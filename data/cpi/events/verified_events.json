@@ -1,0 +1,1942 @@
+{
+  "database_name": "EDGE X PRO Historical Core CPI Releases",
+  "event_type": "CORE_CPI",
+  "instrument": "XAUUSD",
+  "total_verified_events": 52,
+  "total_skipped_events": 0,
+  "time_policy": {
+    "release": "8:30 AM America/New_York",
+    "internal": "UTC",
+    "display": "Asia/Kolkata"
+  },
+  "actual_data_source": "U.S. Bureau of Labor Statistics Public Data API",
+  "series_id": "CUSR0000SA0L1E",
+  "forecast_policy": "Historical market consensus is intentionally null until a separately verified consensus source is added.",
+  "events": [
+    {
+      "id": "CORE_CPI_2021_12",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2022-01-12T08:30:00-05:00",
+      "timestamp_utc": "2022-01-12T13:30:00+00:00",
+      "timestamp_ist": "2022-01-12T19:00:00+05:30",
+      "date_ist": "2022-01-12",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "December 2021"
+      ],
+      "numbers": {
+        "core_cpi_index": 285.18,
+        "actual_mom": 0.6,
+        "forecast_mom": null,
+        "previous_mom": 0.6,
+        "actual_yoy": null,
+        "forecast_yoy": null
+      },
+      "actual": 0.6,
+      "forecast": null,
+      "previous": 0.6,
+      "release": {
+        "previous": "0.6%",
+        "actual": "0.6%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2022_01",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2022-02-10T08:30:00-05:00",
+      "timestamp_utc": "2022-02-10T13:30:00+00:00",
+      "timestamp_ist": "2022-02-10T19:00:00+05:30",
+      "date_ist": "2022-02-10",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "January 2022"
+      ],
+      "numbers": {
+        "core_cpi_index": 286.757,
+        "actual_mom": 0.6,
+        "forecast_mom": null,
+        "previous_mom": 0.6,
+        "actual_yoy": 6.1,
+        "forecast_yoy": null
+      },
+      "actual": 0.6,
+      "forecast": null,
+      "previous": 0.6,
+      "release": {
+        "previous": "0.6%",
+        "actual": "0.6%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2022_02",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2022-03-10T08:30:00-05:00",
+      "timestamp_utc": "2022-03-10T13:30:00+00:00",
+      "timestamp_ist": "2022-03-10T19:00:00+05:30",
+      "date_ist": "2022-03-10",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "February 2022"
+      ],
+      "numbers": {
+        "core_cpi_index": 288.273,
+        "actual_mom": 0.5,
+        "forecast_mom": null,
+        "previous_mom": 0.6,
+        "actual_yoy": 6.5,
+        "forecast_yoy": null
+      },
+      "actual": 0.5,
+      "forecast": null,
+      "previous": 0.6,
+      "release": {
+        "previous": "0.6%",
+        "actual": "0.5%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2022_03",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2022-04-12T08:30:00-04:00",
+      "timestamp_utc": "2022-04-12T12:30:00+00:00",
+      "timestamp_ist": "2022-04-12T18:00:00+05:30",
+      "date_ist": "2022-04-12",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "March 2022"
+      ],
+      "numbers": {
+        "core_cpi_index": 289.056,
+        "actual_mom": 0.3,
+        "forecast_mom": null,
+        "previous_mom": 0.5,
+        "actual_yoy": 6.5,
+        "forecast_yoy": null
+      },
+      "actual": 0.3,
+      "forecast": null,
+      "previous": 0.5,
+      "release": {
+        "previous": "0.5%",
+        "actual": "0.3%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2022_04",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2022-05-11T08:30:00-04:00",
+      "timestamp_utc": "2022-05-11T12:30:00+00:00",
+      "timestamp_ist": "2022-05-11T18:00:00+05:30",
+      "date_ist": "2022-05-11",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "April 2022"
+      ],
+      "numbers": {
+        "core_cpi_index": 290.514,
+        "actual_mom": 0.5,
+        "forecast_mom": null,
+        "previous_mom": 0.3,
+        "actual_yoy": 6.2,
+        "forecast_yoy": null
+      },
+      "actual": 0.5,
+      "forecast": null,
+      "previous": 0.3,
+      "release": {
+        "previous": "0.3%",
+        "actual": "0.5%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2022_05",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2022-06-10T08:30:00-04:00",
+      "timestamp_utc": "2022-06-10T12:30:00+00:00",
+      "timestamp_ist": "2022-06-10T18:00:00+05:30",
+      "date_ist": "2022-06-10",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "May 2022"
+      ],
+      "numbers": {
+        "core_cpi_index": 292.063,
+        "actual_mom": 0.5,
+        "forecast_mom": null,
+        "previous_mom": 0.5,
+        "actual_yoy": 6.0,
+        "forecast_yoy": null
+      },
+      "actual": 0.5,
+      "forecast": null,
+      "previous": 0.5,
+      "release": {
+        "previous": "0.5%",
+        "actual": "0.5%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2022_06",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2022-07-13T08:30:00-04:00",
+      "timestamp_utc": "2022-07-13T12:30:00+00:00",
+      "timestamp_ist": "2022-07-13T18:00:00+05:30",
+      "date_ist": "2022-07-13",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "June 2022"
+      ],
+      "numbers": {
+        "core_cpi_index": 294.05,
+        "actual_mom": 0.7,
+        "forecast_mom": null,
+        "previous_mom": 0.5,
+        "actual_yoy": 5.9,
+        "forecast_yoy": null
+      },
+      "actual": 0.7,
+      "forecast": null,
+      "previous": 0.5,
+      "release": {
+        "previous": "0.5%",
+        "actual": "0.7%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2022_07",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2022-08-10T08:30:00-04:00",
+      "timestamp_utc": "2022-08-10T12:30:00+00:00",
+      "timestamp_ist": "2022-08-10T18:00:00+05:30",
+      "date_ist": "2022-08-10",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "July 2022"
+      ],
+      "numbers": {
+        "core_cpi_index": 295.088,
+        "actual_mom": 0.4,
+        "forecast_mom": null,
+        "previous_mom": 0.7,
+        "actual_yoy": 5.9,
+        "forecast_yoy": null
+      },
+      "actual": 0.4,
+      "forecast": null,
+      "previous": 0.7,
+      "release": {
+        "previous": "0.7%",
+        "actual": "0.4%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2022_08",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2022-09-13T08:30:00-04:00",
+      "timestamp_utc": "2022-09-13T12:30:00+00:00",
+      "timestamp_ist": "2022-09-13T18:00:00+05:30",
+      "date_ist": "2022-09-13",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "August 2022"
+      ],
+      "numbers": {
+        "core_cpi_index": 296.535,
+        "actual_mom": 0.5,
+        "forecast_mom": null,
+        "previous_mom": 0.4,
+        "actual_yoy": 6.3,
+        "forecast_yoy": null
+      },
+      "actual": 0.5,
+      "forecast": null,
+      "previous": 0.4,
+      "release": {
+        "previous": "0.4%",
+        "actual": "0.5%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2022_09",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2022-10-13T08:30:00-04:00",
+      "timestamp_utc": "2022-10-13T12:30:00+00:00",
+      "timestamp_ist": "2022-10-13T18:00:00+05:30",
+      "date_ist": "2022-10-13",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "September 2022"
+      ],
+      "numbers": {
+        "core_cpi_index": 298.226,
+        "actual_mom": 0.6,
+        "forecast_mom": null,
+        "previous_mom": 0.5,
+        "actual_yoy": 6.6,
+        "forecast_yoy": null
+      },
+      "actual": 0.6,
+      "forecast": null,
+      "previous": 0.5,
+      "release": {
+        "previous": "0.5%",
+        "actual": "0.6%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2022_10",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2022-11-10T08:30:00-05:00",
+      "timestamp_utc": "2022-11-10T13:30:00+00:00",
+      "timestamp_ist": "2022-11-10T19:00:00+05:30",
+      "date_ist": "2022-11-10",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "October 2022"
+      ],
+      "numbers": {
+        "core_cpi_index": 299.399,
+        "actual_mom": 0.4,
+        "forecast_mom": null,
+        "previous_mom": 0.6,
+        "actual_yoy": 6.3,
+        "forecast_yoy": null
+      },
+      "actual": 0.4,
+      "forecast": null,
+      "previous": 0.6,
+      "release": {
+        "previous": "0.6%",
+        "actual": "0.4%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2022_11",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2022-12-13T08:30:00-05:00",
+      "timestamp_utc": "2022-12-13T13:30:00+00:00",
+      "timestamp_ist": "2022-12-13T19:00:00+05:30",
+      "date_ist": "2022-12-13",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "November 2022"
+      ],
+      "numbers": {
+        "core_cpi_index": 300.325,
+        "actual_mom": 0.3,
+        "forecast_mom": null,
+        "previous_mom": 0.4,
+        "actual_yoy": 6.0,
+        "forecast_yoy": null
+      },
+      "actual": 0.3,
+      "forecast": null,
+      "previous": 0.4,
+      "release": {
+        "previous": "0.4%",
+        "actual": "0.3%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2022_12",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2023-01-12T08:30:00-05:00",
+      "timestamp_utc": "2023-01-12T13:30:00+00:00",
+      "timestamp_ist": "2023-01-12T19:00:00+05:30",
+      "date_ist": "2023-01-12",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "December 2022"
+      ],
+      "numbers": {
+        "core_cpi_index": 301.394,
+        "actual_mom": 0.4,
+        "forecast_mom": null,
+        "previous_mom": 0.3,
+        "actual_yoy": 5.7,
+        "forecast_yoy": null
+      },
+      "actual": 0.4,
+      "forecast": null,
+      "previous": 0.3,
+      "release": {
+        "previous": "0.3%",
+        "actual": "0.4%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2023_01",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2023-02-14T08:30:00-05:00",
+      "timestamp_utc": "2023-02-14T13:30:00+00:00",
+      "timestamp_ist": "2023-02-14T19:00:00+05:30",
+      "date_ist": "2023-02-14",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "January 2023"
+      ],
+      "numbers": {
+        "core_cpi_index": 302.642,
+        "actual_mom": 0.4,
+        "forecast_mom": null,
+        "previous_mom": 0.4,
+        "actual_yoy": 5.5,
+        "forecast_yoy": null
+      },
+      "actual": 0.4,
+      "forecast": null,
+      "previous": 0.4,
+      "release": {
+        "previous": "0.4%",
+        "actual": "0.4%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2023_02",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2023-03-14T08:30:00-04:00",
+      "timestamp_utc": "2023-03-14T12:30:00+00:00",
+      "timestamp_ist": "2023-03-14T18:00:00+05:30",
+      "date_ist": "2023-03-14",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "February 2023"
+      ],
+      "numbers": {
+        "core_cpi_index": 304.123,
+        "actual_mom": 0.5,
+        "forecast_mom": null,
+        "previous_mom": 0.4,
+        "actual_yoy": 5.5,
+        "forecast_yoy": null
+      },
+      "actual": 0.5,
+      "forecast": null,
+      "previous": 0.4,
+      "release": {
+        "previous": "0.4%",
+        "actual": "0.5%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2023_03",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2023-04-12T08:30:00-04:00",
+      "timestamp_utc": "2023-04-12T12:30:00+00:00",
+      "timestamp_ist": "2023-04-12T18:00:00+05:30",
+      "date_ist": "2023-04-12",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "March 2023"
+      ],
+      "numbers": {
+        "core_cpi_index": 305.147,
+        "actual_mom": 0.3,
+        "forecast_mom": null,
+        "previous_mom": 0.5,
+        "actual_yoy": 5.6,
+        "forecast_yoy": null
+      },
+      "actual": 0.3,
+      "forecast": null,
+      "previous": 0.5,
+      "release": {
+        "previous": "0.5%",
+        "actual": "0.3%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2023_04",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2023-05-10T08:30:00-04:00",
+      "timestamp_utc": "2023-05-10T12:30:00+00:00",
+      "timestamp_ist": "2023-05-10T18:00:00+05:30",
+      "date_ist": "2023-05-10",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "April 2023"
+      ],
+      "numbers": {
+        "core_cpi_index": 306.534,
+        "actual_mom": 0.5,
+        "forecast_mom": null,
+        "previous_mom": 0.3,
+        "actual_yoy": 5.5,
+        "forecast_yoy": null
+      },
+      "actual": 0.5,
+      "forecast": null,
+      "previous": 0.3,
+      "release": {
+        "previous": "0.3%",
+        "actual": "0.5%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2023_05",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2023-06-13T08:30:00-04:00",
+      "timestamp_utc": "2023-06-13T12:30:00+00:00",
+      "timestamp_ist": "2023-06-13T18:00:00+05:30",
+      "date_ist": "2023-06-13",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "May 2023"
+      ],
+      "numbers": {
+        "core_cpi_index": 307.652,
+        "actual_mom": 0.4,
+        "forecast_mom": null,
+        "previous_mom": 0.5,
+        "actual_yoy": 5.3,
+        "forecast_yoy": null
+      },
+      "actual": 0.4,
+      "forecast": null,
+      "previous": 0.5,
+      "release": {
+        "previous": "0.5%",
+        "actual": "0.4%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2023_06",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2023-07-12T08:30:00-04:00",
+      "timestamp_utc": "2023-07-12T12:30:00+00:00",
+      "timestamp_ist": "2023-07-12T18:00:00+05:30",
+      "date_ist": "2023-07-12",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "June 2023"
+      ],
+      "numbers": {
+        "core_cpi_index": 308.322,
+        "actual_mom": 0.2,
+        "forecast_mom": null,
+        "previous_mom": 0.4,
+        "actual_yoy": 4.9,
+        "forecast_yoy": null
+      },
+      "actual": 0.2,
+      "forecast": null,
+      "previous": 0.4,
+      "release": {
+        "previous": "0.4%",
+        "actual": "0.2%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2023_07",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2023-08-10T08:30:00-04:00",
+      "timestamp_utc": "2023-08-10T12:30:00+00:00",
+      "timestamp_ist": "2023-08-10T18:00:00+05:30",
+      "date_ist": "2023-08-10",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "July 2023"
+      ],
+      "numbers": {
+        "core_cpi_index": 308.96,
+        "actual_mom": 0.2,
+        "forecast_mom": null,
+        "previous_mom": 0.2,
+        "actual_yoy": 4.7,
+        "forecast_yoy": null
+      },
+      "actual": 0.2,
+      "forecast": null,
+      "previous": 0.2,
+      "release": {
+        "previous": "0.2%",
+        "actual": "0.2%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2023_08",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2023-09-13T08:30:00-04:00",
+      "timestamp_utc": "2023-09-13T12:30:00+00:00",
+      "timestamp_ist": "2023-09-13T18:00:00+05:30",
+      "date_ist": "2023-09-13",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "August 2023"
+      ],
+      "numbers": {
+        "core_cpi_index": 309.58,
+        "actual_mom": 0.2,
+        "forecast_mom": null,
+        "previous_mom": 0.2,
+        "actual_yoy": 4.4,
+        "forecast_yoy": null
+      },
+      "actual": 0.2,
+      "forecast": null,
+      "previous": 0.2,
+      "release": {
+        "previous": "0.2%",
+        "actual": "0.2%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2023_09",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2023-10-12T08:30:00-04:00",
+      "timestamp_utc": "2023-10-12T12:30:00+00:00",
+      "timestamp_ist": "2023-10-12T18:00:00+05:30",
+      "date_ist": "2023-10-12",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "September 2023"
+      ],
+      "numbers": {
+        "core_cpi_index": 310.539,
+        "actual_mom": 0.3,
+        "forecast_mom": null,
+        "previous_mom": 0.2,
+        "actual_yoy": 4.1,
+        "forecast_yoy": null
+      },
+      "actual": 0.3,
+      "forecast": null,
+      "previous": 0.2,
+      "release": {
+        "previous": "0.2%",
+        "actual": "0.3%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2023_10",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2023-11-14T08:30:00-05:00",
+      "timestamp_utc": "2023-11-14T13:30:00+00:00",
+      "timestamp_ist": "2023-11-14T19:00:00+05:30",
+      "date_ist": "2023-11-14",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "October 2023"
+      ],
+      "numbers": {
+        "core_cpi_index": 311.457,
+        "actual_mom": 0.3,
+        "forecast_mom": null,
+        "previous_mom": 0.3,
+        "actual_yoy": 4.0,
+        "forecast_yoy": null
+      },
+      "actual": 0.3,
+      "forecast": null,
+      "previous": 0.3,
+      "release": {
+        "previous": "0.3%",
+        "actual": "0.3%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2023_11",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2023-12-12T08:30:00-05:00",
+      "timestamp_utc": "2023-12-12T13:30:00+00:00",
+      "timestamp_ist": "2023-12-12T19:00:00+05:30",
+      "date_ist": "2023-12-12",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "November 2023"
+      ],
+      "numbers": {
+        "core_cpi_index": 312.392,
+        "actual_mom": 0.3,
+        "forecast_mom": null,
+        "previous_mom": 0.3,
+        "actual_yoy": 4.0,
+        "forecast_yoy": null
+      },
+      "actual": 0.3,
+      "forecast": null,
+      "previous": 0.3,
+      "release": {
+        "previous": "0.3%",
+        "actual": "0.3%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2023_12",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2024-01-11T08:30:00-05:00",
+      "timestamp_utc": "2024-01-11T13:30:00+00:00",
+      "timestamp_ist": "2024-01-11T19:00:00+05:30",
+      "date_ist": "2024-01-11",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "December 2023"
+      ],
+      "numbers": {
+        "core_cpi_index": 313.195,
+        "actual_mom": 0.3,
+        "forecast_mom": null,
+        "previous_mom": 0.3,
+        "actual_yoy": 3.9,
+        "forecast_yoy": null
+      },
+      "actual": 0.3,
+      "forecast": null,
+      "previous": 0.3,
+      "release": {
+        "previous": "0.3%",
+        "actual": "0.3%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2024_01",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2024-02-13T08:30:00-05:00",
+      "timestamp_utc": "2024-02-13T13:30:00+00:00",
+      "timestamp_ist": "2024-02-13T19:00:00+05:30",
+      "date_ist": "2024-02-13",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "January 2024"
+      ],
+      "numbers": {
+        "core_cpi_index": 314.319,
+        "actual_mom": 0.4,
+        "forecast_mom": null,
+        "previous_mom": 0.3,
+        "actual_yoy": 3.9,
+        "forecast_yoy": null
+      },
+      "actual": 0.4,
+      "forecast": null,
+      "previous": 0.3,
+      "release": {
+        "previous": "0.3%",
+        "actual": "0.4%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2024_02",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2024-03-12T08:30:00-04:00",
+      "timestamp_utc": "2024-03-12T12:30:00+00:00",
+      "timestamp_ist": "2024-03-12T18:00:00+05:30",
+      "date_ist": "2024-03-12",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "February 2024"
+      ],
+      "numbers": {
+        "core_cpi_index": 315.564,
+        "actual_mom": 0.4,
+        "forecast_mom": null,
+        "previous_mom": 0.4,
+        "actual_yoy": 3.8,
+        "forecast_yoy": null
+      },
+      "actual": 0.4,
+      "forecast": null,
+      "previous": 0.4,
+      "release": {
+        "previous": "0.4%",
+        "actual": "0.4%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2024_03",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2024-04-10T08:30:00-04:00",
+      "timestamp_utc": "2024-04-10T12:30:00+00:00",
+      "timestamp_ist": "2024-04-10T18:00:00+05:30",
+      "date_ist": "2024-04-10",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "March 2024"
+      ],
+      "numbers": {
+        "core_cpi_index": 316.792,
+        "actual_mom": 0.4,
+        "forecast_mom": null,
+        "previous_mom": 0.4,
+        "actual_yoy": 3.8,
+        "forecast_yoy": null
+      },
+      "actual": 0.4,
+      "forecast": null,
+      "previous": 0.4,
+      "release": {
+        "previous": "0.4%",
+        "actual": "0.4%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2024_04",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2024-05-15T08:30:00-04:00",
+      "timestamp_utc": "2024-05-15T12:30:00+00:00",
+      "timestamp_ist": "2024-05-15T18:00:00+05:30",
+      "date_ist": "2024-05-15",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "April 2024"
+      ],
+      "numbers": {
+        "core_cpi_index": 317.649,
+        "actual_mom": 0.3,
+        "forecast_mom": null,
+        "previous_mom": 0.4,
+        "actual_yoy": 3.6,
+        "forecast_yoy": null
+      },
+      "actual": 0.3,
+      "forecast": null,
+      "previous": 0.4,
+      "release": {
+        "previous": "0.4%",
+        "actual": "0.3%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2024_05",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2024-06-12T08:30:00-04:00",
+      "timestamp_utc": "2024-06-12T12:30:00+00:00",
+      "timestamp_ist": "2024-06-12T18:00:00+05:30",
+      "date_ist": "2024-06-12",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "May 2024"
+      ],
+      "numbers": {
+        "core_cpi_index": 318.095,
+        "actual_mom": 0.1,
+        "forecast_mom": null,
+        "previous_mom": 0.3,
+        "actual_yoy": 3.4,
+        "forecast_yoy": null
+      },
+      "actual": 0.1,
+      "forecast": null,
+      "previous": 0.3,
+      "release": {
+        "previous": "0.3%",
+        "actual": "0.1%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2024_06",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2024-07-11T08:30:00-04:00",
+      "timestamp_utc": "2024-07-11T12:30:00+00:00",
+      "timestamp_ist": "2024-07-11T18:00:00+05:30",
+      "date_ist": "2024-07-11",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "June 2024"
+      ],
+      "numbers": {
+        "core_cpi_index": 318.39,
+        "actual_mom": 0.1,
+        "forecast_mom": null,
+        "previous_mom": 0.1,
+        "actual_yoy": 3.3,
+        "forecast_yoy": null
+      },
+      "actual": 0.1,
+      "forecast": null,
+      "previous": 0.1,
+      "release": {
+        "previous": "0.1%",
+        "actual": "0.1%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2024_07",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2024-08-14T08:30:00-04:00",
+      "timestamp_utc": "2024-08-14T12:30:00+00:00",
+      "timestamp_ist": "2024-08-14T18:00:00+05:30",
+      "date_ist": "2024-08-14",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "July 2024"
+      ],
+      "numbers": {
+        "core_cpi_index": 318.94,
+        "actual_mom": 0.2,
+        "forecast_mom": null,
+        "previous_mom": 0.1,
+        "actual_yoy": 3.2,
+        "forecast_yoy": null
+      },
+      "actual": 0.2,
+      "forecast": null,
+      "previous": 0.1,
+      "release": {
+        "previous": "0.1%",
+        "actual": "0.2%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2024_08",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2024-09-11T08:30:00-04:00",
+      "timestamp_utc": "2024-09-11T12:30:00+00:00",
+      "timestamp_ist": "2024-09-11T18:00:00+05:30",
+      "date_ist": "2024-09-11",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "August 2024"
+      ],
+      "numbers": {
+        "core_cpi_index": 319.75,
+        "actual_mom": 0.3,
+        "forecast_mom": null,
+        "previous_mom": 0.2,
+        "actual_yoy": 3.3,
+        "forecast_yoy": null
+      },
+      "actual": 0.3,
+      "forecast": null,
+      "previous": 0.2,
+      "release": {
+        "previous": "0.2%",
+        "actual": "0.3%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2024_09",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2024-10-10T08:30:00-04:00",
+      "timestamp_utc": "2024-10-10T12:30:00+00:00",
+      "timestamp_ist": "2024-10-10T18:00:00+05:30",
+      "date_ist": "2024-10-10",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "September 2024"
+      ],
+      "numbers": {
+        "core_cpi_index": 320.732,
+        "actual_mom": 0.3,
+        "forecast_mom": null,
+        "previous_mom": 0.3,
+        "actual_yoy": 3.3,
+        "forecast_yoy": null
+      },
+      "actual": 0.3,
+      "forecast": null,
+      "previous": 0.3,
+      "release": {
+        "previous": "0.3%",
+        "actual": "0.3%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2024_10",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2024-11-13T08:30:00-05:00",
+      "timestamp_utc": "2024-11-13T13:30:00+00:00",
+      "timestamp_ist": "2024-11-13T19:00:00+05:30",
+      "date_ist": "2024-11-13",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "October 2024"
+      ],
+      "numbers": {
+        "core_cpi_index": 321.731,
+        "actual_mom": 0.3,
+        "forecast_mom": null,
+        "previous_mom": 0.3,
+        "actual_yoy": 3.3,
+        "forecast_yoy": null
+      },
+      "actual": 0.3,
+      "forecast": null,
+      "previous": 0.3,
+      "release": {
+        "previous": "0.3%",
+        "actual": "0.3%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2024_11",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2024-12-11T08:30:00-05:00",
+      "timestamp_utc": "2024-12-11T13:30:00+00:00",
+      "timestamp_ist": "2024-12-11T19:00:00+05:30",
+      "date_ist": "2024-12-11",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "November 2024"
+      ],
+      "numbers": {
+        "core_cpi_index": 322.657,
+        "actual_mom": 0.3,
+        "forecast_mom": null,
+        "previous_mom": 0.3,
+        "actual_yoy": 3.3,
+        "forecast_yoy": null
+      },
+      "actual": 0.3,
+      "forecast": null,
+      "previous": 0.3,
+      "release": {
+        "previous": "0.3%",
+        "actual": "0.3%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2024_12",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2025-01-15T08:30:00-05:00",
+      "timestamp_utc": "2025-01-15T13:30:00+00:00",
+      "timestamp_ist": "2025-01-15T19:00:00+05:30",
+      "date_ist": "2025-01-15",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "December 2024"
+      ],
+      "numbers": {
+        "core_cpi_index": 323.259,
+        "actual_mom": 0.2,
+        "forecast_mom": null,
+        "previous_mom": 0.3,
+        "actual_yoy": 3.2,
+        "forecast_yoy": null
+      },
+      "actual": 0.2,
+      "forecast": null,
+      "previous": 0.3,
+      "release": {
+        "previous": "0.3%",
+        "actual": "0.2%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2025_01",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2025-02-12T08:30:00-05:00",
+      "timestamp_utc": "2025-02-12T13:30:00+00:00",
+      "timestamp_ist": "2025-02-12T19:00:00+05:30",
+      "date_ist": "2025-02-12",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "January 2025"
+      ],
+      "numbers": {
+        "core_cpi_index": 324.638,
+        "actual_mom": 0.4,
+        "forecast_mom": null,
+        "previous_mom": 0.2,
+        "actual_yoy": 3.3,
+        "forecast_yoy": null
+      },
+      "actual": 0.4,
+      "forecast": null,
+      "previous": 0.2,
+      "release": {
+        "previous": "0.2%",
+        "actual": "0.4%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2025_02",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2025-03-12T08:30:00-04:00",
+      "timestamp_utc": "2025-03-12T12:30:00+00:00",
+      "timestamp_ist": "2025-03-12T18:00:00+05:30",
+      "date_ist": "2025-03-12",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "February 2025"
+      ],
+      "numbers": {
+        "core_cpi_index": 325.465,
+        "actual_mom": 0.3,
+        "forecast_mom": null,
+        "previous_mom": 0.4,
+        "actual_yoy": 3.1,
+        "forecast_yoy": null
+      },
+      "actual": 0.3,
+      "forecast": null,
+      "previous": 0.4,
+      "release": {
+        "previous": "0.4%",
+        "actual": "0.3%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2025_03",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2025-04-10T08:30:00-04:00",
+      "timestamp_utc": "2025-04-10T12:30:00+00:00",
+      "timestamp_ist": "2025-04-10T18:00:00+05:30",
+      "date_ist": "2025-04-10",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "March 2025"
+      ],
+      "numbers": {
+        "core_cpi_index": 325.69,
+        "actual_mom": 0.1,
+        "forecast_mom": null,
+        "previous_mom": 0.3,
+        "actual_yoy": 2.8,
+        "forecast_yoy": null
+      },
+      "actual": 0.1,
+      "forecast": null,
+      "previous": 0.3,
+      "release": {
+        "previous": "0.3%",
+        "actual": "0.1%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2025_04",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2025-05-13T08:30:00-04:00",
+      "timestamp_utc": "2025-05-13T12:30:00+00:00",
+      "timestamp_ist": "2025-05-13T18:00:00+05:30",
+      "date_ist": "2025-05-13",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "April 2025"
+      ],
+      "numbers": {
+        "core_cpi_index": 326.467,
+        "actual_mom": 0.2,
+        "forecast_mom": null,
+        "previous_mom": 0.1,
+        "actual_yoy": 2.8,
+        "forecast_yoy": null
+      },
+      "actual": 0.2,
+      "forecast": null,
+      "previous": 0.1,
+      "release": {
+        "previous": "0.1%",
+        "actual": "0.2%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2025_05",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2025-06-11T08:30:00-04:00",
+      "timestamp_utc": "2025-06-11T12:30:00+00:00",
+      "timestamp_ist": "2025-06-11T18:00:00+05:30",
+      "date_ist": "2025-06-11",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "May 2025"
+      ],
+      "numbers": {
+        "core_cpi_index": 326.893,
+        "actual_mom": 0.1,
+        "forecast_mom": null,
+        "previous_mom": 0.2,
+        "actual_yoy": 2.8,
+        "forecast_yoy": null
+      },
+      "actual": 0.1,
+      "forecast": null,
+      "previous": 0.2,
+      "release": {
+        "previous": "0.2%",
+        "actual": "0.1%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2025_06",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2025-07-15T08:30:00-04:00",
+      "timestamp_utc": "2025-07-15T12:30:00+00:00",
+      "timestamp_ist": "2025-07-15T18:00:00+05:30",
+      "date_ist": "2025-07-15",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "June 2025"
+      ],
+      "numbers": {
+        "core_cpi_index": 327.658,
+        "actual_mom": 0.2,
+        "forecast_mom": null,
+        "previous_mom": 0.1,
+        "actual_yoy": 2.9,
+        "forecast_yoy": null
+      },
+      "actual": 0.2,
+      "forecast": null,
+      "previous": 0.1,
+      "release": {
+        "previous": "0.1%",
+        "actual": "0.2%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2025_07",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2025-08-12T08:30:00-04:00",
+      "timestamp_utc": "2025-08-12T12:30:00+00:00",
+      "timestamp_ist": "2025-08-12T18:00:00+05:30",
+      "date_ist": "2025-08-12",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "July 2025"
+      ],
+      "numbers": {
+        "core_cpi_index": 328.682,
+        "actual_mom": 0.3,
+        "forecast_mom": null,
+        "previous_mom": 0.2,
+        "actual_yoy": 3.1,
+        "forecast_yoy": null
+      },
+      "actual": 0.3,
+      "forecast": null,
+      "previous": 0.2,
+      "release": {
+        "previous": "0.2%",
+        "actual": "0.3%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2025_08",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2025-09-11T08:30:00-04:00",
+      "timestamp_utc": "2025-09-11T12:30:00+00:00",
+      "timestamp_ist": "2025-09-11T18:00:00+05:30",
+      "date_ist": "2025-09-11",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "August 2025"
+      ],
+      "numbers": {
+        "core_cpi_index": 329.7,
+        "actual_mom": 0.3,
+        "forecast_mom": null,
+        "previous_mom": 0.3,
+        "actual_yoy": 3.1,
+        "forecast_yoy": null
+      },
+      "actual": 0.3,
+      "forecast": null,
+      "previous": 0.3,
+      "release": {
+        "previous": "0.3%",
+        "actual": "0.3%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2025_12",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2026-01-13T08:30:00-05:00",
+      "timestamp_utc": "2026-01-13T13:30:00+00:00",
+      "timestamp_ist": "2026-01-13T19:00:00+05:30",
+      "date_ist": "2026-01-13",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "December 2025"
+      ],
+      "numbers": {
+        "core_cpi_index": 331.814,
+        "actual_mom": 0.2,
+        "forecast_mom": null,
+        "previous_mom": null,
+        "actual_yoy": 2.6,
+        "forecast_yoy": null
+      },
+      "actual": 0.2,
+      "forecast": null,
+      "previous": null,
+      "release": {
+        "previous": null,
+        "actual": "0.2%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2026_01",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2026-02-13T08:30:00-05:00",
+      "timestamp_utc": "2026-02-13T13:30:00+00:00",
+      "timestamp_ist": "2026-02-13T19:00:00+05:30",
+      "date_ist": "2026-02-13",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "January 2026"
+      ],
+      "numbers": {
+        "core_cpi_index": 332.793,
+        "actual_mom": 0.3,
+        "forecast_mom": null,
+        "previous_mom": 0.2,
+        "actual_yoy": 2.5,
+        "forecast_yoy": null
+      },
+      "actual": 0.3,
+      "forecast": null,
+      "previous": 0.2,
+      "release": {
+        "previous": "0.2%",
+        "actual": "0.3%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2026_02",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2026-03-11T08:30:00-04:00",
+      "timestamp_utc": "2026-03-11T12:30:00+00:00",
+      "timestamp_ist": "2026-03-11T18:00:00+05:30",
+      "date_ist": "2026-03-11",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "February 2026"
+      ],
+      "numbers": {
+        "core_cpi_index": 333.512,
+        "actual_mom": 0.2,
+        "forecast_mom": null,
+        "previous_mom": 0.3,
+        "actual_yoy": 2.5,
+        "forecast_yoy": null
+      },
+      "actual": 0.2,
+      "forecast": null,
+      "previous": 0.3,
+      "release": {
+        "previous": "0.3%",
+        "actual": "0.2%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2026_03",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2026-04-10T08:30:00-04:00",
+      "timestamp_utc": "2026-04-10T12:30:00+00:00",
+      "timestamp_ist": "2026-04-10T18:00:00+05:30",
+      "date_ist": "2026-04-10",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "March 2026"
+      ],
+      "numbers": {
+        "core_cpi_index": 334.165,
+        "actual_mom": 0.2,
+        "forecast_mom": null,
+        "previous_mom": 0.2,
+        "actual_yoy": 2.6,
+        "forecast_yoy": null
+      },
+      "actual": 0.2,
+      "forecast": null,
+      "previous": 0.2,
+      "release": {
+        "previous": "0.2%",
+        "actual": "0.2%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2026_04",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2026-05-12T08:30:00-04:00",
+      "timestamp_utc": "2026-05-12T12:30:00+00:00",
+      "timestamp_ist": "2026-05-12T18:00:00+05:30",
+      "date_ist": "2026-05-12",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "April 2026"
+      ],
+      "numbers": {
+        "core_cpi_index": 335.423,
+        "actual_mom": 0.4,
+        "forecast_mom": null,
+        "previous_mom": 0.2,
+        "actual_yoy": 2.7,
+        "forecast_yoy": null
+      },
+      "actual": 0.4,
+      "forecast": null,
+      "previous": 0.2,
+      "release": {
+        "previous": "0.2%",
+        "actual": "0.4%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2026_05",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2026-06-10T08:30:00-04:00",
+      "timestamp_utc": "2026-06-10T12:30:00+00:00",
+      "timestamp_ist": "2026-06-10T18:00:00+05:30",
+      "date_ist": "2026-06-10",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "May 2026"
+      ],
+      "numbers": {
+        "core_cpi_index": 336.121,
+        "actual_mom": 0.2,
+        "forecast_mom": null,
+        "previous_mom": 0.4,
+        "actual_yoy": 2.8,
+        "forecast_yoy": null
+      },
+      "actual": 0.2,
+      "forecast": null,
+      "previous": 0.4,
+      "release": {
+        "previous": "0.4%",
+        "actual": "0.2%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    },
+    {
+      "id": "CORE_CPI_2026_06",
+      "events": [
+        "US Core CPI MoM"
+      ],
+      "event": "CORE_CPI",
+      "category": "CORE_CPI",
+      "verified": true,
+      "timestamp_et": "2026-07-14T08:30:00-04:00",
+      "timestamp_utc": "2026-07-14T12:30:00+00:00",
+      "timestamp_ist": "2026-07-14T18:00:00+05:30",
+      "date_ist": "2026-07-14",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "June 2026"
+      ],
+      "numbers": {
+        "core_cpi_index": 336.065,
+        "actual_mom": -0.0,
+        "forecast_mom": null,
+        "previous_mom": 0.2,
+        "actual_yoy": 2.6,
+        "forecast_yoy": null
+      },
+      "actual": -0.0,
+      "forecast": null,
+      "previous": 0.2,
+      "release": {
+        "previous": "0.2%",
+        "actual": "-0.0%",
+        "result": "CORE CPI RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CUSR0000SA0L1E",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "Core CPI changes calculated from the official seasonally adjusted BLS index series. Historical market consensus is not included."
+    }
+  ],
+  "skipped_events": []
+}

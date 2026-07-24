@@ -1,0 +1,40 @@
+{
+  "macro": {
+    "cpi": {
+      "actual_mom": -0.42,
+      "actual_yoy": 3.46,
+      "index": 332.568,
+      "release_period": "2026-06-01",
+      "source": "U.S. Bureau of Labor Statistics",
+      "forecast": null
+    },
+    "core_cpi": {
+      "actual_mom": -0.02,
+      "actual_yoy": 2.57,
+      "index": 336.065,
+      "release_period": "2026-06-01",
+      "source": "U.S. Bureau of Labor Statistics",
+      "forecast": null
+    },
+    "nfp": {
+      "actual": 57.0,
+      "previous": 129.0,
+      "forecast": null,
+      "release_period": "2026-06-01",
+      "unit": "thousand jobs",
+      "source": "U.S. Bureau of Labor Statistics"
+    },
+    "unemployment": {
+      "actual": 4.2,
+      "previous": 4.3,
+      "forecast": null,
+      "release_period": "2026-06-01",
+      "unit": "percent",
+      "source": "U.S. Bureau of Labor Statistics"
+    }
+  },
+  "inflation_trend": "COOLING",
+  "labor_market": "WEAKENING",
+  "updated_at_utc": "2026-07-20T18:39:35.090400+00:00",
+  "source_status": "LIVE_BLS"
+}

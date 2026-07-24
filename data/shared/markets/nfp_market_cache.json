@@ -1,0 +1,35 @@
+{
+  "dxy": {
+    "value": 100.936,
+    "date": "2026-07-20",
+    "direction": "MIXED",
+    "direction_1d": "RISING",
+    "direction_5d": "FALLING",
+    "direction_20d": "FLAT",
+    "change_1d_percent": 0.185,
+    "change_5d_percent": -0.34,
+    "change_20d_percent": 0.085,
+    "source": "Yahoo Finance chart data"
+  },
+  "us10y": {
+    "value": 4.598,
+    "date": "2026-07-20",
+    "direction": "RISING",
+    "direction_1d": "RISING",
+    "direction_5d": "FLAT",
+    "direction_20d": "RISING",
+    "change_1d_percent": 1.255,
+    "change_5d_percent": -0.239,
+    "change_20d_percent": 3.303,
+    "source": "Yahoo Finance chart data"
+  },
+  "gold_market_bias": {
+    "bias": "BEARISH",
+    "score": -2,
+    "reasons": [
+      "US dollar trend is mixed.",
+      "Rising Treasury yields pressure gold."
+    ]
+  },
+  "updated_at_utc": "2026-07-20T18:34:35.326613+00:00"
+}

@@ -1,0 +1,909 @@
+"use client";
+
+import { FormEvent, useEffect, useState } from "react";
+import Sidebar from "../../components/Sidebar";
+import ChartModal from "../../components/ChartModal";
+
+type Trade = {
+  id: number;
+  date: string;
+  time: string;
+  symbol: string;
+  direction: string;
+  entry: number;
+  stopLoss: number;
+  takeProfit: number;
+  exit: number;
+  risk: number;
+  lotSize: number;
+  pnl: number;
+  session: string;
+  strategy: string;
+  emotion: string;
+  ruleFollowed: string;
+  tradingViewLink: string;
+  notes: string;
+  chartImages: string[];
+};
+
+const emptyForm = {
+  date: "",
+  time: "",
+  symbol: "XAUUSD",
+  direction: "Buy",
+  entry: "",
+  stopLoss: "",
+  takeProfit: "",
+  exit: "",
+  risk: "",
+  lotSize: "",
+  pnl: "",
+  session: "London",
+  strategy: "",
+  emotion: "Calm",
+  ruleFollowed: "Yes",
+  tradingViewLink: "",
+  notes: "",
+};
+
+export default function JournalPage() {
+  const [trades, setTrades] = useState<Trade[]>([]);
+  const [form, setForm] = useState(emptyForm);
+  const [editingId, setEditingId] = useState<number | null>(null);
+  const [chartImages, setChartImages] = useState<string[]>([]);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem("edge-x-trades");
+
+      if (saved) {
+        const parsedTrades = JSON.parse(saved);
+
+        if (Array.isArray(parsedTrades)) {
+          const upgradedTrades = parsedTrades.map((trade) => ({
+            ...trade,
+            chartImages:
+              trade.chartImages ||
+              (trade.chartImage ? [trade.chartImage] : []),
+          }));
+
+          setTrades(upgradedTrades);
+        }
+      }
+    } catch (error) {
+      console.error("Failed to load trades:", error);
+      setTrades([]);
+    }
+
+    setCurrentDateTime();
+  }, []);
+
+  function getCurrentDateTime() {
+    const now = new Date();
+
+    const date =
+      now.getFullYear() +
+      "-" +
+      String(now.getMonth() + 1).padStart(2, "0") +
+      "-" +
+      String(now.getDate()).padStart(2, "0");
+
+    const time =
+      String(now.getHours()).padStart(2, "0") +
+      ":" +
+      String(now.getMinutes()).padStart(2, "0");
+
+    return { date, time };
+  }
+
+  function setCurrentDateTime() {
+    const { date, time } = getCurrentDateTime();
+
+    setForm((previous) => ({
+      ...previous,
+      date,
+      time,
+    }));
+  }
+
+  function updateField(
+    event:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLSelectElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) {
+    const { name, value } = event.target;
+
+    setForm((previous) => ({
+      ...previous,
+      [name]: value,
+    }));
+  }
+
+  async function handleChartUpload(
+    event: React.ChangeEvent<HTMLInputElement>
+  ) {
+    const files = Array.from(event.target.files || []);
+
+    if (!files.length) return;
+
+    const remainingSlots = 10 - chartImages.length;
+
+    if (remainingSlots <= 0) {
+      alert("Maximum 10 screenshots allowed per trade.");
+      event.target.value = "";
+      return;
+    }
+
+    const filesToProcess = files.slice(0, remainingSlots);
+
+    try {
+      const compressedImages = await Promise.all(
+        filesToProcess.map((file) => compressImage(file))
+      );
+
+      setChartImages((previous) => [
+        ...previous,
+        ...compressedImages,
+      ]);
+    } catch {
+      alert("One or more screenshots could not be processed.");
+    }
+
+    event.target.value = "";
+  }
+
+  function removeChart(index: number) {
+    setChartImages((previous) =>
+      previous.filter((_, imageIndex) => imageIndex !== index)
+    );
+  }
+
+  function saveTrade(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const trade: Trade = {
+      id: editingId ?? Date.now(),
+      date: form.date,
+      time: form.time,
+      symbol: form.symbol,
+      direction: form.direction,
+      entry: Number(form.entry || 0),
+      stopLoss: Number(form.stopLoss || 0),
+      takeProfit: Number(form.takeProfit || 0),
+      exit: Number(form.exit || 0),
+      risk: Number(form.risk || 0),
+      lotSize: Number(form.lotSize || 0),
+      pnl: Number(form.pnl || 0),
+      session: form.session,
+      strategy: form.strategy,
+      emotion: form.emotion,
+      ruleFollowed: form.ruleFollowed,
+      tradingViewLink: form.tradingViewLink,
+      notes: form.notes,
+      chartImages,
+    };
+
+    let updatedTrades: Trade[];
+
+    if (editingId !== null) {
+      updatedTrades = trades.map((existingTrade) =>
+        existingTrade.id === editingId ? trade : existingTrade
+      );
+    } else {
+      updatedTrades = [trade, ...trades];
+    }
+
+    try {
+      localStorage.setItem(
+        "edge-x-trades",
+        JSON.stringify(updatedTrades)
+      );
+
+      setTrades(updatedTrades);
+
+      alert(
+        editingId !== null
+          ? "Trade updated successfully!"
+          : "Trade saved successfully!"
+      );
+
+      clearForm();
+    } catch {
+      alert(
+        "Browser storage is full. Try removing some screenshots."
+      );
+    }
+  }
+
+  function editTrade(trade: Trade) {
+    setEditingId(trade.id);
+
+    setForm({
+      date: trade.date || "",
+      time: trade.time || "",
+      symbol: trade.symbol || "XAUUSD",
+      direction: trade.direction || "Buy",
+      entry: String(trade.entry ?? ""),
+      stopLoss: String(trade.stopLoss ?? ""),
+      takeProfit: String(trade.takeProfit ?? ""),
+      exit: String(trade.exit ?? ""),
+      risk: String(trade.risk ?? ""),
+      lotSize: String(trade.lotSize ?? ""),
+      pnl: String(trade.pnl ?? ""),
+      session: trade.session || "London",
+      strategy: trade.strategy || "",
+      emotion: trade.emotion || "Calm",
+      ruleFollowed: trade.ruleFollowed || "Yes",
+      tradingViewLink: trade.tradingViewLink || "",
+      notes: trade.notes || "",
+    });
+
+    setChartImages(trade.chartImages || []);
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+
+  function deleteTrade(id: number) {
+    const confirmed = window.confirm(
+      "Are you sure you want to delete this trade?"
+    );
+
+    if (!confirmed) return;
+
+    const updatedTrades = trades.filter(
+      (trade) => trade.id !== id
+    );
+
+    setTrades(updatedTrades);
+
+    localStorage.setItem(
+      "edge-x-trades",
+      JSON.stringify(updatedTrades)
+    );
+
+    if (editingId === id) {
+      clearForm();
+    }
+  }
+
+  function clearForm() {
+    const { date, time } = getCurrentDateTime();
+
+    setForm({
+      ...emptyForm,
+      date,
+      time,
+    });
+
+    setEditingId(null);
+    setChartImages([]);
+  }
+
+  return (
+    <div className="flex min-h-screen bg-slate-950 text-white">
+      <Sidebar />
+
+      <main className="min-w-0 flex-1 p-8">
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold">
+            Trade Journal
+          </h1>
+
+          <p className="mt-2 text-slate-400">
+            Record, review and improve every trade.
+          </p>
+        </div>
+
+        <form
+          onSubmit={saveTrade}
+          className="rounded-2xl border border-slate-800 bg-slate-900 p-6"
+        >
+          <div className="mb-6 flex items-center justify-between">
+            <h2 className="text-xl font-bold text-yellow-400">
+              {editingId !== null
+                ? "✏️ Edit Trade"
+                : "+ Add New Trade"}
+            </h2>
+
+            {editingId !== null && (
+              <button
+                type="button"
+                onClick={clearForm}
+                className="text-sm text-slate-400 hover:text-white"
+              >
+                Cancel Editing
+              </button>
+            )}
+          </div>
+
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <Input
+              label="Date"
+              name="date"
+              type="date"
+              value={form.date}
+              onChange={updateField}
+            />
+
+            <Input
+              label="Time"
+              name="time"
+              type="time"
+              value={form.time}
+              onChange={updateField}
+            />
+
+            <Select
+              label="Symbol"
+              name="symbol"
+              value={form.symbol}
+              onChange={updateField}
+              options={[
+                "XAUUSD",
+                "BTCUSD",
+                "EURUSD",
+                "GBPUSD",
+                "NAS100",
+                "US30",
+              ]}
+            />
+
+            <Select
+              label="Direction"
+              name="direction"
+              value={form.direction}
+              onChange={updateField}
+              options={["Buy", "Sell"]}
+            />
+
+            <Input
+              label="Entry Price"
+              name="entry"
+              type="number"
+              value={form.entry}
+              onChange={updateField}
+            />
+
+            <Input
+              label="Stop Loss"
+              name="stopLoss"
+              type="number"
+              value={form.stopLoss}
+              onChange={updateField}
+            />
+
+            <Input
+              label="Take Profit"
+              name="takeProfit"
+              type="number"
+              value={form.takeProfit}
+              onChange={updateField}
+            />
+
+            <Input
+              label="Exit Price"
+              name="exit"
+              type="number"
+              value={form.exit}
+              onChange={updateField}
+            />
+
+            <Input
+              label="Risk %"
+              name="risk"
+              type="number"
+              value={form.risk}
+              onChange={updateField}
+            />
+
+            <Input
+              label="Lot Size"
+              name="lotSize"
+              type="number"
+              value={form.lotSize}
+              onChange={updateField}
+            />
+
+            <Input
+              label="Profit / Loss ($)"
+              name="pnl"
+              type="number"
+              value={form.pnl}
+              onChange={updateField}
+            />
+
+            <Select
+              label="Session"
+              name="session"
+              value={form.session}
+              onChange={updateField}
+              options={[
+                "Asia",
+                "London",
+                "New York",
+                "London + New York",
+              ]}
+            />
+
+            <Input
+              label="Strategy / Setup"
+              name="strategy"
+              type="text"
+              value={form.strategy}
+              onChange={updateField}
+            />
+
+            <Select
+              label="Emotion"
+              name="emotion"
+              value={form.emotion}
+              onChange={updateField}
+              options={[
+                "Calm",
+                "Confident",
+                "Fear",
+                "FOMO",
+                "Revenge",
+                "Greedy",
+              ]}
+            />
+
+            <Select
+              label="Rules Followed?"
+              name="ruleFollowed"
+              value={form.ruleFollowed}
+              onChange={updateField}
+              options={[
+                "Yes",
+                "Partially",
+                "No",
+              ]}
+            />
+
+            <Input
+              label="TradingView Link"
+              name="tradingViewLink"
+              type="url"
+              value={form.tradingViewLink}
+              onChange={updateField}
+            />
+          </div>
+
+          <div className="mt-6">
+            <Label>Trade Notes</Label>
+
+            <textarea
+              name="notes"
+              value={form.notes}
+              onChange={updateField}
+              rows={5}
+              className={inputStyle}
+              placeholder="Why did you enter? What happened? What did you learn?"
+            />
+          </div>
+
+          <div className="mt-8">
+            <div className="flex items-center justify-between">
+              <Label>Chart Screenshots</Label>
+
+              <span className="text-sm text-slate-500">
+                {chartImages.length}/10
+              </span>
+            </div>
+
+            {chartImages.length > 0 && (
+              <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+                {chartImages.map((image, index) => (
+                  <div
+                    key={index}
+                    className="overflow-hidden rounded-xl border border-slate-700 bg-slate-950"
+                  >
+                    <button
+                      type="button"
+                      onClick={() => setSelectedImage(image)}
+                      className="block w-full"
+                    >
+                      <img
+                        src={image}
+                        alt={`Trade chart ${index + 1}`}
+                        className="h-40 w-full object-cover"
+                      />
+                    </button>
+
+                    <div className="flex justify-between p-3">
+                      <button
+                        type="button"
+                        onClick={() => setSelectedImage(image)}
+                        className="text-sm text-yellow-400"
+                      >
+                        View
+                      </button>
+
+                      <button
+                        type="button"
+                        onClick={() => removeChart(index)}
+                        className="text-sm text-red-400"
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {chartImages.length < 10 && (
+              <label className="mt-4 flex cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed border-slate-700 p-8 hover:border-yellow-400">
+                <span className="text-4xl">
+                  📷
+                </span>
+
+                <span className="mt-3 font-medium text-slate-300">
+                  Add Screenshots
+                </span>
+
+                <span className="mt-1 text-sm text-slate-500">
+                  Select one or multiple images — maximum 10.
+                </span>
+
+                <input
+                  type="file"
+                  accept="image/*"
+                  multiple
+                  className="hidden"
+                  onChange={handleChartUpload}
+                />
+              </label>
+            )}
+          </div>
+
+          <div className="mt-8 flex gap-4">
+            <button
+              type="submit"
+              className="rounded-xl bg-yellow-400 px-8 py-3 font-bold text-slate-950"
+            >
+              {editingId !== null
+                ? "Update Trade"
+                : "Save Trade"}
+            </button>
+
+            <button
+              type="button"
+              onClick={clearForm}
+              className="rounded-xl border border-slate-700 px-8 py-3 text-slate-300"
+            >
+              Clear
+            </button>
+          </div>
+        </form>
+
+        <section className="mt-10">
+          <h2 className="text-2xl font-bold">
+            Saved Trades
+          </h2>
+
+          <p className="mt-1 text-sm text-slate-400">
+            {trades.length} trades recorded
+          </p>
+
+          {trades.length === 0 ? (
+            <div className="mt-5 rounded-2xl border border-slate-800 bg-slate-900 p-12 text-center text-slate-500">
+              No trades saved yet.
+            </div>
+          ) : (
+            <div className="mt-5 overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900">
+              <table className="w-full min-w-[1200px] text-left">
+                <thead className="border-b border-slate-800">
+                  <tr>
+                    <TableHead>Date</TableHead>
+                    <TableHead>Time</TableHead>
+                    <TableHead>Symbol</TableHead>
+                    <TableHead>Side</TableHead>
+                    <TableHead>Strategy</TableHead>
+                    <TableHead>Session</TableHead>
+                    <TableHead>Risk</TableHead>
+                    <TableHead>P&L</TableHead>
+                    <TableHead>Charts</TableHead>
+                    <TableHead>Actions</TableHead>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  {trades.map((trade) => (
+                    <tr
+                      key={trade.id}
+                      className="border-b border-slate-800 last:border-0"
+                    >
+                      <TableCell>{trade.date || "—"}</TableCell>
+                      <TableCell>{trade.time || "—"}</TableCell>
+                      <TableCell>{trade.symbol}</TableCell>
+
+                      <TableCell>
+                        <span
+                          className={
+                            trade.direction === "Buy"
+                              ? "text-emerald-400"
+                              : "text-red-400"
+                          }
+                        >
+                          {trade.direction}
+                        </span>
+                      </TableCell>
+
+                      <TableCell>
+                        {trade.strategy || "—"}
+                      </TableCell>
+
+                      <TableCell>
+                        {trade.session || "—"}
+                      </TableCell>
+
+                      <TableCell>
+                        {trade.risk || 0}%
+                      </TableCell>
+
+                      <TableCell>
+                        <span
+                          className={
+                            trade.pnl > 0
+                              ? "font-bold text-emerald-400"
+                              : trade.pnl < 0
+                              ? "font-bold text-red-400"
+                              : "text-slate-400"
+                          }
+                        >
+                          {trade.pnl > 0 ? "+" : ""}
+                          ${trade.pnl}
+                        </span>
+                      </TableCell>
+
+                      <TableCell>
+                        {trade.chartImages?.length ? (
+                          <div className="flex gap-2">
+                            {trade.chartImages
+                              .slice(0, 3)
+                              .map((image, index) => (
+                                <button
+                                  key={index}
+                                  type="button"
+                                  onClick={() =>
+                                    setSelectedImage(image)
+                                  }
+                                >
+                                  <img
+                                    src={image}
+                                    alt={`Chart ${index + 1}`}
+                                    className="h-14 w-20 rounded-md object-cover"
+                                  />
+                                </button>
+                              ))}
+
+                            {trade.chartImages.length > 3 && (
+                              <span className="flex items-center text-sm text-slate-400">
+                                +{trade.chartImages.length - 3}
+                              </span>
+                            )}
+                          </div>
+                        ) : (
+                          <span className="text-slate-600">
+                            No charts
+                          </span>
+                        )}
+                      </TableCell>
+
+                      <TableCell>
+                        <div className="flex gap-2">
+                          <button
+                            type="button"
+                            onClick={() => editTrade(trade)}
+                            className="rounded-lg bg-blue-500/10 px-3 py-2 text-blue-400"
+                          >
+                            Edit
+                          </button>
+
+                          <button
+                            type="button"
+                            onClick={() => deleteTrade(trade.id)}
+                            className="rounded-lg bg-red-500/10 px-3 py-2 text-red-400"
+                          >
+                            Delete
+                          </button>
+                        </div>
+                      </TableCell>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </section>
+      </main>
+
+      <ChartModal
+        image={selectedImage}
+        onClose={() => setSelectedImage(null)}
+      />
+    </div>
+  );
+}
+
+function compressImage(file: File): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+
+    reader.onload = () => {
+      const image = new Image();
+
+      image.onload = () => {
+        const maxWidth = 1400;
+        const maxHeight = 900;
+
+        let width = image.width;
+        let height = image.height;
+
+        const ratio = Math.min(
+          maxWidth / width,
+          maxHeight / height,
+          1
+        );
+
+        width = Math.round(width * ratio);
+        height = Math.round(height * ratio);
+
+        const canvas = document.createElement("canvas");
+
+        canvas.width = width;
+        canvas.height = height;
+
+        const context = canvas.getContext("2d");
+
+        if (!context) {
+          reject(new Error("Canvas unavailable"));
+          return;
+        }
+
+        context.drawImage(
+          image,
+          0,
+          0,
+          width,
+          height
+        );
+
+        resolve(
+          canvas.toDataURL(
+            "image/jpeg",
+            0.65
+          )
+        );
+      };
+
+      image.onerror = () =>
+        reject(
+          new Error("Image could not be loaded")
+        );
+
+      image.src = reader.result as string;
+    };
+
+    reader.onerror = () =>
+      reject(
+        new Error("File could not be read")
+      );
+
+    reader.readAsDataURL(file);
+  });
+}
+
+const inputStyle =
+  "mt-2 w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition focus:border-yellow-400";
+
+function Label({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <label className="text-sm font-medium text-slate-300">
+      {children}
+    </label>
+  );
+}
+
+function Input({
+  label,
+  name,
+  type,
+  value,
+  onChange,
+}: {
+  label: string;
+  name: string;
+  type: string;
+  value: string;
+  onChange: (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => void;
+}) {
+  return (
+    <div>
+      <Label>{label}</Label>
+
+      <input
+        name={name}
+        type={type}
+        value={value}
+        onChange={onChange}
+        step={type === "number" ? "any" : undefined}
+        className={inputStyle}
+      />
+    </div>
+  );
+}
+
+function Select({
+  label,
+  name,
+  value,
+  onChange,
+  options,
+}: {
+  label: string;
+  name: string;
+  value: string;
+  onChange: (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => void;
+  options: string[];
+}) {
+  return (
+    <div>
+      <Label>{label}</Label>
+
+      <select
+        name={name}
+        value={value}
+        onChange={onChange}
+        className={inputStyle}
+      >
+        {options.map((option) => (
+          <option
+            key={option}
+            value={option}
+          >
+            {option}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+}
+
+function TableHead({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <th className="whitespace-nowrap px-5 py-4 text-xs font-semibold uppercase text-slate-400">
+      {children}
+    </th>
+  );
+}
+
+function TableCell({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <td className="whitespace-nowrap px-5 py-4 text-sm text-slate-300">
+      {children}
+    </td>
+  );
+}

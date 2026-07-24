@@ -1,0 +1,1963 @@
+{
+  "database_name": "EDGE X PRO Historical NFP Releases",
+  "event_type": "NFP",
+  "instrument": "XAUUSD",
+  "total_verified_events": 54,
+  "total_skipped_events": 0,
+  "time_policy": {
+    "release": "8:30 AM America/New_York",
+    "internal": "UTC",
+    "display": "Asia/Kolkata"
+  },
+  "actual_data_source": "U.S. Bureau of Labor Statistics Public Data API",
+  "series_id": "CES0000000001",
+  "forecast_policy": "Historical market consensus is intentionally null until a separately verified consensus source is added.",
+  "revision_warning": "The BLS API series contains the latest revised payroll levels. Therefore calculated historical monthly changes can differ from the first NFP number reported on the original release day.",
+  "events": [
+    {
+      "id": "NFP_2021_12",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2022-01-07T08:30:00-05:00",
+      "timestamp_utc": "2022-01-07T13:30:00+00:00",
+      "timestamp_ist": "2022-01-07T19:00:00+05:30",
+      "date_ist": "2022-01-07",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "December 2021"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 149816.0,
+        "actual": 586.0,
+        "forecast": null,
+        "previous": 658.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 586.0,
+      "forecast": null,
+      "previous": 658.0,
+      "release": {
+        "previous": "+658K",
+        "actual": "+586K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2022_01",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2022-02-04T08:30:00-05:00",
+      "timestamp_utc": "2022-02-04T13:30:00+00:00",
+      "timestamp_ist": "2022-02-04T19:00:00+05:30",
+      "date_ist": "2022-02-04",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "January 2022"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 150006.0,
+        "actual": 190.0,
+        "forecast": null,
+        "previous": 586.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 190.0,
+      "forecast": null,
+      "previous": 586.0,
+      "release": {
+        "previous": "+586K",
+        "actual": "+190K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2022_02",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2022-03-04T08:30:00-05:00",
+      "timestamp_utc": "2022-03-04T13:30:00+00:00",
+      "timestamp_ist": "2022-03-04T19:00:00+05:30",
+      "date_ist": "2022-03-04",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "February 2022"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 150825.0,
+        "actual": 819.0,
+        "forecast": null,
+        "previous": 190.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 819.0,
+      "forecast": null,
+      "previous": 190.0,
+      "release": {
+        "previous": "+190K",
+        "actual": "+819K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2022_03",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2022-04-01T08:30:00-04:00",
+      "timestamp_utc": "2022-04-01T12:30:00+00:00",
+      "timestamp_ist": "2022-04-01T18:00:00+05:30",
+      "date_ist": "2022-04-01",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "March 2022"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 151315.0,
+        "actual": 490.0,
+        "forecast": null,
+        "previous": 819.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 490.0,
+      "forecast": null,
+      "previous": 819.0,
+      "release": {
+        "previous": "+819K",
+        "actual": "+490K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2022_04",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2022-05-06T08:30:00-04:00",
+      "timestamp_utc": "2022-05-06T12:30:00+00:00",
+      "timestamp_ist": "2022-05-06T18:00:00+05:30",
+      "date_ist": "2022-05-06",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "April 2022"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 151623.0,
+        "actual": 308.0,
+        "forecast": null,
+        "previous": 490.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 308.0,
+      "forecast": null,
+      "previous": 490.0,
+      "release": {
+        "previous": "+490K",
+        "actual": "+308K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2022_05",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2022-06-03T08:30:00-04:00",
+      "timestamp_utc": "2022-06-03T12:30:00+00:00",
+      "timestamp_ist": "2022-06-03T18:00:00+05:30",
+      "date_ist": "2022-06-03",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "May 2022"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 151924.0,
+        "actual": 301.0,
+        "forecast": null,
+        "previous": 308.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 301.0,
+      "forecast": null,
+      "previous": 308.0,
+      "release": {
+        "previous": "+308K",
+        "actual": "+301K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2022_06",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2022-07-08T08:30:00-04:00",
+      "timestamp_utc": "2022-07-08T12:30:00+00:00",
+      "timestamp_ist": "2022-07-08T18:00:00+05:30",
+      "date_ist": "2022-07-08",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "June 2022"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 152358.0,
+        "actual": 434.0,
+        "forecast": null,
+        "previous": 301.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 434.0,
+      "forecast": null,
+      "previous": 301.0,
+      "release": {
+        "previous": "+301K",
+        "actual": "+434K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2022_07",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2022-08-05T08:30:00-04:00",
+      "timestamp_utc": "2022-08-05T12:30:00+00:00",
+      "timestamp_ist": "2022-08-05T18:00:00+05:30",
+      "date_ist": "2022-08-05",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "July 2022"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 153072.0,
+        "actual": 714.0,
+        "forecast": null,
+        "previous": 434.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 714.0,
+      "forecast": null,
+      "previous": 434.0,
+      "release": {
+        "previous": "+434K",
+        "actual": "+714K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2022_08",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2022-09-02T08:30:00-04:00",
+      "timestamp_utc": "2022-09-02T12:30:00+00:00",
+      "timestamp_ist": "2022-09-02T18:00:00+05:30",
+      "date_ist": "2022-09-02",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "August 2022"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 153362.0,
+        "actual": 290.0,
+        "forecast": null,
+        "previous": 714.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 290.0,
+      "forecast": null,
+      "previous": 714.0,
+      "release": {
+        "previous": "+714K",
+        "actual": "+290K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2022_09",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2022-10-07T08:30:00-04:00",
+      "timestamp_utc": "2022-10-07T12:30:00+00:00",
+      "timestamp_ist": "2022-10-07T18:00:00+05:30",
+      "date_ist": "2022-10-07",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "September 2022"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 153582.0,
+        "actual": 220.0,
+        "forecast": null,
+        "previous": 290.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 220.0,
+      "forecast": null,
+      "previous": 290.0,
+      "release": {
+        "previous": "+290K",
+        "actual": "+220K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2022_10",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2022-11-04T08:30:00-04:00",
+      "timestamp_utc": "2022-11-04T12:30:00+00:00",
+      "timestamp_ist": "2022-11-04T18:00:00+05:30",
+      "date_ist": "2022-11-04",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "October 2022"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 153939.0,
+        "actual": 357.0,
+        "forecast": null,
+        "previous": 220.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 357.0,
+      "forecast": null,
+      "previous": 220.0,
+      "release": {
+        "previous": "+220K",
+        "actual": "+357K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2022_11",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2022-12-02T08:30:00-05:00",
+      "timestamp_utc": "2022-12-02T13:30:00+00:00",
+      "timestamp_ist": "2022-12-02T19:00:00+05:30",
+      "date_ist": "2022-12-02",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "November 2022"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 154242.0,
+        "actual": 303.0,
+        "forecast": null,
+        "previous": 357.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 303.0,
+      "forecast": null,
+      "previous": 357.0,
+      "release": {
+        "previous": "+357K",
+        "actual": "+303K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2022_12",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2023-01-06T08:30:00-05:00",
+      "timestamp_utc": "2023-01-06T13:30:00+00:00",
+      "timestamp_ist": "2023-01-06T19:00:00+05:30",
+      "date_ist": "2023-01-06",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "December 2022"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 154342.0,
+        "actual": 100.0,
+        "forecast": null,
+        "previous": 303.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 100.0,
+      "forecast": null,
+      "previous": 303.0,
+      "release": {
+        "previous": "+303K",
+        "actual": "+100K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2023_01",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2023-02-03T08:30:00-05:00",
+      "timestamp_utc": "2023-02-03T13:30:00+00:00",
+      "timestamp_ist": "2023-02-03T19:00:00+05:30",
+      "date_ist": "2023-02-03",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "January 2023"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 154776.0,
+        "actual": 434.0,
+        "forecast": null,
+        "previous": 100.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 434.0,
+      "forecast": null,
+      "previous": 100.0,
+      "release": {
+        "previous": "+100K",
+        "actual": "+434K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2023_02",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2023-03-10T08:30:00-05:00",
+      "timestamp_utc": "2023-03-10T13:30:00+00:00",
+      "timestamp_ist": "2023-03-10T19:00:00+05:30",
+      "date_ist": "2023-03-10",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "February 2023"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 155066.0,
+        "actual": 290.0,
+        "forecast": null,
+        "previous": 434.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 290.0,
+      "forecast": null,
+      "previous": 434.0,
+      "release": {
+        "previous": "+434K",
+        "actual": "+290K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2023_03",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2023-04-07T08:30:00-04:00",
+      "timestamp_utc": "2023-04-07T12:30:00+00:00",
+      "timestamp_ist": "2023-04-07T18:00:00+05:30",
+      "date_ist": "2023-04-07",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "March 2023"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 155134.0,
+        "actual": 68.0,
+        "forecast": null,
+        "previous": 290.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 68.0,
+      "forecast": null,
+      "previous": 290.0,
+      "release": {
+        "previous": "+290K",
+        "actual": "+68K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2023_04",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2023-05-05T08:30:00-04:00",
+      "timestamp_utc": "2023-05-05T12:30:00+00:00",
+      "timestamp_ist": "2023-05-05T18:00:00+05:30",
+      "date_ist": "2023-05-05",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "April 2023"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 155375.0,
+        "actual": 241.0,
+        "forecast": null,
+        "previous": 68.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 241.0,
+      "forecast": null,
+      "previous": 68.0,
+      "release": {
+        "previous": "+68K",
+        "actual": "+241K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2023_05",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2023-06-02T08:30:00-04:00",
+      "timestamp_utc": "2023-06-02T12:30:00+00:00",
+      "timestamp_ist": "2023-06-02T18:00:00+05:30",
+      "date_ist": "2023-06-02",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "May 2023"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 155655.0,
+        "actual": 280.0,
+        "forecast": null,
+        "previous": 241.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 280.0,
+      "forecast": null,
+      "previous": 241.0,
+      "release": {
+        "previous": "+241K",
+        "actual": "+280K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2023_06",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2023-07-07T08:30:00-04:00",
+      "timestamp_utc": "2023-07-07T12:30:00+00:00",
+      "timestamp_ist": "2023-07-07T18:00:00+05:30",
+      "date_ist": "2023-07-07",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "June 2023"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 155880.0,
+        "actual": 225.0,
+        "forecast": null,
+        "previous": 280.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 225.0,
+      "forecast": null,
+      "previous": 280.0,
+      "release": {
+        "previous": "+280K",
+        "actual": "+225K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2023_07",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2023-08-04T08:30:00-04:00",
+      "timestamp_utc": "2023-08-04T12:30:00+00:00",
+      "timestamp_ist": "2023-08-04T18:00:00+05:30",
+      "date_ist": "2023-08-04",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "July 2023"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 156043.0,
+        "actual": 163.0,
+        "forecast": null,
+        "previous": 225.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 163.0,
+      "forecast": null,
+      "previous": 225.0,
+      "release": {
+        "previous": "+225K",
+        "actual": "+163K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2023_08",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2023-09-01T08:30:00-04:00",
+      "timestamp_utc": "2023-09-01T12:30:00+00:00",
+      "timestamp_ist": "2023-09-01T18:00:00+05:30",
+      "date_ist": "2023-09-01",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "August 2023"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 156261.0,
+        "actual": 218.0,
+        "forecast": null,
+        "previous": 163.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 218.0,
+      "forecast": null,
+      "previous": 163.0,
+      "release": {
+        "previous": "+163K",
+        "actual": "+218K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2023_09",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2023-10-06T08:30:00-04:00",
+      "timestamp_utc": "2023-10-06T12:30:00+00:00",
+      "timestamp_ist": "2023-10-06T18:00:00+05:30",
+      "date_ist": "2023-10-06",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "September 2023"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 156417.0,
+        "actual": 156.0,
+        "forecast": null,
+        "previous": 218.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 156.0,
+      "forecast": null,
+      "previous": 218.0,
+      "release": {
+        "previous": "+218K",
+        "actual": "+156K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2023_10",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2023-11-03T08:30:00-04:00",
+      "timestamp_utc": "2023-11-03T12:30:00+00:00",
+      "timestamp_ist": "2023-11-03T18:00:00+05:30",
+      "date_ist": "2023-11-03",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "October 2023"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 156576.0,
+        "actual": 159.0,
+        "forecast": null,
+        "previous": 156.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 159.0,
+      "forecast": null,
+      "previous": 156.0,
+      "release": {
+        "previous": "+156K",
+        "actual": "+159K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2023_11",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2023-12-08T08:30:00-05:00",
+      "timestamp_utc": "2023-12-08T13:30:00+00:00",
+      "timestamp_ist": "2023-12-08T19:00:00+05:30",
+      "date_ist": "2023-12-08",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "November 2023"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 156703.0,
+        "actual": 127.0,
+        "forecast": null,
+        "previous": 159.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 127.0,
+      "forecast": null,
+      "previous": 159.0,
+      "release": {
+        "previous": "+159K",
+        "actual": "+127K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2023_12",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2024-01-05T08:30:00-05:00",
+      "timestamp_utc": "2024-01-05T13:30:00+00:00",
+      "timestamp_ist": "2024-01-05T19:00:00+05:30",
+      "date_ist": "2024-01-05",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "December 2023"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 156857.0,
+        "actual": 154.0,
+        "forecast": null,
+        "previous": 127.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 154.0,
+      "forecast": null,
+      "previous": 127.0,
+      "release": {
+        "previous": "+127K",
+        "actual": "+154K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2024_01",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2024-02-02T08:30:00-05:00",
+      "timestamp_utc": "2024-02-02T13:30:00+00:00",
+      "timestamp_ist": "2024-02-02T19:00:00+05:30",
+      "date_ist": "2024-02-02",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "January 2024"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 157032.0,
+        "actual": 175.0,
+        "forecast": null,
+        "previous": 154.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 175.0,
+      "forecast": null,
+      "previous": 154.0,
+      "release": {
+        "previous": "+154K",
+        "actual": "+175K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2024_02",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2024-03-08T08:30:00-05:00",
+      "timestamp_utc": "2024-03-08T13:30:00+00:00",
+      "timestamp_ist": "2024-03-08T19:00:00+05:30",
+      "date_ist": "2024-03-08",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "February 2024"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 157238.0,
+        "actual": 206.0,
+        "forecast": null,
+        "previous": 175.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 206.0,
+      "forecast": null,
+      "previous": 175.0,
+      "release": {
+        "previous": "+175K",
+        "actual": "+206K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2024_03",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2024-04-05T08:30:00-04:00",
+      "timestamp_utc": "2024-04-05T12:30:00+00:00",
+      "timestamp_ist": "2024-04-05T18:00:00+05:30",
+      "date_ist": "2024-04-05",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "March 2024"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 157466.0,
+        "actual": 228.0,
+        "forecast": null,
+        "previous": 206.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 228.0,
+      "forecast": null,
+      "previous": 206.0,
+      "release": {
+        "previous": "+206K",
+        "actual": "+228K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2024_04",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2024-05-03T08:30:00-04:00",
+      "timestamp_utc": "2024-05-03T12:30:00+00:00",
+      "timestamp_ist": "2024-05-03T18:00:00+05:30",
+      "date_ist": "2024-05-03",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "April 2024"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 157530.0,
+        "actual": 64.0,
+        "forecast": null,
+        "previous": 228.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 64.0,
+      "forecast": null,
+      "previous": 228.0,
+      "release": {
+        "previous": "+228K",
+        "actual": "+64K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2024_05",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2024-06-07T08:30:00-04:00",
+      "timestamp_utc": "2024-06-07T12:30:00+00:00",
+      "timestamp_ist": "2024-06-07T18:00:00+05:30",
+      "date_ist": "2024-06-07",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "May 2024"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 157608.0,
+        "actual": 78.0,
+        "forecast": null,
+        "previous": 64.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 78.0,
+      "forecast": null,
+      "previous": 64.0,
+      "release": {
+        "previous": "+64K",
+        "actual": "+78K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2024_06",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2024-07-05T08:30:00-04:00",
+      "timestamp_utc": "2024-07-05T12:30:00+00:00",
+      "timestamp_ist": "2024-07-05T18:00:00+05:30",
+      "date_ist": "2024-07-05",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "June 2024"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 157695.0,
+        "actual": 87.0,
+        "forecast": null,
+        "previous": 78.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 87.0,
+      "forecast": null,
+      "previous": 78.0,
+      "release": {
+        "previous": "+78K",
+        "actual": "+87K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2024_07",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2024-08-02T08:30:00-04:00",
+      "timestamp_utc": "2024-08-02T12:30:00+00:00",
+      "timestamp_ist": "2024-08-02T18:00:00+05:30",
+      "date_ist": "2024-08-02",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "July 2024"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 157748.0,
+        "actual": 53.0,
+        "forecast": null,
+        "previous": 87.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 53.0,
+      "forecast": null,
+      "previous": 87.0,
+      "release": {
+        "previous": "+87K",
+        "actual": "+53K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2024_08",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2024-09-06T08:30:00-04:00",
+      "timestamp_utc": "2024-09-06T12:30:00+00:00",
+      "timestamp_ist": "2024-09-06T18:00:00+05:30",
+      "date_ist": "2024-09-06",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "August 2024"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 157757.0,
+        "actual": 9.0,
+        "forecast": null,
+        "previous": 53.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 9.0,
+      "forecast": null,
+      "previous": 53.0,
+      "release": {
+        "previous": "+53K",
+        "actual": "+9K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2024_09",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2024-10-04T08:30:00-04:00",
+      "timestamp_utc": "2024-10-04T12:30:00+00:00",
+      "timestamp_ist": "2024-10-04T18:00:00+05:30",
+      "date_ist": "2024-10-04",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "September 2024"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 157912.0,
+        "actual": 155.0,
+        "forecast": null,
+        "previous": 9.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 155.0,
+      "forecast": null,
+      "previous": 9.0,
+      "release": {
+        "previous": "+9K",
+        "actual": "+155K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2024_10",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2024-11-01T08:30:00-04:00",
+      "timestamp_utc": "2024-11-01T12:30:00+00:00",
+      "timestamp_ist": "2024-11-01T18:00:00+05:30",
+      "date_ist": "2024-11-01",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "October 2024"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 157945.0,
+        "actual": 33.0,
+        "forecast": null,
+        "previous": 155.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 33.0,
+      "forecast": null,
+      "previous": 155.0,
+      "release": {
+        "previous": "+155K",
+        "actual": "+33K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2024_11",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2024-12-06T08:30:00-05:00",
+      "timestamp_utc": "2024-12-06T13:30:00+00:00",
+      "timestamp_ist": "2024-12-06T19:00:00+05:30",
+      "date_ist": "2024-12-06",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "November 2024"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 158079.0,
+        "actual": 134.0,
+        "forecast": null,
+        "previous": 33.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 134.0,
+      "forecast": null,
+      "previous": 33.0,
+      "release": {
+        "previous": "+33K",
+        "actual": "+134K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2024_12",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2025-01-10T08:30:00-05:00",
+      "timestamp_utc": "2025-01-10T13:30:00+00:00",
+      "timestamp_ist": "2025-01-10T19:00:00+05:30",
+      "date_ist": "2025-01-10",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "December 2024"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 158316.0,
+        "actual": 237.0,
+        "forecast": null,
+        "previous": 134.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 237.0,
+      "forecast": null,
+      "previous": 134.0,
+      "release": {
+        "previous": "+134K",
+        "actual": "+237K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2025_01",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2025-02-07T08:30:00-05:00",
+      "timestamp_utc": "2025-02-07T13:30:00+00:00",
+      "timestamp_ist": "2025-02-07T19:00:00+05:30",
+      "date_ist": "2025-02-07",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "January 2025"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 158268.0,
+        "actual": -48.0,
+        "forecast": null,
+        "previous": 237.0,
+        "unit": "thousand jobs"
+      },
+      "actual": -48.0,
+      "forecast": null,
+      "previous": 237.0,
+      "release": {
+        "previous": "+237K",
+        "actual": "-48K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2025_02",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2025-03-07T08:30:00-05:00",
+      "timestamp_utc": "2025-03-07T13:30:00+00:00",
+      "timestamp_ist": "2025-03-07T19:00:00+05:30",
+      "date_ist": "2025-03-07",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "February 2025"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 158310.0,
+        "actual": 42.0,
+        "forecast": null,
+        "previous": -48.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 42.0,
+      "forecast": null,
+      "previous": -48.0,
+      "release": {
+        "previous": "-48K",
+        "actual": "+42K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2025_03",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2025-04-04T08:30:00-04:00",
+      "timestamp_utc": "2025-04-04T12:30:00+00:00",
+      "timestamp_ist": "2025-04-04T18:00:00+05:30",
+      "date_ist": "2025-04-04",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "March 2025"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 158377.0,
+        "actual": 67.0,
+        "forecast": null,
+        "previous": 42.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 67.0,
+      "forecast": null,
+      "previous": 42.0,
+      "release": {
+        "previous": "+42K",
+        "actual": "+67K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2025_04",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2025-05-02T08:30:00-04:00",
+      "timestamp_utc": "2025-05-02T12:30:00+00:00",
+      "timestamp_ist": "2025-05-02T18:00:00+05:30",
+      "date_ist": "2025-05-02",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "April 2025"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 158485.0,
+        "actual": 108.0,
+        "forecast": null,
+        "previous": 67.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 108.0,
+      "forecast": null,
+      "previous": 67.0,
+      "release": {
+        "previous": "+67K",
+        "actual": "+108K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2025_05",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2025-06-06T08:30:00-04:00",
+      "timestamp_utc": "2025-06-06T12:30:00+00:00",
+      "timestamp_ist": "2025-06-06T18:00:00+05:30",
+      "date_ist": "2025-06-06",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "May 2025"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 158498.0,
+        "actual": 13.0,
+        "forecast": null,
+        "previous": 108.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 13.0,
+      "forecast": null,
+      "previous": 108.0,
+      "release": {
+        "previous": "+108K",
+        "actual": "+13K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2025_06",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2025-07-03T08:30:00-04:00",
+      "timestamp_utc": "2025-07-03T12:30:00+00:00",
+      "timestamp_ist": "2025-07-03T18:00:00+05:30",
+      "date_ist": "2025-07-03",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "June 2025"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 158478.0,
+        "actual": -20.0,
+        "forecast": null,
+        "previous": 13.0,
+        "unit": "thousand jobs"
+      },
+      "actual": -20.0,
+      "forecast": null,
+      "previous": 13.0,
+      "release": {
+        "previous": "+13K",
+        "actual": "-20K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2025_07",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2025-08-01T08:30:00-04:00",
+      "timestamp_utc": "2025-08-01T12:30:00+00:00",
+      "timestamp_ist": "2025-08-01T18:00:00+05:30",
+      "date_ist": "2025-08-01",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "July 2025"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 158542.0,
+        "actual": 64.0,
+        "forecast": null,
+        "previous": -20.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 64.0,
+      "forecast": null,
+      "previous": -20.0,
+      "release": {
+        "previous": "-20K",
+        "actual": "+64K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2025_08",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2025-09-05T08:30:00-04:00",
+      "timestamp_utc": "2025-09-05T12:30:00+00:00",
+      "timestamp_ist": "2025-09-05T18:00:00+05:30",
+      "date_ist": "2025-09-05",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "August 2025"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 158472.0,
+        "actual": -70.0,
+        "forecast": null,
+        "previous": 64.0,
+        "unit": "thousand jobs"
+      },
+      "actual": -70.0,
+      "forecast": null,
+      "previous": 64.0,
+      "release": {
+        "previous": "+64K",
+        "actual": "-70K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2025_09",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2025-11-20T08:30:00-05:00",
+      "timestamp_utc": "2025-11-20T13:30:00+00:00",
+      "timestamp_ist": "2025-11-20T19:00:00+05:30",
+      "date_ist": "2025-11-20",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "September 2025"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 158548.0,
+        "actual": 76.0,
+        "forecast": null,
+        "previous": -70.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 76.0,
+      "forecast": null,
+      "previous": -70.0,
+      "release": {
+        "previous": "-70K",
+        "actual": "+76K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2025_11",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2025-12-16T08:30:00-05:00",
+      "timestamp_utc": "2025-12-16T13:30:00+00:00",
+      "timestamp_ist": "2025-12-16T19:00:00+05:30",
+      "date_ist": "2025-12-16",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "November 2025"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 158449.0,
+        "actual": 41.0,
+        "forecast": null,
+        "previous": -140.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 41.0,
+      "forecast": null,
+      "previous": -140.0,
+      "release": {
+        "previous": "-140K",
+        "actual": "+41K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2025_12",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2026-01-09T08:30:00-05:00",
+      "timestamp_utc": "2026-01-09T13:30:00+00:00",
+      "timestamp_ist": "2026-01-09T19:00:00+05:30",
+      "date_ist": "2026-01-09",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "December 2025"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 158432.0,
+        "actual": -17.0,
+        "forecast": null,
+        "previous": 41.0,
+        "unit": "thousand jobs"
+      },
+      "actual": -17.0,
+      "forecast": null,
+      "previous": 41.0,
+      "release": {
+        "previous": "+41K",
+        "actual": "-17K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2026_01",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2026-02-11T08:30:00-05:00",
+      "timestamp_utc": "2026-02-11T13:30:00+00:00",
+      "timestamp_ist": "2026-02-11T19:00:00+05:30",
+      "date_ist": "2026-02-11",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "January 2026"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 158592.0,
+        "actual": 160.0,
+        "forecast": null,
+        "previous": -17.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 160.0,
+      "forecast": null,
+      "previous": -17.0,
+      "release": {
+        "previous": "-17K",
+        "actual": "+160K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2026_02",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2026-03-06T08:30:00-05:00",
+      "timestamp_utc": "2026-03-06T13:30:00+00:00",
+      "timestamp_ist": "2026-03-06T19:00:00+05:30",
+      "date_ist": "2026-03-06",
+      "time_ist": "19:00",
+      "reference_periods": [
+        "February 2026"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 158436.0,
+        "actual": -156.0,
+        "forecast": null,
+        "previous": 160.0,
+        "unit": "thousand jobs"
+      },
+      "actual": -156.0,
+      "forecast": null,
+      "previous": 160.0,
+      "release": {
+        "previous": "+160K",
+        "actual": "-156K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2026_03",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2026-04-03T08:30:00-04:00",
+      "timestamp_utc": "2026-04-03T12:30:00+00:00",
+      "timestamp_ist": "2026-04-03T18:00:00+05:30",
+      "date_ist": "2026-04-03",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "March 2026"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 158650.0,
+        "actual": 214.0,
+        "forecast": null,
+        "previous": -156.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 214.0,
+      "forecast": null,
+      "previous": -156.0,
+      "release": {
+        "previous": "-156K",
+        "actual": "+214K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2026_04",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2026-05-08T08:30:00-04:00",
+      "timestamp_utc": "2026-05-08T12:30:00+00:00",
+      "timestamp_ist": "2026-05-08T18:00:00+05:30",
+      "date_ist": "2026-05-08",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "April 2026"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 158798.0,
+        "actual": 148.0,
+        "forecast": null,
+        "previous": 214.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 148.0,
+      "forecast": null,
+      "previous": 214.0,
+      "release": {
+        "previous": "+214K",
+        "actual": "+148K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2026_05",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2026-06-05T08:30:00-04:00",
+      "timestamp_utc": "2026-06-05T12:30:00+00:00",
+      "timestamp_ist": "2026-06-05T18:00:00+05:30",
+      "date_ist": "2026-06-05",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "May 2026"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 158927.0,
+        "actual": 129.0,
+        "forecast": null,
+        "previous": 148.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 129.0,
+      "forecast": null,
+      "previous": 148.0,
+      "release": {
+        "previous": "+148K",
+        "actual": "+129K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    },
+    {
+      "id": "NFP_2026_06",
+      "events": [
+        "US Nonfarm Payrolls"
+      ],
+      "event": "NFP",
+      "category": "NFP",
+      "verified": true,
+      "timestamp_et": "2026-07-02T08:30:00-04:00",
+      "timestamp_utc": "2026-07-02T12:30:00+00:00",
+      "timestamp_ist": "2026-07-02T18:00:00+05:30",
+      "date_ist": "2026-07-02",
+      "time_ist": "18:00",
+      "reference_periods": [
+        "June 2026"
+      ],
+      "numbers": {
+        "total_nonfarm_payrolls_thousands": 158984.0,
+        "actual": 57.0,
+        "forecast": null,
+        "previous": 129.0,
+        "unit": "thousand jobs"
+      },
+      "actual": 57.0,
+      "forecast": null,
+      "previous": 129.0,
+      "release": {
+        "previous": "+129K",
+        "actual": "+57K",
+        "result": "NFP RELEASE"
+      },
+      "official_source": "U.S. Bureau of Labor Statistics",
+      "series_id": "CES0000000001",
+      "consensus_status": "PENDING_VERIFIED_SOURCE",
+      "data_note": "NFP monthly payroll change calculated from the official seasonally adjusted BLS Total Nonfarm Payroll employment series. Historical consensus is not included. Values from the live BLS series may include later revisions."
+    }
+  ],
+  "skipped_events": []
+}

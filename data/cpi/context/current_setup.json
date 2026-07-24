@@ -1,0 +1,191 @@
+{
+  "category": "cpi",
+  "event_name": "US Core CPI",
+  "event_time_utc": "2026-07-25T18:00:00+00:00",
+  "technical": {
+    "collected_at_utc": "2026-07-20T16:11:39.145753+00:00",
+    "symbol": "XAUUSD",
+    "broker": "Winprofx Limited",
+    "latest_candle_time_utc": "2026-07-20T19:11:00+00:00",
+    "day_direction": "UP",
+    "day_location": "MIDDLE_DAY_RANGE",
+    "day_context": {
+      "day_open": 4001.9,
+      "current_price": 4015.88,
+      "day_high": 4040.73,
+      "day_low": 3982.48,
+      "day_move_usd": 13.98,
+      "day_direction": "UP",
+      "day_range_usd": 58.25,
+      "range_position_percent": 57.3,
+      "day_location": "MIDDLE_DAY_RANGE"
+    },
+    "timeframes": {
+      "15m": "UP",
+      "30m": "UP",
+      "1h": "UP",
+      "4h": "UP"
+    },
+    "timeframe_details": {
+      "15m": {
+        "direction": "UP",
+        "move_usd": 1.02
+      },
+      "30m": {
+        "direction": "UP",
+        "move_usd": 5.05
+      },
+      "1h": {
+        "direction": "UP",
+        "move_usd": 2.34
+      },
+      "4h": {
+        "direction": "UP",
+        "move_usd": 0.26
+      }
+    },
+    "liquidity": {
+      "available": true,
+      "sequence": "NO_RECENT_SWEEP",
+      "upside_swept": false,
+      "downside_swept": false,
+      "upside_rejected": false,
+      "downside_reclaimed": false,
+      "reference_high": 4019.52,
+      "reference_low": 3998.14,
+      "final_hour_high": 4018.36,
+      "final_hour_low": 4010.36,
+      "current_price": 4015.88
+    }
+  },
+  "fundamental": {
+    "event": {
+      "name": "FED Interest Rate Decision",
+      "meeting_start_date": "2026-07-28",
+      "next_meeting_date": "2026-07-29",
+      "meeting_label": "July 28-29, 2026",
+      "decision_time_et": "14:00",
+      "press_conference_time_et": "14:30",
+      "current_target_lower": null,
+      "current_target_upper": null,
+      "source": "Federal Reserve"
+    },
+    "market_probabilities": {
+      "cut": null,
+      "hold": null,
+      "hike": null,
+      "source": "UNKNOWN",
+      "updated_at": null
+    },
+    "expected_decision": "UNKNOWN",
+    "dollar_bias": "MIXED",
+    "treasury_yields": "RISING",
+    "inflation_trend": "COOLING",
+    "labor_market": "WEAKENING",
+    "fed_tone": "UNKNOWN",
+    "geopolitical_risk": "UNKNOWN",
+    "macro": {
+      "cpi": {
+        "actual_mom": -0.4,
+        "actual_yoy": 3.5,
+        "raw_mom": -0.4225,
+        "raw_yoy": 3.4635,
+        "index": 332.568,
+        "release_period": "2026-06-01",
+        "source": "U.S. Bureau of Labor Statistics",
+        "forecast": null
+      },
+      "core_cpi": {
+        "actual_mom": -0.0,
+        "actual_yoy": 2.6,
+        "raw_mom": -0.0167,
+        "raw_yoy": 2.5658,
+        "index": 336.065,
+        "release_period": "2026-06-01",
+        "source": "U.S. Bureau of Labor Statistics",
+        "forecast": null
+      },
+      "nfp": {
+        "actual": 57.0,
+        "previous": 129.0,
+        "forecast": null,
+        "release_period": "2026-06-01",
+        "unit": "thousand jobs",
+        "source": "U.S. Bureau of Labor Statistics"
+      },
+      "unemployment": {
+        "actual": 4.2,
+        "previous": 4.3,
+        "forecast": null,
+        "release_period": "2026-06-01",
+        "unit": "percent",
+        "source": "U.S. Bureau of Labor Statistics"
+      }
+    },
+    "markets": {
+      "dxy": {
+        "value": 100.982,
+        "date": "2026-07-20",
+        "direction": "MIXED",
+        "direction_1d": "RISING",
+        "direction_5d": "FALLING",
+        "direction_20d": "FLAT",
+        "change_1d_percent": 0.23,
+        "change_5d_percent": -0.294,
+        "change_20d_percent": 0.131,
+        "source": "Yahoo Finance chart data"
+      },
+      "us10y": {
+        "value": 4.592,
+        "date": "2026-07-20",
+        "direction": "RISING",
+        "direction_1d": "RISING",
+        "direction_5d": "FLAT",
+        "direction_20d": "RISING",
+        "change_1d_percent": 1.123,
+        "change_5d_percent": -0.369,
+        "change_20d_percent": 3.168,
+        "source": "Yahoo Finance chart data"
+      },
+      "gold": {
+        "value": null,
+        "direction": "UNKNOWN"
+      }
+    },
+    "context": {
+      "fed_drivers": [],
+      "inflation_drivers": [],
+      "labor_drivers": [],
+      "dollar_drivers": [],
+      "geopolitical_drivers": []
+    },
+    "data_quality": {
+      "official_fomc_calendar": true,
+      "official_target_rate": false,
+      "market_probabilities": false,
+      "macro_data": true,
+      "market_data": true,
+      "fed_news": false,
+      "geopolitical_news": false,
+      "cpi_data": true,
+      "core_cpi_data": true,
+      "nfp_data": true,
+      "unemployment_data": true,
+      "dxy_data": true,
+      "us10y_data": true
+    },
+    "macro_source_status": "LIVE_BLS",
+    "macro_updated_at_utc": "2026-07-20T16:11:41.169311+00:00",
+    "gold_market_bias": {
+      "bias": "BEARISH",
+      "score": -2,
+      "reasons": [
+        "US dollar trend is mixed.",
+        "Rising Treasury yields pressure gold."
+      ]
+    },
+    "market_context_updated_at_utc": "2026-07-20T16:11:43.099069+00:00"
+  },
+  "fundamental_updated_at_utc": "2026-07-18T17:29:30.776854+00:00",
+  "event_date": "2026-07-29"
+}

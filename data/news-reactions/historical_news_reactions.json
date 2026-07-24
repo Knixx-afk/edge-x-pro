@@ -1,0 +1,124 @@
+{
+  "timezone": "Asia/Kolkata",
+  "instrument": "XAUUSD",
+  "price_source": "Dukascopy Spot Gold",
+  "events": [
+    {
+      "id": "CPI-2026-07-14",
+      "event": "CPI",
+      "success": true,
+      "release": {
+        "date": "2026-07-14",
+        "time_ist": "18:00",
+        "timestamp_ist": "2026-07-14 18:00:00",
+        "actual": null,
+        "forecast": null,
+        "previous": null
+      },
+      "fundamental_analysis": {
+        "bias": "UNCLASSIFIED",
+        "expected_gold_direction": null,
+        "surprise": null
+      },
+      "impulse_candle": {
+        "open": 4030.31,
+        "high": 4090.07,
+        "low": 4029.595,
+        "close": 4087.87,
+        "direction": "UP",
+        "move": 57.56,
+        "range": 60.475,
+        "body": 57.56,
+        "upper_wick": 2.2,
+        "lower_wick": 0.715,
+        "aligned_with_news": null
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 4087.87,
+          "move": 57.56,
+          "move_percent": 1.4282,
+          "direction": "UP",
+          "max_high": 4090.07,
+          "max_low": 4029.595,
+          "max_up": 59.76,
+          "max_down": -0.715,
+          "aligned_with_news": null
+        },
+        "5m": {
+          "available": true,
+          "close": 4096.115,
+          "move": 65.805,
+          "move_percent": 1.6328,
+          "direction": "UP",
+          "max_high": 4103.25,
+          "max_low": 4029.595,
+          "max_up": 72.94,
+          "max_down": -0.715,
+          "aligned_with_news": null
+        },
+        "15m": {
+          "available": true,
+          "close": 4093.005,
+          "move": 62.695,
+          "move_percent": 1.5556,
+          "direction": "UP",
+          "max_high": 4103.25,
+          "max_low": 4029.595,
+          "max_up": 72.94,
+          "max_down": -0.715,
+          "aligned_with_news": null
+        },
+        "30m": {
+          "available": true,
+          "close": 4076.245,
+          "move": 45.935,
+          "move_percent": 1.1397,
+          "direction": "UP",
+          "max_high": 4103.25,
+          "max_low": 4029.595,
+          "max_up": 72.94,
+          "max_down": -0.715,
+          "aligned_with_news": null
+        },
+        "1h": {
+          "available": true,
+          "close": 4081.805,
+          "move": 51.495,
+          "move_percent": 1.2777,
+          "direction": "UP",
+          "max_high": 4103.25,
+          "max_low": 4029.595,
+          "max_up": 72.94,
+          "max_down": -0.715,
+          "aligned_with_news": null
+        },
+        "4h": {
+          "available": true,
+          "close": 4059.255,
+          "move": 28.945,
+          "move_percent": 0.7182,
+          "direction": "UP",
+          "max_high": 4103.25,
+          "max_low": 4029.595,
+          "max_up": 72.94,
+          "max_down": -0.715,
+          "aligned_with_news": null
+        },
+        "24h": {
+          "available": true,
+          "close": 4052.98,
+          "move": 22.67,
+          "move_percent": 0.5625,
+          "direction": "UP",
+          "max_high": 4103.25,
+          "max_low": 4029.595,
+          "max_up": 72.94,
+          "max_down": -0.715,
+          "aligned_with_news": null
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,6278 @@
+{
+  "generated_at_ist": "2026-07-16T17:39:47.717889+05:30",
+  "database_type": "FED_RATE_DECISION_XAUUSD_TECHNICAL_SEQUENCE_DATABASE",
+  "instrument": "XAUUSD",
+  "market": "XAUUSD CFD",
+  "price_source": "Winpro MetaTrader 5",
+  "broker": "Winprofx Limited",
+  "successful_reactions": 33,
+  "total_verified_windows": 33,
+  "technical_model": {
+    "pre_news_liquidity_reference": "Range from 4 hours before news until 1 hour before news",
+    "liquidity_sweep_window": "Final 1 hour before news",
+    "warning": "Liquidity is defined by this specific historical model and should not be interpreted as every possible SMC liquidity concept."
+  },
+  "reactions": [
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "June 2022"
+      ],
+      "numbers": {
+        "previous_target_lower": 0.75,
+        "previous_target_upper": 1.0,
+        "actual_target_lower": 1.5,
+        "actual_target_upper": 1.75,
+        "change_bps": 75,
+        "decision": "HIKE"
+      },
+      "release": {
+        "previous": "0.75%-1.00%",
+        "actual": "1.50%-1.75%",
+        "result": "HIKE +75 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2022-06-15T18:00:00+00:00",
+        "news_time_ist": "2022-06-15T23:30:00+05:30",
+        "winpro_chart_time": "2022-06-15T21:00:00+03:00",
+        "winpro_offset_hours": 3,
+        "mt5_api_news_candle_time": "2022-06-15T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 1808.6,
+        "price_before_news": 1830.95,
+        "pre_news_move_usd": 22.35,
+        "pre_news_direction": "UP",
+        "day_high_before_news": 1840.02,
+        "day_low_before_news": 1807.62,
+        "pre_news_range_usd": 32.4,
+        "range_position_percent": 72.0,
+        "location": "UPPER_DAY_RANGE",
+        "periods": {
+          "15m": {
+            "available": false
+          },
+          "30m": {
+            "available": false
+          },
+          "1h": {
+            "available": false
+          },
+          "4h": {
+            "available": false
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 1824.69,
+        "reference_low": 1816.35,
+        "final_hour_high": 1840.02,
+        "final_hour_low": 1813.6,
+        "price_before_news": 1830.95,
+        "swept_upside_liquidity": true,
+        "swept_downside_liquidity": true,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": true,
+        "distance_to_reference_high_usd": -6.26,
+        "distance_to_reference_low_usd": 14.6,
+        "sequence": "DOWNSIDE_SWEEP_RECLAIM"
+      },
+      "impulse_candle": {
+        "open": 1830.78,
+        "high": 1841.88,
+        "low": 1830.45,
+        "close": 1831.72,
+        "body_move_usd": 0.94,
+        "body_direction": "UP",
+        "full_range_usd": 11.43,
+        "maximum_up_from_open_usd": 11.1,
+        "maximum_down_from_open_usd": -0.33,
+        "tick_volume": 14645,
+        "broker_spread_points": 0
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": true,
+        "swept_pre_news_day_low": false
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 1831.72,
+          "move_usd": 0.94,
+          "direction": "UP",
+          "maximum_up_usd": 11.1,
+          "maximum_down_usd": -0.33,
+          "highest_price": 1841.88,
+          "lowest_price": 1830.45
+        },
+        "5m": {
+          "available": true,
+          "close": 1831.72,
+          "move_usd": 0.94,
+          "direction": "UP",
+          "maximum_up_usd": 11.1,
+          "maximum_down_usd": -0.33,
+          "highest_price": 1841.88,
+          "lowest_price": 1830.45
+        },
+        "15m": {
+          "available": false
+        },
+        "30m": {
+          "available": false
+        },
+        "1h": {
+          "available": true,
+          "close": 1833.78,
+          "move_usd": 3.0,
+          "direction": "UP",
+          "maximum_up_usd": 11.1,
+          "maximum_down_usd": -0.33,
+          "highest_price": 1841.88,
+          "lowest_price": 1830.45
+        },
+        "4h": {
+          "available": true,
+          "close": 1833.79,
+          "move_usd": 3.01,
+          "direction": "UP",
+          "maximum_up_usd": 11.1,
+          "maximum_down_usd": -0.33,
+          "highest_price": 1841.88,
+          "lowest_price": 1830.45
+        },
+        "24h": {
+          "available": true,
+          "close": 1852.21,
+          "move_usd": 21.43,
+          "direction": "UP",
+          "maximum_up_usd": 21.96,
+          "maximum_down_usd": -15.11,
+          "highest_price": 1852.74,
+          "lowest_price": 1815.67
+        },
+        "2d": {
+          "available": true,
+          "close": 1837.05,
+          "move_usd": 6.27,
+          "direction": "UP",
+          "maximum_up_usd": 26.7,
+          "maximum_down_usd": -15.11,
+          "highest_price": 1857.48,
+          "lowest_price": 1815.67
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 1838.48,
+          "move_usd": 7.7,
+          "direction": "UP",
+          "maximum_up_usd": 26.7,
+          "maximum_down_usd": -15.11,
+          "highest_price": 1857.48,
+          "lowest_price": 1815.67
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "July 2022"
+      ],
+      "numbers": {
+        "previous_target_lower": 1.5,
+        "previous_target_upper": 1.75,
+        "actual_target_lower": 2.25,
+        "actual_target_upper": 2.5,
+        "change_bps": 75,
+        "decision": "HIKE"
+      },
+      "release": {
+        "previous": "1.50%-1.75%",
+        "actual": "2.25%-2.50%",
+        "result": "HIKE +75 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2022-07-27T18:00:00+00:00",
+        "news_time_ist": "2022-07-27T23:30:00+05:30",
+        "winpro_chart_time": "2022-07-27T21:00:00+03:00",
+        "winpro_offset_hours": 3,
+        "mt5_api_news_candle_time": "2022-07-27T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 1718.17,
+        "price_before_news": 1734.83,
+        "pre_news_move_usd": 16.66,
+        "pre_news_direction": "UP",
+        "day_high_before_news": 1738.24,
+        "day_low_before_news": 1711.43,
+        "pre_news_range_usd": 26.81,
+        "range_position_percent": 87.3,
+        "location": "NEAR_DAY_HIGH",
+        "periods": {
+          "15m": {
+            "available": false
+          },
+          "30m": {
+            "available": false
+          },
+          "1h": {
+            "available": false
+          },
+          "4h": {
+            "available": false
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 1722.85,
+        "reference_low": 1716.44,
+        "final_hour_high": 1738.24,
+        "final_hour_low": 1719.08,
+        "price_before_news": 1734.83,
+        "swept_upside_liquidity": true,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": -11.98,
+        "distance_to_reference_low_usd": 18.39,
+        "sequence": "UPSIDE_LIQUIDITY_TAKEN"
+      },
+      "impulse_candle": {
+        "open": 1734.76,
+        "high": 1740.24,
+        "low": 1733.37,
+        "close": 1734.45,
+        "body_move_usd": -0.31,
+        "body_direction": "DOWN",
+        "full_range_usd": 6.87,
+        "maximum_up_from_open_usd": 5.48,
+        "maximum_down_from_open_usd": -1.39,
+        "tick_volume": 8368,
+        "broker_spread_points": 0
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": true,
+        "swept_pre_news_day_low": false
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 1734.45,
+          "move_usd": -0.31,
+          "direction": "DOWN",
+          "maximum_up_usd": 5.48,
+          "maximum_down_usd": -1.39,
+          "highest_price": 1740.24,
+          "lowest_price": 1733.37
+        },
+        "5m": {
+          "available": true,
+          "close": 1734.45,
+          "move_usd": -0.31,
+          "direction": "DOWN",
+          "maximum_up_usd": 5.48,
+          "maximum_down_usd": -1.39,
+          "highest_price": 1740.24,
+          "lowest_price": 1733.37
+        },
+        "15m": {
+          "available": false
+        },
+        "30m": {
+          "available": false
+        },
+        "1h": {
+          "available": true,
+          "close": 1734.45,
+          "move_usd": -0.31,
+          "direction": "DOWN",
+          "maximum_up_usd": 5.48,
+          "maximum_down_usd": -1.66,
+          "highest_price": 1740.24,
+          "lowest_price": 1733.1
+        },
+        "4h": {
+          "available": true,
+          "close": 1738.75,
+          "move_usd": 3.99,
+          "direction": "UP",
+          "maximum_up_usd": 5.48,
+          "maximum_down_usd": -1.66,
+          "highest_price": 1740.24,
+          "lowest_price": 1733.1
+        },
+        "24h": {
+          "available": true,
+          "close": 1755.27,
+          "move_usd": 20.51,
+          "direction": "UP",
+          "maximum_up_usd": 22.04,
+          "maximum_down_usd": -1.66,
+          "highest_price": 1756.8,
+          "lowest_price": 1733.1
+        },
+        "2d": {
+          "available": true,
+          "close": 1761.4,
+          "move_usd": 26.64,
+          "direction": "UP",
+          "maximum_up_usd": 33.09,
+          "maximum_down_usd": -1.66,
+          "highest_price": 1767.85,
+          "lowest_price": 1733.1
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 1770.88,
+          "move_usd": 36.12,
+          "direction": "UP",
+          "maximum_up_usd": 40.61,
+          "maximum_down_usd": -1.66,
+          "highest_price": 1775.37,
+          "lowest_price": 1733.1
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "September 2022"
+      ],
+      "numbers": {
+        "previous_target_lower": 2.25,
+        "previous_target_upper": 2.5,
+        "actual_target_lower": 3.0,
+        "actual_target_upper": 3.25,
+        "change_bps": 75,
+        "decision": "HIKE"
+      },
+      "release": {
+        "previous": "2.25%-2.50%",
+        "actual": "3.00%-3.25%",
+        "result": "HIKE +75 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2022-09-21T18:00:00+00:00",
+        "news_time_ist": "2022-09-21T23:30:00+05:30",
+        "winpro_chart_time": "2022-09-21T21:00:00+03:00",
+        "winpro_offset_hours": 3,
+        "mt5_api_news_candle_time": "2022-09-21T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 1665.16,
+        "price_before_news": 1685.92,
+        "pre_news_move_usd": 20.76,
+        "pre_news_direction": "UP",
+        "day_high_before_news": 1687.96,
+        "day_low_before_news": 1653.81,
+        "pre_news_range_usd": 34.15,
+        "range_position_percent": 94.0,
+        "location": "NEAR_DAY_HIGH",
+        "periods": {
+          "15m": {
+            "available": false
+          },
+          "30m": {
+            "available": false
+          },
+          "1h": {
+            "available": false
+          },
+          "4h": {
+            "available": false
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 1670.8,
+        "reference_low": 1664.82,
+        "final_hour_high": 1687.96,
+        "final_hour_low": 1653.81,
+        "price_before_news": 1685.92,
+        "swept_upside_liquidity": true,
+        "swept_downside_liquidity": true,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": true,
+        "distance_to_reference_high_usd": -15.12,
+        "distance_to_reference_low_usd": 21.1,
+        "sequence": "DOWNSIDE_SWEEP_RECLAIM"
+      },
+      "impulse_candle": {
+        "open": 1685.98,
+        "high": 1687.65,
+        "low": 1670.02,
+        "close": 1672.42,
+        "body_move_usd": -13.56,
+        "body_direction": "DOWN",
+        "full_range_usd": 17.63,
+        "maximum_up_from_open_usd": 1.67,
+        "maximum_down_from_open_usd": -15.96,
+        "tick_volume": 14850,
+        "broker_spread_points": 0
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": false,
+        "swept_pre_news_day_low": false
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 1672.42,
+          "move_usd": -13.56,
+          "direction": "DOWN",
+          "maximum_up_usd": 1.67,
+          "maximum_down_usd": -15.96,
+          "highest_price": 1687.65,
+          "lowest_price": 1670.02
+        },
+        "5m": {
+          "available": true,
+          "close": 1672.42,
+          "move_usd": -13.56,
+          "direction": "DOWN",
+          "maximum_up_usd": 1.67,
+          "maximum_down_usd": -15.96,
+          "highest_price": 1687.65,
+          "lowest_price": 1670.02
+        },
+        "15m": {
+          "available": false
+        },
+        "30m": {
+          "available": false
+        },
+        "1h": {
+          "available": true,
+          "close": 1673.71,
+          "move_usd": -12.27,
+          "direction": "DOWN",
+          "maximum_up_usd": 1.67,
+          "maximum_down_usd": -15.96,
+          "highest_price": 1687.65,
+          "lowest_price": 1670.02
+        },
+        "4h": {
+          "available": true,
+          "close": 1666.99,
+          "move_usd": -18.99,
+          "direction": "DOWN",
+          "maximum_up_usd": 1.67,
+          "maximum_down_usd": -20.09,
+          "highest_price": 1687.65,
+          "lowest_price": 1665.89
+        },
+        "24h": {
+          "available": true,
+          "close": 1671.76,
+          "move_usd": -14.22,
+          "direction": "DOWN",
+          "maximum_up_usd": 1.67,
+          "maximum_down_usd": -30.4,
+          "highest_price": 1687.65,
+          "lowest_price": 1655.58
+        },
+        "2d": {
+          "available": true,
+          "close": 1642.99,
+          "move_usd": -42.99,
+          "direction": "DOWN",
+          "maximum_up_usd": 1.67,
+          "maximum_down_usd": -46.25,
+          "highest_price": 1687.65,
+          "lowest_price": 1639.73
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 1624.21,
+          "move_usd": -61.77,
+          "direction": "DOWN",
+          "maximum_up_usd": 1.67,
+          "maximum_down_usd": -64.27,
+          "highest_price": 1687.65,
+          "lowest_price": 1621.71
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "November 2022"
+      ],
+      "numbers": {
+        "previous_target_lower": 3.0,
+        "previous_target_upper": 3.25,
+        "actual_target_lower": 3.75,
+        "actual_target_upper": 4.0,
+        "change_bps": 75,
+        "decision": "HIKE"
+      },
+      "release": {
+        "previous": "3.00%-3.25%",
+        "actual": "3.75%-4.00%",
+        "result": "HIKE +75 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2022-11-02T18:00:00+00:00",
+        "news_time_ist": "2022-11-02T23:30:00+05:30",
+        "winpro_chart_time": "2022-11-02T20:00:00+02:00",
+        "winpro_offset_hours": 2,
+        "mt5_api_news_candle_time": "2022-11-02T20:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 1646.7,
+        "price_before_news": 1650.27,
+        "pre_news_move_usd": 3.57,
+        "pre_news_direction": "UP",
+        "day_high_before_news": 1658.81,
+        "day_low_before_news": 1645.58,
+        "pre_news_range_usd": 13.23,
+        "range_position_percent": 35.4,
+        "location": "LOWER_DAY_RANGE",
+        "periods": {
+          "15m": {
+            "available": false
+          },
+          "30m": {
+            "available": false
+          },
+          "1h": {
+            "available": false
+          },
+          "4h": {
+            "available": false
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 1653.54,
+        "reference_low": 1645.58,
+        "final_hour_high": 1650.46,
+        "final_hour_low": 1646.07,
+        "price_before_news": 1650.27,
+        "swept_upside_liquidity": false,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 3.27,
+        "distance_to_reference_low_usd": 4.69,
+        "sequence": "NO_RECENT_SWEEP"
+      },
+      "impulse_candle": {
+        "open": 1650.5,
+        "high": 1669.48,
+        "low": 1644.68,
+        "close": 1649.47,
+        "body_move_usd": -1.03,
+        "body_direction": "DOWN",
+        "full_range_usd": 24.8,
+        "maximum_up_from_open_usd": 18.98,
+        "maximum_down_from_open_usd": -5.82,
+        "tick_volume": 25289,
+        "broker_spread_points": 0
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": true,
+        "swept_pre_news_day_low": true
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 1649.47,
+          "move_usd": -1.03,
+          "direction": "DOWN",
+          "maximum_up_usd": 18.98,
+          "maximum_down_usd": -5.82,
+          "highest_price": 1669.48,
+          "lowest_price": 1644.68
+        },
+        "5m": {
+          "available": true,
+          "close": 1649.47,
+          "move_usd": -1.03,
+          "direction": "DOWN",
+          "maximum_up_usd": 18.98,
+          "maximum_down_usd": -5.82,
+          "highest_price": 1669.48,
+          "lowest_price": 1644.68
+        },
+        "15m": {
+          "available": false
+        },
+        "30m": {
+          "available": false
+        },
+        "1h": {
+          "available": true,
+          "close": 1636.93,
+          "move_usd": -13.57,
+          "direction": "DOWN",
+          "maximum_up_usd": 18.98,
+          "maximum_down_usd": -14.79,
+          "highest_price": 1669.48,
+          "lowest_price": 1635.71
+        },
+        "4h": {
+          "available": false
+        },
+        "24h": {
+          "available": true,
+          "close": 1631.1,
+          "move_usd": -19.4,
+          "direction": "DOWN",
+          "maximum_up_usd": 18.98,
+          "maximum_down_usd": -33.93,
+          "highest_price": 1669.48,
+          "lowest_price": 1616.57
+        },
+        "2d": {
+          "available": true,
+          "close": 1680.58,
+          "move_usd": 30.08,
+          "direction": "UP",
+          "maximum_up_usd": 31.84,
+          "maximum_down_usd": -33.93,
+          "highest_price": 1682.34,
+          "lowest_price": 1616.57
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 1676.71,
+          "move_usd": 26.21,
+          "direction": "UP",
+          "maximum_up_usd": 31.84,
+          "maximum_down_usd": -33.93,
+          "highest_price": 1682.34,
+          "lowest_price": 1616.57
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "December 2022"
+      ],
+      "numbers": {
+        "previous_target_lower": 3.75,
+        "previous_target_upper": 4.0,
+        "actual_target_lower": 4.25,
+        "actual_target_upper": 4.5,
+        "change_bps": 50,
+        "decision": "HIKE"
+      },
+      "release": {
+        "previous": "3.75%-4.00%",
+        "actual": "4.25%-4.50%",
+        "result": "HIKE +50 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2022-12-14T19:00:00+00:00",
+        "news_time_ist": "2022-12-15T00:30:00+05:30",
+        "winpro_chart_time": "2022-12-14T21:00:00+02:00",
+        "winpro_offset_hours": 2,
+        "mt5_api_news_candle_time": "2022-12-14T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 1810.67,
+        "price_before_news": 1809.6,
+        "pre_news_move_usd": -1.07,
+        "pre_news_direction": "DOWN",
+        "day_high_before_news": 1813.16,
+        "day_low_before_news": 1804.3,
+        "pre_news_range_usd": 8.86,
+        "range_position_percent": 59.8,
+        "location": "MIDDLE_DAY_RANGE",
+        "periods": {
+          "15m": {
+            "available": false
+          },
+          "30m": {
+            "available": false
+          },
+          "1h": {
+            "available": false
+          },
+          "4h": {
+            "available": false
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 1813.03,
+        "reference_low": 1807.86,
+        "final_hour_high": 1810.19,
+        "final_hour_low": 1806.9,
+        "price_before_news": 1809.6,
+        "swept_upside_liquidity": false,
+        "swept_downside_liquidity": true,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": true,
+        "distance_to_reference_high_usd": 3.43,
+        "distance_to_reference_low_usd": 1.74,
+        "sequence": "DOWNSIDE_SWEEP_RECLAIM"
+      },
+      "impulse_candle": {
+        "open": 1809.58,
+        "high": 1809.66,
+        "low": 1795.13,
+        "close": 1805.17,
+        "body_move_usd": -4.41,
+        "body_direction": "DOWN",
+        "full_range_usd": 14.53,
+        "maximum_up_from_open_usd": 0.08,
+        "maximum_down_from_open_usd": -14.45,
+        "tick_volume": 13894,
+        "broker_spread_points": 0
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": true,
+        "swept_pre_news_day_low": true
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 1805.17,
+          "move_usd": -4.41,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.08,
+          "maximum_down_usd": -14.45,
+          "highest_price": 1809.66,
+          "lowest_price": 1795.13
+        },
+        "5m": {
+          "available": true,
+          "close": 1805.17,
+          "move_usd": -4.41,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.08,
+          "maximum_down_usd": -14.45,
+          "highest_price": 1809.66,
+          "lowest_price": 1795.13
+        },
+        "15m": {
+          "available": false
+        },
+        "30m": {
+          "available": false
+        },
+        "1h": {
+          "available": true,
+          "close": 1806.59,
+          "move_usd": -2.99,
+          "direction": "DOWN",
+          "maximum_up_usd": 4.51,
+          "maximum_down_usd": -14.45,
+          "highest_price": 1814.09,
+          "lowest_price": 1795.13
+        },
+        "4h": {
+          "available": true,
+          "close": 1807.65,
+          "move_usd": -1.93,
+          "direction": "DOWN",
+          "maximum_up_usd": 4.51,
+          "maximum_down_usd": -14.45,
+          "highest_price": 1814.09,
+          "lowest_price": 1795.13
+        },
+        "24h": {
+          "available": true,
+          "close": 1777.85,
+          "move_usd": -31.73,
+          "direction": "DOWN",
+          "maximum_up_usd": 4.51,
+          "maximum_down_usd": -35.87,
+          "highest_price": 1814.09,
+          "lowest_price": 1773.71
+        },
+        "2d": {
+          "available": true,
+          "close": 1792.87,
+          "move_usd": -16.71,
+          "direction": "DOWN",
+          "maximum_up_usd": 4.51,
+          "maximum_down_usd": -35.87,
+          "highest_price": 1814.09,
+          "lowest_price": 1773.71
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 1786.75,
+          "move_usd": -22.83,
+          "direction": "DOWN",
+          "maximum_up_usd": 4.51,
+          "maximum_down_usd": -35.87,
+          "highest_price": 1814.09,
+          "lowest_price": 1773.71
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "February 2023"
+      ],
+      "numbers": {
+        "previous_target_lower": 4.25,
+        "previous_target_upper": 4.5,
+        "actual_target_lower": 4.5,
+        "actual_target_upper": 4.75,
+        "change_bps": 25,
+        "decision": "HIKE"
+      },
+      "release": {
+        "previous": "4.25%-4.50%",
+        "actual": "4.50%-4.75%",
+        "result": "HIKE +25 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2023-02-01T19:00:00+00:00",
+        "news_time_ist": "2023-02-02T00:30:00+05:30",
+        "winpro_chart_time": "2023-02-01T21:00:00+02:00",
+        "winpro_offset_hours": 2,
+        "mt5_api_news_candle_time": "2023-02-01T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 1928.33,
+        "price_before_news": 1927.68,
+        "pre_news_move_usd": -0.65,
+        "pre_news_direction": "DOWN",
+        "day_high_before_news": 1933.19,
+        "day_low_before_news": 1920.5,
+        "pre_news_range_usd": 12.69,
+        "range_position_percent": 56.6,
+        "location": "MIDDLE_DAY_RANGE",
+        "periods": {
+          "15m": {
+            "available": false
+          },
+          "30m": {
+            "available": false
+          },
+          "1h": {
+            "available": false
+          },
+          "4h": {
+            "available": false
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 1932.3,
+        "reference_low": 1920.5,
+        "final_hour_high": 1928.41,
+        "final_hour_low": 1924.72,
+        "price_before_news": 1927.68,
+        "swept_upside_liquidity": false,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 4.62,
+        "distance_to_reference_low_usd": 7.18,
+        "sequence": "NO_RECENT_SWEEP"
+      },
+      "impulse_candle": {
+        "open": 1927.74,
+        "high": 1943.92,
+        "low": 1921.25,
+        "close": 1942.96,
+        "body_move_usd": 15.22,
+        "body_direction": "UP",
+        "full_range_usd": 22.67,
+        "maximum_up_from_open_usd": 16.18,
+        "maximum_down_from_open_usd": -6.49,
+        "tick_volume": 22244,
+        "broker_spread_points": 0
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": true,
+        "swept_pre_news_day_low": false
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 1942.96,
+          "move_usd": 15.22,
+          "direction": "UP",
+          "maximum_up_usd": 16.18,
+          "maximum_down_usd": -6.49,
+          "highest_price": 1943.92,
+          "lowest_price": 1921.25
+        },
+        "5m": {
+          "available": true,
+          "close": 1942.96,
+          "move_usd": 15.22,
+          "direction": "UP",
+          "maximum_up_usd": 16.18,
+          "maximum_down_usd": -6.49,
+          "highest_price": 1943.92,
+          "lowest_price": 1921.25
+        },
+        "15m": {
+          "available": false
+        },
+        "30m": {
+          "available": false
+        },
+        "1h": {
+          "available": true,
+          "close": 1953.47,
+          "move_usd": 25.73,
+          "direction": "UP",
+          "maximum_up_usd": 25.73,
+          "maximum_down_usd": -6.49,
+          "highest_price": 1953.47,
+          "lowest_price": 1921.25
+        },
+        "4h": {
+          "available": true,
+          "close": 1953.05,
+          "move_usd": 25.31,
+          "direction": "UP",
+          "maximum_up_usd": 28.42,
+          "maximum_down_usd": -6.49,
+          "highest_price": 1956.16,
+          "lowest_price": 1921.25
+        },
+        "24h": {
+          "available": true,
+          "close": 1917.31,
+          "move_usd": -10.43,
+          "direction": "DOWN",
+          "maximum_up_usd": 31.92,
+          "maximum_down_usd": -15.96,
+          "highest_price": 1959.66,
+          "lowest_price": 1911.78
+        },
+        "2d": {
+          "available": true,
+          "close": 1865.07,
+          "move_usd": -62.67,
+          "direction": "DOWN",
+          "maximum_up_usd": 31.92,
+          "maximum_down_usd": -66.38,
+          "highest_price": 1959.66,
+          "lowest_price": 1861.36
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 1868.98,
+          "move_usd": -58.76,
+          "direction": "DOWN",
+          "maximum_up_usd": 31.92,
+          "maximum_down_usd": -67.53,
+          "highest_price": 1959.66,
+          "lowest_price": 1860.21
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "March 2023"
+      ],
+      "numbers": {
+        "previous_target_lower": 4.5,
+        "previous_target_upper": 4.75,
+        "actual_target_lower": 4.75,
+        "actual_target_upper": 5.0,
+        "change_bps": 25,
+        "decision": "HIKE"
+      },
+      "release": {
+        "previous": "4.50%-4.75%",
+        "actual": "4.75%-5.00%",
+        "result": "HIKE +25 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2023-03-22T18:00:00+00:00",
+        "news_time_ist": "2023-03-22T23:30:00+05:30",
+        "winpro_chart_time": "2023-03-22T20:00:00+02:00",
+        "winpro_offset_hours": 2,
+        "mt5_api_news_candle_time": "2023-03-22T20:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 1939.61,
+        "price_before_news": 1949.05,
+        "pre_news_move_usd": 9.44,
+        "pre_news_direction": "UP",
+        "day_high_before_news": 1951.91,
+        "day_low_before_news": 1934.23,
+        "pre_news_range_usd": 17.68,
+        "range_position_percent": 83.8,
+        "location": "NEAR_DAY_HIGH",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": 0.46,
+            "direction": "UP"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": 0.67,
+            "direction": "UP"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": 2.03,
+            "direction": "UP"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": 10.63,
+            "direction": "UP"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 1951.91,
+        "reference_low": 1937.33,
+        "final_hour_high": 1949.79,
+        "final_hour_low": 1945.65,
+        "price_before_news": 1949.05,
+        "swept_upside_liquidity": false,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 2.86,
+        "distance_to_reference_low_usd": 11.72,
+        "sequence": "NO_RECENT_SWEEP"
+      },
+      "impulse_candle": {
+        "open": 1949.01,
+        "high": 1949.64,
+        "low": 1948.96,
+        "close": 1949.19,
+        "body_move_usd": 0.18,
+        "body_direction": "UP",
+        "full_range_usd": 0.68,
+        "maximum_up_from_open_usd": 0.63,
+        "maximum_down_from_open_usd": -0.05,
+        "tick_volume": 181,
+        "broker_spread_points": 18
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": true,
+        "swept_pre_news_day_low": false
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 1949.17,
+          "move_usd": 0.16,
+          "direction": "UP",
+          "maximum_up_usd": 0.63,
+          "maximum_down_usd": -0.05,
+          "highest_price": 1949.64,
+          "lowest_price": 1948.96
+        },
+        "5m": {
+          "available": true,
+          "close": 1948.44,
+          "move_usd": -0.57,
+          "direction": "DOWN",
+          "maximum_up_usd": 1.76,
+          "maximum_down_usd": -0.7,
+          "highest_price": 1950.77,
+          "lowest_price": 1948.31
+        },
+        "15m": {
+          "available": true,
+          "close": 1946.53,
+          "move_usd": -2.48,
+          "direction": "DOWN",
+          "maximum_up_usd": 1.76,
+          "maximum_down_usd": -3.12,
+          "highest_price": 1950.77,
+          "lowest_price": 1945.89
+        },
+        "30m": {
+          "available": true,
+          "close": 1947.27,
+          "move_usd": -1.74,
+          "direction": "DOWN",
+          "maximum_up_usd": 1.76,
+          "maximum_down_usd": -3.82,
+          "highest_price": 1950.77,
+          "lowest_price": 1945.19
+        },
+        "1h": {
+          "available": true,
+          "close": 1954.94,
+          "move_usd": 5.93,
+          "direction": "UP",
+          "maximum_up_usd": 8.97,
+          "maximum_down_usd": -4.14,
+          "highest_price": 1957.98,
+          "lowest_price": 1944.87
+        },
+        "4h": {
+          "available": false
+        },
+        "24h": {
+          "available": true,
+          "close": 1994.54,
+          "move_usd": 45.53,
+          "direction": "UP",
+          "maximum_up_usd": 46.16,
+          "maximum_down_usd": -4.14,
+          "highest_price": 1995.17,
+          "lowest_price": 1944.87
+        },
+        "2d": {
+          "available": true,
+          "close": 1986.9,
+          "move_usd": 37.89,
+          "direction": "UP",
+          "maximum_up_usd": 54.28,
+          "maximum_down_usd": -4.14,
+          "highest_price": 2003.29,
+          "lowest_price": 1944.87
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 1956.0,
+          "move_usd": 6.99,
+          "direction": "UP",
+          "maximum_up_usd": 54.28,
+          "maximum_down_usd": -5.02,
+          "highest_price": 2003.29,
+          "lowest_price": 1943.99
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "May 2023"
+      ],
+      "numbers": {
+        "previous_target_lower": 4.75,
+        "previous_target_upper": 5.0,
+        "actual_target_lower": 5.0,
+        "actual_target_upper": 5.25,
+        "change_bps": 25,
+        "decision": "HIKE"
+      },
+      "release": {
+        "previous": "4.75%-5.00%",
+        "actual": "5.00%-5.25%",
+        "result": "HIKE +25 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2023-05-03T18:00:00+00:00",
+        "news_time_ist": "2023-05-03T23:30:00+05:30",
+        "winpro_chart_time": "2023-05-03T21:00:00+03:00",
+        "winpro_offset_hours": 3,
+        "mt5_api_news_candle_time": "2023-05-03T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 2016.99,
+        "price_before_news": 2023.78,
+        "pre_news_move_usd": 6.79,
+        "pre_news_direction": "UP",
+        "day_high_before_news": 2028.53,
+        "day_low_before_news": 2007.61,
+        "pre_news_range_usd": 20.92,
+        "range_position_percent": 77.3,
+        "location": "UPPER_DAY_RANGE",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": -2.5,
+            "direction": "DOWN"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": -4.23,
+            "direction": "DOWN"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": -0.31,
+            "direction": "DOWN"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": 9.42,
+            "direction": "UP"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 2026.8,
+        "reference_low": 2011.8,
+        "final_hour_high": 2028.53,
+        "final_hour_low": 2022.33,
+        "price_before_news": 2023.78,
+        "swept_upside_liquidity": true,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": true,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 3.02,
+        "distance_to_reference_low_usd": 11.98,
+        "sequence": "UPSIDE_SWEEP_REJECT"
+      },
+      "impulse_candle": {
+        "open": 2023.78,
+        "high": 2031.82,
+        "low": 2023.78,
+        "close": 2029.15,
+        "body_move_usd": 5.37,
+        "body_direction": "UP",
+        "full_range_usd": 8.04,
+        "maximum_up_from_open_usd": 8.04,
+        "maximum_down_from_open_usd": 0.0,
+        "tick_volume": 763,
+        "broker_spread_points": 18
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": true,
+        "swept_pre_news_day_low": false
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 2029.98,
+          "move_usd": 6.2,
+          "direction": "UP",
+          "maximum_up_usd": 8.04,
+          "maximum_down_usd": 0.0,
+          "highest_price": 2031.82,
+          "lowest_price": 2023.78
+        },
+        "5m": {
+          "available": true,
+          "close": 2030.02,
+          "move_usd": 6.24,
+          "direction": "UP",
+          "maximum_up_usd": 12.34,
+          "maximum_down_usd": 0.0,
+          "highest_price": 2036.12,
+          "lowest_price": 2023.78
+        },
+        "15m": {
+          "available": true,
+          "close": 2024.27,
+          "move_usd": 0.49,
+          "direction": "UP",
+          "maximum_up_usd": 12.34,
+          "maximum_down_usd": -4.46,
+          "highest_price": 2036.12,
+          "lowest_price": 2019.32
+        },
+        "30m": {
+          "available": true,
+          "close": 2021.89,
+          "move_usd": -1.89,
+          "direction": "DOWN",
+          "maximum_up_usd": 12.34,
+          "maximum_down_usd": -4.46,
+          "highest_price": 2036.12,
+          "lowest_price": 2019.32
+        },
+        "1h": {
+          "available": true,
+          "close": 2023.3,
+          "move_usd": -0.48,
+          "direction": "DOWN",
+          "maximum_up_usd": 12.34,
+          "maximum_down_usd": -6.78,
+          "highest_price": 2036.12,
+          "lowest_price": 2017.0
+        },
+        "4h": {
+          "available": true,
+          "close": 2061.71,
+          "move_usd": 37.93,
+          "direction": "UP",
+          "maximum_up_usd": 47.22,
+          "maximum_down_usd": -6.78,
+          "highest_price": 2071.0,
+          "lowest_price": 2017.0
+        },
+        "24h": {
+          "available": true,
+          "close": 2046.75,
+          "move_usd": 22.97,
+          "direction": "UP",
+          "maximum_up_usd": 55.66,
+          "maximum_down_usd": -6.78,
+          "highest_price": 2079.44,
+          "lowest_price": 2017.0
+        },
+        "2d": {
+          "available": true,
+          "close": 2015.23,
+          "move_usd": -8.55,
+          "direction": "DOWN",
+          "maximum_up_usd": 55.66,
+          "maximum_down_usd": -24.3,
+          "highest_price": 2079.44,
+          "lowest_price": 1999.48
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 2022.63,
+          "move_usd": -1.15,
+          "direction": "DOWN",
+          "maximum_up_usd": 55.66,
+          "maximum_down_usd": -24.3,
+          "highest_price": 2079.44,
+          "lowest_price": 1999.48
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "June 2023"
+      ],
+      "numbers": {
+        "previous_target_lower": 5.0,
+        "previous_target_upper": 5.25,
+        "actual_target_lower": 5.0,
+        "actual_target_upper": 5.25,
+        "change_bps": 0,
+        "decision": "HOLD"
+      },
+      "release": {
+        "previous": "5.00%-5.25%",
+        "actual": "5.00%-5.25%",
+        "result": "HOLD +0 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2023-06-14T18:00:00+00:00",
+        "news_time_ist": "2023-06-14T23:30:00+05:30",
+        "winpro_chart_time": "2023-06-14T21:00:00+03:00",
+        "winpro_offset_hours": 3,
+        "mt5_api_news_candle_time": "2023-06-14T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 1943.05,
+        "price_before_news": 1953.46,
+        "pre_news_move_usd": 10.41,
+        "pre_news_direction": "UP",
+        "day_high_before_news": 1960.33,
+        "day_low_before_news": 1942.19,
+        "pre_news_range_usd": 18.14,
+        "range_position_percent": 62.1,
+        "location": "UPPER_DAY_RANGE",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": -0.71,
+            "direction": "DOWN"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": -2.15,
+            "direction": "DOWN"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": -1.45,
+            "direction": "DOWN"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": -2.71,
+            "direction": "DOWN"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 1959.25,
+        "reference_low": 1954.88,
+        "final_hour_high": 1955.67,
+        "final_hour_low": 1953.28,
+        "price_before_news": 1953.46,
+        "swept_upside_liquidity": false,
+        "swept_downside_liquidity": true,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 5.79,
+        "distance_to_reference_low_usd": -1.42,
+        "sequence": "DOWNSIDE_LIQUIDITY_TAKEN"
+      },
+      "impulse_candle": {
+        "open": 1953.46,
+        "high": 1953.56,
+        "low": 1946.4,
+        "close": 1946.77,
+        "body_move_usd": -6.69,
+        "body_direction": "DOWN",
+        "full_range_usd": 7.16,
+        "maximum_up_from_open_usd": 0.1,
+        "maximum_down_from_open_usd": -7.06,
+        "tick_volume": 341,
+        "broker_spread_points": 18
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": false,
+        "swept_pre_news_day_low": true
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 1946.55,
+          "move_usd": -6.91,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.1,
+          "maximum_down_usd": -9.59,
+          "highest_price": 1953.56,
+          "lowest_price": 1943.87
+        },
+        "5m": {
+          "available": true,
+          "close": 1943.32,
+          "move_usd": -10.14,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.1,
+          "maximum_down_usd": -10.85,
+          "highest_price": 1953.56,
+          "lowest_price": 1942.61
+        },
+        "15m": {
+          "available": true,
+          "close": 1948.71,
+          "move_usd": -4.75,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.1,
+          "maximum_down_usd": -13.52,
+          "highest_price": 1953.56,
+          "lowest_price": 1939.94
+        },
+        "30m": {
+          "available": true,
+          "close": 1944.98,
+          "move_usd": -8.48,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.1,
+          "maximum_down_usd": -13.52,
+          "highest_price": 1953.56,
+          "lowest_price": 1939.94
+        },
+        "1h": {
+          "available": true,
+          "close": 1951.18,
+          "move_usd": -2.28,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.1,
+          "maximum_down_usd": -13.52,
+          "highest_price": 1953.56,
+          "lowest_price": 1939.94
+        },
+        "4h": {
+          "available": true,
+          "close": 1941.31,
+          "move_usd": -12.15,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.1,
+          "maximum_down_usd": -13.6,
+          "highest_price": 1953.56,
+          "lowest_price": 1939.86
+        },
+        "24h": {
+          "available": true,
+          "close": 1959.16,
+          "move_usd": 5.7,
+          "direction": "UP",
+          "maximum_up_usd": 6.75,
+          "maximum_down_usd": -29.04,
+          "highest_price": 1960.21,
+          "lowest_price": 1924.42
+        },
+        "2d": {
+          "available": true,
+          "close": 1959.19,
+          "move_usd": 5.73,
+          "direction": "UP",
+          "maximum_up_usd": 14.4,
+          "maximum_down_usd": -29.04,
+          "highest_price": 1967.86,
+          "lowest_price": 1924.42
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 1949.48,
+          "move_usd": -3.98,
+          "direction": "DOWN",
+          "maximum_up_usd": 14.4,
+          "maximum_down_usd": -29.04,
+          "highest_price": 1967.86,
+          "lowest_price": 1924.42
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "July 2023"
+      ],
+      "numbers": {
+        "previous_target_lower": 5.0,
+        "previous_target_upper": 5.25,
+        "actual_target_lower": 5.25,
+        "actual_target_upper": 5.5,
+        "change_bps": 25,
+        "decision": "HIKE"
+      },
+      "release": {
+        "previous": "5.00%-5.25%",
+        "actual": "5.25%-5.50%",
+        "result": "HIKE +25 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2023-07-26T18:00:00+00:00",
+        "news_time_ist": "2023-07-26T23:30:00+05:30",
+        "winpro_chart_time": "2023-07-26T21:00:00+03:00",
+        "winpro_offset_hours": 3,
+        "mt5_api_news_candle_time": "2023-07-26T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 1964.94,
+        "price_before_news": 1969.41,
+        "pre_news_move_usd": 4.47,
+        "pre_news_direction": "UP",
+        "day_high_before_news": 1975.01,
+        "day_low_before_news": 1962.01,
+        "pre_news_range_usd": 13.0,
+        "range_position_percent": 56.9,
+        "location": "MIDDLE_DAY_RANGE",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": -0.41,
+            "direction": "DOWN"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": -0.55,
+            "direction": "DOWN"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": -0.55,
+            "direction": "DOWN"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": 2.34,
+            "direction": "UP"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 1975.01,
+        "reference_low": 1964.19,
+        "final_hour_high": 1970.36,
+        "final_hour_low": 1967.67,
+        "price_before_news": 1969.41,
+        "swept_upside_liquidity": false,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 5.6,
+        "distance_to_reference_low_usd": 5.22,
+        "sequence": "NO_RECENT_SWEEP"
+      },
+      "impulse_candle": {
+        "open": 1969.41,
+        "high": 1972.97,
+        "low": 1965.68,
+        "close": 1972.45,
+        "body_move_usd": 3.04,
+        "body_direction": "UP",
+        "full_range_usd": 7.29,
+        "maximum_up_from_open_usd": 3.56,
+        "maximum_down_from_open_usd": -3.73,
+        "tick_volume": 437,
+        "broker_spread_points": 18
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": true,
+        "swept_pre_news_day_low": false
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 1971.64,
+          "move_usd": 2.23,
+          "direction": "UP",
+          "maximum_up_usd": 3.56,
+          "maximum_down_usd": -3.73,
+          "highest_price": 1972.97,
+          "lowest_price": 1965.68
+        },
+        "5m": {
+          "available": true,
+          "close": 1970.02,
+          "move_usd": 0.61,
+          "direction": "UP",
+          "maximum_up_usd": 3.56,
+          "maximum_down_usd": -3.73,
+          "highest_price": 1972.97,
+          "lowest_price": 1965.68
+        },
+        "15m": {
+          "available": true,
+          "close": 1970.31,
+          "move_usd": 0.9,
+          "direction": "UP",
+          "maximum_up_usd": 3.56,
+          "maximum_down_usd": -3.73,
+          "highest_price": 1972.97,
+          "lowest_price": 1965.68
+        },
+        "30m": {
+          "available": true,
+          "close": 1967.36,
+          "move_usd": -2.05,
+          "direction": "DOWN",
+          "maximum_up_usd": 3.56,
+          "maximum_down_usd": -3.73,
+          "highest_price": 1972.97,
+          "lowest_price": 1965.68
+        },
+        "1h": {
+          "available": true,
+          "close": 1976.46,
+          "move_usd": 7.05,
+          "direction": "UP",
+          "maximum_up_usd": 8.84,
+          "maximum_down_usd": -3.73,
+          "highest_price": 1978.25,
+          "lowest_price": 1965.68
+        },
+        "4h": {
+          "available": true,
+          "close": 1971.72,
+          "move_usd": 2.31,
+          "direction": "UP",
+          "maximum_up_usd": 8.84,
+          "maximum_down_usd": -3.73,
+          "highest_price": 1978.25,
+          "lowest_price": 1965.68
+        },
+        "24h": {
+          "available": true,
+          "close": 1948.52,
+          "move_usd": -20.89,
+          "direction": "DOWN",
+          "maximum_up_usd": 12.73,
+          "maximum_down_usd": -26.85,
+          "highest_price": 1982.14,
+          "lowest_price": 1942.56
+        },
+        "2d": {
+          "available": true,
+          "close": 1959.61,
+          "move_usd": -9.8,
+          "direction": "DOWN",
+          "maximum_up_usd": 12.73,
+          "maximum_down_usd": -26.85,
+          "highest_price": 1982.14,
+          "lowest_price": 1942.56
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 1971.01,
+          "move_usd": 1.6,
+          "direction": "UP",
+          "maximum_up_usd": 12.73,
+          "maximum_down_usd": -26.85,
+          "highest_price": 1982.14,
+          "lowest_price": 1942.56
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "September 2023"
+      ],
+      "numbers": {
+        "previous_target_lower": 5.25,
+        "previous_target_upper": 5.5,
+        "actual_target_lower": 5.25,
+        "actual_target_upper": 5.5,
+        "change_bps": 0,
+        "decision": "HOLD"
+      },
+      "release": {
+        "previous": "5.25%-5.50%",
+        "actual": "5.25%-5.50%",
+        "result": "HOLD +0 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2023-09-20T18:00:00+00:00",
+        "news_time_ist": "2023-09-20T23:30:00+05:30",
+        "winpro_chart_time": "2023-09-20T21:00:00+03:00",
+        "winpro_offset_hours": 3,
+        "mt5_api_news_candle_time": "2023-09-20T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 1932.07,
+        "price_before_news": 1946.06,
+        "pre_news_move_usd": 13.99,
+        "pre_news_direction": "UP",
+        "day_high_before_news": 1947.34,
+        "day_low_before_news": 1927.86,
+        "pre_news_range_usd": 19.48,
+        "range_position_percent": 93.4,
+        "location": "NEAR_DAY_HIGH",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": -0.83,
+            "direction": "DOWN"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": -0.23,
+            "direction": "DOWN"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": -0.57,
+            "direction": "DOWN"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": 5.45,
+            "direction": "UP"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 1946.76,
+        "reference_low": 1940.3,
+        "final_hour_high": 1947.34,
+        "final_hour_low": 1945.23,
+        "price_before_news": 1946.06,
+        "swept_upside_liquidity": true,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": true,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 0.7,
+        "distance_to_reference_low_usd": 5.76,
+        "sequence": "UPSIDE_SWEEP_REJECT"
+      },
+      "impulse_candle": {
+        "open": 1946.06,
+        "high": 1946.06,
+        "low": 1940.21,
+        "close": 1942.46,
+        "body_move_usd": -3.6,
+        "body_direction": "DOWN",
+        "full_range_usd": 5.85,
+        "maximum_up_from_open_usd": 0.0,
+        "maximum_down_from_open_usd": -5.85,
+        "tick_volume": 473,
+        "broker_spread_points": 0
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": false,
+        "swept_pre_news_day_low": false
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 1942.8,
+          "move_usd": -3.26,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -5.85,
+          "highest_price": 1946.06,
+          "lowest_price": 1940.21
+        },
+        "5m": {
+          "available": true,
+          "close": 1941.53,
+          "move_usd": -4.53,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -5.87,
+          "highest_price": 1946.06,
+          "lowest_price": 1940.19
+        },
+        "15m": {
+          "available": true,
+          "close": 1940.97,
+          "move_usd": -5.09,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -6.79,
+          "highest_price": 1946.06,
+          "lowest_price": 1939.27
+        },
+        "30m": {
+          "available": true,
+          "close": 1943.19,
+          "move_usd": -2.87,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -6.79,
+          "highest_price": 1946.06,
+          "lowest_price": 1939.27
+        },
+        "1h": {
+          "available": true,
+          "close": 1940.41,
+          "move_usd": -5.65,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.64,
+          "maximum_down_usd": -6.79,
+          "highest_price": 1946.7,
+          "lowest_price": 1939.27
+        },
+        "4h": {
+          "available": true,
+          "close": 1930.38,
+          "move_usd": -15.68,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.64,
+          "maximum_down_usd": -17.02,
+          "highest_price": 1946.7,
+          "lowest_price": 1929.04
+        },
+        "24h": {
+          "available": true,
+          "close": 1920.36,
+          "move_usd": -25.7,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.64,
+          "maximum_down_usd": -32.16,
+          "highest_price": 1946.7,
+          "lowest_price": 1913.9
+        },
+        "2d": {
+          "available": true,
+          "close": 1925.47,
+          "move_usd": -20.59,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.64,
+          "maximum_down_usd": -32.16,
+          "highest_price": 1946.7,
+          "lowest_price": 1913.9
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 1916.08,
+          "move_usd": -29.98,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.64,
+          "maximum_down_usd": -32.16,
+          "highest_price": 1946.7,
+          "lowest_price": 1913.9
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "November 2023"
+      ],
+      "numbers": {
+        "previous_target_lower": 5.25,
+        "previous_target_upper": 5.5,
+        "actual_target_lower": 5.25,
+        "actual_target_upper": 5.5,
+        "change_bps": 0,
+        "decision": "HOLD"
+      },
+      "release": {
+        "previous": "5.25%-5.50%",
+        "actual": "5.25%-5.50%",
+        "result": "HOLD +0 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2023-11-01T18:00:00+00:00",
+        "news_time_ist": "2023-11-01T23:30:00+05:30",
+        "winpro_chart_time": "2023-11-01T20:00:00+02:00",
+        "winpro_offset_hours": 2,
+        "mt5_api_news_candle_time": "2023-11-01T20:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 1984.07,
+        "price_before_news": 1977.82,
+        "pre_news_move_usd": -6.25,
+        "pre_news_direction": "DOWN",
+        "day_high_before_news": 1992.15,
+        "day_low_before_news": 1974.51,
+        "pre_news_range_usd": 17.64,
+        "range_position_percent": 18.8,
+        "location": "NEAR_DAY_LOW",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": 2.52,
+            "direction": "UP"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": -0.18,
+            "direction": "DOWN"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": -1.75,
+            "direction": "DOWN"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": -7.73,
+            "direction": "DOWN"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 1992.15,
+        "reference_low": 1978.3,
+        "final_hour_high": 1980.4,
+        "final_hour_low": 1974.51,
+        "price_before_news": 1977.82,
+        "swept_upside_liquidity": false,
+        "swept_downside_liquidity": true,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 14.33,
+        "distance_to_reference_low_usd": -0.48,
+        "sequence": "DOWNSIDE_LIQUIDITY_TAKEN"
+      },
+      "impulse_candle": {
+        "open": 1977.86,
+        "high": 1978.6,
+        "low": 1977.85,
+        "close": 1978.57,
+        "body_move_usd": 0.71,
+        "body_direction": "UP",
+        "full_range_usd": 0.75,
+        "maximum_up_from_open_usd": 0.74,
+        "maximum_down_from_open_usd": -0.01,
+        "tick_volume": 100,
+        "broker_spread_points": 18
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": false,
+        "swept_pre_news_day_low": false
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 1978.61,
+          "move_usd": 0.75,
+          "direction": "UP",
+          "maximum_up_usd": 0.91,
+          "maximum_down_usd": -0.01,
+          "highest_price": 1978.77,
+          "lowest_price": 1977.85
+        },
+        "5m": {
+          "available": true,
+          "close": 1979.0,
+          "move_usd": 1.14,
+          "direction": "UP",
+          "maximum_up_usd": 1.46,
+          "maximum_down_usd": -0.01,
+          "highest_price": 1979.32,
+          "lowest_price": 1977.85
+        },
+        "15m": {
+          "available": true,
+          "close": 1978.48,
+          "move_usd": 0.62,
+          "direction": "UP",
+          "maximum_up_usd": 1.48,
+          "maximum_down_usd": -0.04,
+          "highest_price": 1979.34,
+          "lowest_price": 1977.82
+        },
+        "30m": {
+          "available": true,
+          "close": 1979.39,
+          "move_usd": 1.53,
+          "direction": "UP",
+          "maximum_up_usd": 2.01,
+          "maximum_down_usd": -0.08,
+          "highest_price": 1979.87,
+          "lowest_price": 1977.78
+        },
+        "1h": {
+          "available": true,
+          "close": 1980.89,
+          "move_usd": 3.03,
+          "direction": "UP",
+          "maximum_up_usd": 4.34,
+          "maximum_down_usd": -0.51,
+          "highest_price": 1982.2,
+          "lowest_price": 1977.35
+        },
+        "4h": {
+          "available": true,
+          "close": 1982.67,
+          "move_usd": 4.81,
+          "direction": "UP",
+          "maximum_up_usd": 4.96,
+          "maximum_down_usd": -8.04,
+          "highest_price": 1982.82,
+          "lowest_price": 1969.82
+        },
+        "24h": {
+          "available": true,
+          "close": 1981.56,
+          "move_usd": 3.7,
+          "direction": "UP",
+          "maximum_up_usd": 13.13,
+          "maximum_down_usd": -8.04,
+          "highest_price": 1990.99,
+          "lowest_price": 1969.82
+        },
+        "2d": {
+          "available": true,
+          "close": 1990.11,
+          "move_usd": 12.25,
+          "direction": "UP",
+          "maximum_up_usd": 26.18,
+          "maximum_down_usd": -8.04,
+          "highest_price": 2004.04,
+          "lowest_price": 1969.82
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 1983.52,
+          "move_usd": 5.66,
+          "direction": "UP",
+          "maximum_up_usd": 26.18,
+          "maximum_down_usd": -8.04,
+          "highest_price": 2004.04,
+          "lowest_price": 1969.82
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "December 2023"
+      ],
+      "numbers": {
+        "previous_target_lower": 5.25,
+        "previous_target_upper": 5.5,
+        "actual_target_lower": 5.25,
+        "actual_target_upper": 5.5,
+        "change_bps": 0,
+        "decision": "HOLD"
+      },
+      "release": {
+        "previous": "5.25%-5.50%",
+        "actual": "5.25%-5.50%",
+        "result": "HOLD +0 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2023-12-13T19:00:00+00:00",
+        "news_time_ist": "2023-12-14T00:30:00+05:30",
+        "winpro_chart_time": "2023-12-13T21:00:00+02:00",
+        "winpro_offset_hours": 2,
+        "mt5_api_news_candle_time": "2023-12-13T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 1979.65,
+        "price_before_news": 1982.02,
+        "pre_news_move_usd": 2.37,
+        "pre_news_direction": "UP",
+        "day_high_before_news": 1986.72,
+        "day_low_before_news": 1973.06,
+        "pre_news_range_usd": 13.66,
+        "range_position_percent": 65.6,
+        "location": "UPPER_DAY_RANGE",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": 1.56,
+            "direction": "UP"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": 0.46,
+            "direction": "UP"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": 0.06,
+            "direction": "UP"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": -0.18,
+            "direction": "DOWN"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 1983.71,
+        "reference_low": 1978.38,
+        "final_hour_high": 1982.89,
+        "final_hour_low": 1979.67,
+        "price_before_news": 1982.02,
+        "swept_upside_liquidity": false,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 1.69,
+        "distance_to_reference_low_usd": 3.64,
+        "sequence": "NO_RECENT_SWEEP"
+      },
+      "impulse_candle": {
+        "open": 1981.93,
+        "high": 1992.95,
+        "low": 1981.93,
+        "close": 1992.87,
+        "body_move_usd": 10.94,
+        "body_direction": "UP",
+        "full_range_usd": 11.02,
+        "maximum_up_from_open_usd": 11.02,
+        "maximum_down_from_open_usd": 0.0,
+        "tick_volume": 671,
+        "broker_spread_points": 18
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": true,
+        "swept_pre_news_day_low": false
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 1993.27,
+          "move_usd": 11.34,
+          "direction": "UP",
+          "maximum_up_usd": 12.53,
+          "maximum_down_usd": 0.0,
+          "highest_price": 1994.46,
+          "lowest_price": 1981.93
+        },
+        "5m": {
+          "available": true,
+          "close": 1999.74,
+          "move_usd": 17.81,
+          "direction": "UP",
+          "maximum_up_usd": 17.83,
+          "maximum_down_usd": 0.0,
+          "highest_price": 1999.76,
+          "lowest_price": 1981.93
+        },
+        "15m": {
+          "available": true,
+          "close": 2003.52,
+          "move_usd": 21.59,
+          "direction": "UP",
+          "maximum_up_usd": 22.96,
+          "maximum_down_usd": 0.0,
+          "highest_price": 2004.89,
+          "lowest_price": 1981.93
+        },
+        "30m": {
+          "available": true,
+          "close": 2005.06,
+          "move_usd": 23.13,
+          "direction": "UP",
+          "maximum_up_usd": 26.08,
+          "maximum_down_usd": 0.0,
+          "highest_price": 2008.01,
+          "lowest_price": 1981.93
+        },
+        "1h": {
+          "available": true,
+          "close": 2013.11,
+          "move_usd": 31.18,
+          "direction": "UP",
+          "maximum_up_usd": 35.5,
+          "maximum_down_usd": 0.0,
+          "highest_price": 2017.43,
+          "lowest_price": 1981.93
+        },
+        "4h": {
+          "available": true,
+          "close": 2025.13,
+          "move_usd": 43.2,
+          "direction": "UP",
+          "maximum_up_usd": 46.89,
+          "maximum_down_usd": 0.0,
+          "highest_price": 2028.82,
+          "lowest_price": 1981.93
+        },
+        "24h": {
+          "available": true,
+          "close": 2031.37,
+          "move_usd": 49.44,
+          "direction": "UP",
+          "maximum_up_usd": 65.94,
+          "maximum_down_usd": 0.0,
+          "highest_price": 2047.87,
+          "lowest_price": 1981.93
+        },
+        "2d": {
+          "available": true,
+          "close": 2018.87,
+          "move_usd": 36.94,
+          "direction": "UP",
+          "maximum_up_usd": 65.94,
+          "maximum_down_usd": 0.0,
+          "highest_price": 2047.87,
+          "lowest_price": 1981.93
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 2026.73,
+          "move_usd": 44.8,
+          "direction": "UP",
+          "maximum_up_usd": 65.94,
+          "maximum_down_usd": 0.0,
+          "highest_price": 2047.87,
+          "lowest_price": 1981.93
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "January 2024"
+      ],
+      "numbers": {
+        "previous_target_lower": 5.25,
+        "previous_target_upper": 5.5,
+        "actual_target_lower": 5.25,
+        "actual_target_upper": 5.5,
+        "change_bps": 0,
+        "decision": "HOLD"
+      },
+      "release": {
+        "previous": "5.25%-5.50%",
+        "actual": "5.25%-5.50%",
+        "result": "HOLD +0 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2024-01-31T19:00:00+00:00",
+        "news_time_ist": "2024-02-01T00:30:00+05:30",
+        "winpro_chart_time": "2024-01-31T21:00:00+02:00",
+        "winpro_offset_hours": 2,
+        "mt5_api_news_candle_time": "2024-01-31T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 2037.12,
+        "price_before_news": 2046.3,
+        "pre_news_move_usd": 9.18,
+        "pre_news_direction": "UP",
+        "day_high_before_news": 2055.99,
+        "day_low_before_news": 2032.84,
+        "pre_news_range_usd": 23.15,
+        "range_position_percent": 58.1,
+        "location": "MIDDLE_DAY_RANGE",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": -0.37,
+            "direction": "DOWN"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": -2.44,
+            "direction": "DOWN"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": -2.38,
+            "direction": "DOWN"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": -6.59,
+            "direction": "DOWN"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 2055.99,
+        "reference_low": 2047.46,
+        "final_hour_high": 2049.8,
+        "final_hour_low": 2045.71,
+        "price_before_news": 2046.3,
+        "swept_upside_liquidity": false,
+        "swept_downside_liquidity": true,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 9.69,
+        "distance_to_reference_low_usd": -1.16,
+        "sequence": "DOWNSIDE_LIQUIDITY_TAKEN"
+      },
+      "impulse_candle": {
+        "open": 2046.17,
+        "high": 2048.27,
+        "low": 2039.35,
+        "close": 2041.56,
+        "body_move_usd": -4.61,
+        "body_direction": "DOWN",
+        "full_range_usd": 8.92,
+        "maximum_up_from_open_usd": 2.1,
+        "maximum_down_from_open_usd": -6.82,
+        "tick_volume": 721,
+        "broker_spread_points": 18
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": false,
+        "swept_pre_news_day_low": false
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 2042.26,
+          "move_usd": -3.91,
+          "direction": "DOWN",
+          "maximum_up_usd": 2.1,
+          "maximum_down_usd": -6.82,
+          "highest_price": 2048.27,
+          "lowest_price": 2039.35
+        },
+        "5m": {
+          "available": true,
+          "close": 2047.1,
+          "move_usd": 0.93,
+          "direction": "UP",
+          "maximum_up_usd": 2.1,
+          "maximum_down_usd": -6.82,
+          "highest_price": 2048.27,
+          "lowest_price": 2039.35
+        },
+        "15m": {
+          "available": true,
+          "close": 2044.35,
+          "move_usd": -1.82,
+          "direction": "DOWN",
+          "maximum_up_usd": 2.24,
+          "maximum_down_usd": -6.82,
+          "highest_price": 2048.41,
+          "lowest_price": 2039.35
+        },
+        "30m": {
+          "available": true,
+          "close": 2041.7,
+          "move_usd": -4.47,
+          "direction": "DOWN",
+          "maximum_up_usd": 2.24,
+          "maximum_down_usd": -6.82,
+          "highest_price": 2048.41,
+          "lowest_price": 2039.35
+        },
+        "1h": {
+          "available": true,
+          "close": 2044.3,
+          "move_usd": -1.87,
+          "direction": "DOWN",
+          "maximum_up_usd": 4.68,
+          "maximum_down_usd": -6.82,
+          "highest_price": 2050.85,
+          "lowest_price": 2039.35
+        },
+        "4h": {
+          "available": true,
+          "close": 2040.31,
+          "move_usd": -5.86,
+          "direction": "DOWN",
+          "maximum_up_usd": 4.68,
+          "maximum_down_usd": -15.39,
+          "highest_price": 2050.85,
+          "lowest_price": 2030.78
+        },
+        "24h": {
+          "available": true,
+          "close": 2055.72,
+          "move_usd": 9.55,
+          "direction": "UP",
+          "maximum_up_usd": 19.25,
+          "maximum_down_usd": -16.2,
+          "highest_price": 2065.42,
+          "lowest_price": 2029.97
+        },
+        "2d": {
+          "available": true,
+          "close": 2037.37,
+          "move_usd": -8.8,
+          "direction": "DOWN",
+          "maximum_up_usd": 19.25,
+          "maximum_down_usd": -18.39,
+          "highest_price": 2065.42,
+          "lowest_price": 2027.78
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 2025.22,
+          "move_usd": -20.95,
+          "direction": "DOWN",
+          "maximum_up_usd": 19.25,
+          "maximum_down_usd": -31.32,
+          "highest_price": 2065.42,
+          "lowest_price": 2014.85
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "March 2024"
+      ],
+      "numbers": {
+        "previous_target_lower": 5.25,
+        "previous_target_upper": 5.5,
+        "actual_target_lower": 5.25,
+        "actual_target_upper": 5.5,
+        "change_bps": 0,
+        "decision": "HOLD"
+      },
+      "release": {
+        "previous": "5.25%-5.50%",
+        "actual": "5.25%-5.50%",
+        "result": "HOLD +0 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2024-03-20T18:00:00+00:00",
+        "news_time_ist": "2024-03-20T23:30:00+05:30",
+        "winpro_chart_time": "2024-03-20T20:00:00+02:00",
+        "winpro_offset_hours": 2,
+        "mt5_api_news_candle_time": "2024-03-20T20:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 2158.3,
+        "price_before_news": 2157.68,
+        "pre_news_move_usd": -0.62,
+        "pre_news_direction": "DOWN",
+        "day_high_before_news": 2164.88,
+        "day_low_before_news": 2149.56,
+        "pre_news_range_usd": 15.32,
+        "range_position_percent": 53.0,
+        "location": "MIDDLE_DAY_RANGE",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": 0.78,
+            "direction": "UP"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": -0.25,
+            "direction": "DOWN"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": 2.01,
+            "direction": "UP"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": 4.81,
+            "direction": "UP"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 2164.88,
+        "reference_low": 2150.48,
+        "final_hour_high": 2158.66,
+        "final_hour_low": 2155.56,
+        "price_before_news": 2157.68,
+        "swept_upside_liquidity": false,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 7.2,
+        "distance_to_reference_low_usd": 7.2,
+        "sequence": "NO_RECENT_SWEEP"
+      },
+      "impulse_candle": {
+        "open": 2157.69,
+        "high": 2157.79,
+        "low": 2157.17,
+        "close": 2157.39,
+        "body_move_usd": -0.3,
+        "body_direction": "DOWN",
+        "full_range_usd": 0.62,
+        "maximum_up_from_open_usd": 0.1,
+        "maximum_down_from_open_usd": -0.52,
+        "tick_volume": 98,
+        "broker_spread_points": 18
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": true,
+        "swept_pre_news_day_low": false
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 2157.48,
+          "move_usd": -0.21,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.1,
+          "maximum_down_usd": -0.52,
+          "highest_price": 2157.79,
+          "lowest_price": 2157.17
+        },
+        "5m": {
+          "available": true,
+          "close": 2157.01,
+          "move_usd": -0.68,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.1,
+          "maximum_down_usd": -0.8,
+          "highest_price": 2157.79,
+          "lowest_price": 2156.89
+        },
+        "15m": {
+          "available": true,
+          "close": 2158.03,
+          "move_usd": 0.34,
+          "direction": "UP",
+          "maximum_up_usd": 0.4,
+          "maximum_down_usd": -0.8,
+          "highest_price": 2158.09,
+          "lowest_price": 2156.89
+        },
+        "30m": {
+          "available": true,
+          "close": 2158.39,
+          "move_usd": 0.7,
+          "direction": "UP",
+          "maximum_up_usd": 0.8,
+          "maximum_down_usd": -1.06,
+          "highest_price": 2158.49,
+          "lowest_price": 2156.63
+        },
+        "1h": {
+          "available": true,
+          "close": 2162.21,
+          "move_usd": 4.52,
+          "direction": "UP",
+          "maximum_up_usd": 7.77,
+          "maximum_down_usd": -1.06,
+          "highest_price": 2165.46,
+          "lowest_price": 2156.63
+        },
+        "4h": {
+          "available": true,
+          "close": 2186.14,
+          "move_usd": 28.45,
+          "direction": "UP",
+          "maximum_up_usd": 31.11,
+          "maximum_down_usd": -1.06,
+          "highest_price": 2188.8,
+          "lowest_price": 2156.63
+        },
+        "24h": {
+          "available": true,
+          "close": 2180.34,
+          "move_usd": 22.65,
+          "direction": "UP",
+          "maximum_up_usd": 65.39,
+          "maximum_down_usd": -1.06,
+          "highest_price": 2223.08,
+          "lowest_price": 2156.63
+        },
+        "2d": {
+          "available": true,
+          "close": 2163.23,
+          "move_usd": 5.54,
+          "direction": "UP",
+          "maximum_up_usd": 65.39,
+          "maximum_down_usd": -1.06,
+          "highest_price": 2223.08,
+          "lowest_price": 2156.63
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 2176.15,
+          "move_usd": 18.46,
+          "direction": "UP",
+          "maximum_up_usd": 65.39,
+          "maximum_down_usd": -1.06,
+          "highest_price": 2223.08,
+          "lowest_price": 2156.63
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "May 2024"
+      ],
+      "numbers": {
+        "previous_target_lower": 5.25,
+        "previous_target_upper": 5.5,
+        "actual_target_lower": 5.25,
+        "actual_target_upper": 5.5,
+        "change_bps": 0,
+        "decision": "HOLD"
+      },
+      "release": {
+        "previous": "5.25%-5.50%",
+        "actual": "5.25%-5.50%",
+        "result": "HOLD +0 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2024-05-01T18:00:00+00:00",
+        "news_time_ist": "2024-05-01T23:30:00+05:30",
+        "winpro_chart_time": "2024-05-01T21:00:00+03:00",
+        "winpro_offset_hours": 3,
+        "mt5_api_news_candle_time": "2024-05-01T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 2286.66,
+        "price_before_news": 2299.48,
+        "pre_news_move_usd": 12.82,
+        "pre_news_direction": "UP",
+        "day_high_before_news": 2310.47,
+        "day_low_before_news": 2281.59,
+        "pre_news_range_usd": 28.88,
+        "range_position_percent": 61.9,
+        "location": "UPPER_DAY_RANGE",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": -0.68,
+            "direction": "DOWN"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": 0.88,
+            "direction": "UP"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": -3.87,
+            "direction": "DOWN"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": -4.11,
+            "direction": "DOWN"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 2310.47,
+        "reference_low": 2297.37,
+        "final_hour_high": 2305.0,
+        "final_hour_low": 2297.6,
+        "price_before_news": 2299.48,
+        "swept_upside_liquidity": false,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 10.99,
+        "distance_to_reference_low_usd": 2.11,
+        "sequence": "NO_RECENT_SWEEP"
+      },
+      "impulse_candle": {
+        "open": 2298.31,
+        "high": 2304.01,
+        "low": 2295.91,
+        "close": 2303.58,
+        "body_move_usd": 5.27,
+        "body_direction": "UP",
+        "full_range_usd": 8.1,
+        "maximum_up_from_open_usd": 5.7,
+        "maximum_down_from_open_usd": -2.4,
+        "tick_volume": 821,
+        "broker_spread_points": 18
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": true,
+        "swept_pre_news_day_low": false
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 2302.4,
+          "move_usd": 4.09,
+          "direction": "UP",
+          "maximum_up_usd": 5.89,
+          "maximum_down_usd": -2.4,
+          "highest_price": 2304.2,
+          "lowest_price": 2295.91
+        },
+        "5m": {
+          "available": true,
+          "close": 2305.72,
+          "move_usd": 7.41,
+          "direction": "UP",
+          "maximum_up_usd": 9.09,
+          "maximum_down_usd": -2.4,
+          "highest_price": 2307.4,
+          "lowest_price": 2295.91
+        },
+        "15m": {
+          "available": true,
+          "close": 2303.96,
+          "move_usd": 5.65,
+          "direction": "UP",
+          "maximum_up_usd": 9.09,
+          "maximum_down_usd": -2.4,
+          "highest_price": 2307.4,
+          "lowest_price": 2295.91
+        },
+        "30m": {
+          "available": true,
+          "close": 2311.52,
+          "move_usd": 13.21,
+          "direction": "UP",
+          "maximum_up_usd": 15.52,
+          "maximum_down_usd": -2.4,
+          "highest_price": 2313.83,
+          "lowest_price": 2295.91
+        },
+        "1h": {
+          "available": true,
+          "close": 2325.81,
+          "move_usd": 27.5,
+          "direction": "UP",
+          "maximum_up_usd": 29.98,
+          "maximum_down_usd": -2.4,
+          "highest_price": 2328.29,
+          "lowest_price": 2295.91
+        },
+        "4h": {
+          "available": true,
+          "close": 2319.98,
+          "move_usd": 21.67,
+          "direction": "UP",
+          "maximum_up_usd": 29.98,
+          "maximum_down_usd": -2.4,
+          "highest_price": 2328.29,
+          "lowest_price": 2295.91
+        },
+        "24h": {
+          "available": true,
+          "close": 2308.08,
+          "move_usd": 9.77,
+          "direction": "UP",
+          "maximum_up_usd": 29.98,
+          "maximum_down_usd": -12.86,
+          "highest_price": 2328.29,
+          "lowest_price": 2285.45
+        },
+        "2d": {
+          "available": true,
+          "close": 2302.55,
+          "move_usd": 4.24,
+          "direction": "UP",
+          "maximum_up_usd": 29.98,
+          "maximum_down_usd": -21.04,
+          "highest_price": 2328.29,
+          "lowest_price": 2277.27
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 2325.29,
+          "move_usd": 26.98,
+          "direction": "UP",
+          "maximum_up_usd": 33.79,
+          "maximum_down_usd": -21.04,
+          "highest_price": 2332.1,
+          "lowest_price": 2277.27
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "June 2024"
+      ],
+      "numbers": {
+        "previous_target_lower": 5.25,
+        "previous_target_upper": 5.5,
+        "actual_target_lower": 5.25,
+        "actual_target_upper": 5.5,
+        "change_bps": 0,
+        "decision": "HOLD"
+      },
+      "release": {
+        "previous": "5.25%-5.50%",
+        "actual": "5.25%-5.50%",
+        "result": "HOLD +0 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2024-06-12T18:00:00+00:00",
+        "news_time_ist": "2024-06-12T23:30:00+05:30",
+        "winpro_chart_time": "2024-06-12T21:00:00+03:00",
+        "winpro_offset_hours": 3,
+        "mt5_api_news_candle_time": "2024-06-12T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 2316.81,
+        "price_before_news": 2335.15,
+        "pre_news_move_usd": 18.34,
+        "pre_news_direction": "UP",
+        "day_high_before_news": 2341.63,
+        "day_low_before_news": 2310.66,
+        "pre_news_range_usd": 30.97,
+        "range_position_percent": 79.1,
+        "location": "UPPER_DAY_RANGE",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": 1.39,
+            "direction": "UP"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": -1.62,
+            "direction": "DOWN"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": -2.3,
+            "direction": "DOWN"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": 7.34,
+            "direction": "UP"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 2338.15,
+        "reference_low": 2320.07,
+        "final_hour_high": 2339.54,
+        "final_hour_low": 2332.84,
+        "price_before_news": 2335.15,
+        "swept_upside_liquidity": true,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": true,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 3.0,
+        "distance_to_reference_low_usd": 15.08,
+        "sequence": "UPSIDE_SWEEP_REJECT"
+      },
+      "impulse_candle": {
+        "open": 2333.94,
+        "high": 2333.94,
+        "low": 2324.07,
+        "close": 2330.46,
+        "body_move_usd": -3.48,
+        "body_direction": "DOWN",
+        "full_range_usd": 9.87,
+        "maximum_up_from_open_usd": 0.0,
+        "maximum_down_from_open_usd": -9.87,
+        "tick_volume": 820,
+        "broker_spread_points": 18
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": false,
+        "swept_pre_news_day_low": false
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 2329.03,
+          "move_usd": -4.91,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -9.87,
+          "highest_price": 2333.94,
+          "lowest_price": 2324.07
+        },
+        "5m": {
+          "available": true,
+          "close": 2329.8,
+          "move_usd": -4.14,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -9.87,
+          "highest_price": 2333.94,
+          "lowest_price": 2324.07
+        },
+        "15m": {
+          "available": true,
+          "close": 2326.39,
+          "move_usd": -7.55,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -9.87,
+          "highest_price": 2333.94,
+          "lowest_price": 2324.07
+        },
+        "30m": {
+          "available": true,
+          "close": 2332.23,
+          "move_usd": -1.71,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -9.87,
+          "highest_price": 2333.94,
+          "lowest_price": 2324.07
+        },
+        "1h": {
+          "available": true,
+          "close": 2322.19,
+          "move_usd": -11.75,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -14.46,
+          "highest_price": 2333.94,
+          "lowest_price": 2319.48
+        },
+        "4h": {
+          "available": true,
+          "close": 2324.77,
+          "move_usd": -9.17,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -18.1,
+          "highest_price": 2333.94,
+          "lowest_price": 2315.84
+        },
+        "24h": {
+          "available": true,
+          "close": 2300.9,
+          "move_usd": -33.04,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -38.38,
+          "highest_price": 2333.94,
+          "lowest_price": 2295.56
+        },
+        "2d": {
+          "available": true,
+          "close": 2333.8,
+          "move_usd": -0.14,
+          "direction": "DOWN",
+          "maximum_up_usd": 2.66,
+          "maximum_down_usd": -38.38,
+          "highest_price": 2336.6,
+          "lowest_price": 2295.56
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 2316.42,
+          "move_usd": -17.52,
+          "direction": "DOWN",
+          "maximum_up_usd": 2.66,
+          "maximum_down_usd": -38.38,
+          "highest_price": 2336.6,
+          "lowest_price": 2295.56
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "July 2024"
+      ],
+      "numbers": {
+        "previous_target_lower": 5.25,
+        "previous_target_upper": 5.5,
+        "actual_target_lower": 5.25,
+        "actual_target_upper": 5.5,
+        "change_bps": 0,
+        "decision": "HOLD"
+      },
+      "release": {
+        "previous": "5.25%-5.50%",
+        "actual": "5.25%-5.50%",
+        "result": "HOLD +0 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2024-07-31T18:00:00+00:00",
+        "news_time_ist": "2024-07-31T23:30:00+05:30",
+        "winpro_chart_time": "2024-07-31T21:00:00+03:00",
+        "winpro_offset_hours": 3,
+        "mt5_api_news_candle_time": "2024-07-31T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 2410.58,
+        "price_before_news": 2425.76,
+        "pre_news_move_usd": 15.18,
+        "pre_news_direction": "UP",
+        "day_high_before_news": 2429.01,
+        "day_low_before_news": 2403.86,
+        "pre_news_range_usd": 25.15,
+        "range_position_percent": 87.1,
+        "location": "NEAR_DAY_HIGH",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": -0.96,
+            "direction": "DOWN"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": -2.46,
+            "direction": "DOWN"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": -1.26,
+            "direction": "DOWN"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": -1.85,
+            "direction": "DOWN"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 2429.01,
+        "reference_low": 2419.16,
+        "final_hour_high": 2429.0,
+        "final_hour_low": 2425.65,
+        "price_before_news": 2425.76,
+        "swept_upside_liquidity": false,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 3.25,
+        "distance_to_reference_low_usd": 6.6,
+        "sequence": "NO_RECENT_SWEEP"
+      },
+      "impulse_candle": {
+        "open": 2426.15,
+        "high": 2427.42,
+        "low": 2421.48,
+        "close": 2422.4,
+        "body_move_usd": -3.75,
+        "body_direction": "DOWN",
+        "full_range_usd": 5.94,
+        "maximum_up_from_open_usd": 1.27,
+        "maximum_down_from_open_usd": -4.67,
+        "tick_volume": 604,
+        "broker_spread_points": 18
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": true,
+        "swept_pre_news_day_low": false
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 2423.87,
+          "move_usd": -2.28,
+          "direction": "DOWN",
+          "maximum_up_usd": 1.27,
+          "maximum_down_usd": -4.67,
+          "highest_price": 2427.42,
+          "lowest_price": 2421.48
+        },
+        "5m": {
+          "available": true,
+          "close": 2423.72,
+          "move_usd": -2.43,
+          "direction": "DOWN",
+          "maximum_up_usd": 1.27,
+          "maximum_down_usd": -4.67,
+          "highest_price": 2427.42,
+          "lowest_price": 2421.48
+        },
+        "15m": {
+          "available": true,
+          "close": 2422.52,
+          "move_usd": -3.63,
+          "direction": "DOWN",
+          "maximum_up_usd": 1.27,
+          "maximum_down_usd": -4.67,
+          "highest_price": 2427.42,
+          "lowest_price": 2421.48
+        },
+        "30m": {
+          "available": true,
+          "close": 2425.36,
+          "move_usd": -0.79,
+          "direction": "DOWN",
+          "maximum_up_usd": 1.27,
+          "maximum_down_usd": -4.67,
+          "highest_price": 2427.42,
+          "lowest_price": 2421.48
+        },
+        "1h": {
+          "available": true,
+          "close": 2434.35,
+          "move_usd": 8.2,
+          "direction": "UP",
+          "maximum_up_usd": 9.17,
+          "maximum_down_usd": -4.67,
+          "highest_price": 2435.32,
+          "lowest_price": 2421.48
+        },
+        "4h": {
+          "available": true,
+          "close": 2449.18,
+          "move_usd": 23.03,
+          "direction": "UP",
+          "maximum_up_usd": 24.74,
+          "maximum_down_usd": -4.67,
+          "highest_price": 2450.89,
+          "lowest_price": 2421.48
+        },
+        "24h": {
+          "available": true,
+          "close": 2439.92,
+          "move_usd": 13.77,
+          "direction": "UP",
+          "maximum_up_usd": 36.08,
+          "maximum_down_usd": -4.67,
+          "highest_price": 2462.23,
+          "lowest_price": 2421.48
+        },
+        "2d": {
+          "available": true,
+          "close": 2427.18,
+          "move_usd": 1.03,
+          "direction": "UP",
+          "maximum_up_usd": 51.48,
+          "maximum_down_usd": -15.41,
+          "highest_price": 2477.63,
+          "lowest_price": 2410.74
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 2404.44,
+          "move_usd": -21.71,
+          "direction": "DOWN",
+          "maximum_up_usd": 51.48,
+          "maximum_down_usd": -61.94,
+          "highest_price": 2477.63,
+          "lowest_price": 2364.21
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "September 2024"
+      ],
+      "numbers": {
+        "previous_target_lower": 5.25,
+        "previous_target_upper": 5.5,
+        "actual_target_lower": 4.75,
+        "actual_target_upper": 5.0,
+        "change_bps": -50,
+        "decision": "CUT"
+      },
+      "release": {
+        "previous": "5.25%-5.50%",
+        "actual": "4.75%-5.00%",
+        "result": "CUT -50 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2024-09-18T18:00:00+00:00",
+        "news_time_ist": "2024-09-18T23:30:00+05:30",
+        "winpro_chart_time": "2024-09-18T21:00:00+03:00",
+        "winpro_offset_hours": 3,
+        "mt5_api_news_candle_time": "2024-09-18T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 2569.57,
+        "price_before_news": 2568.09,
+        "pre_news_move_usd": -1.48,
+        "pre_news_direction": "DOWN",
+        "day_high_before_news": 2580.74,
+        "day_low_before_news": 2565.66,
+        "pre_news_range_usd": 15.08,
+        "range_position_percent": 16.1,
+        "location": "NEAR_DAY_LOW",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": -3.0,
+            "direction": "DOWN"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": -3.87,
+            "direction": "DOWN"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": -6.37,
+            "direction": "DOWN"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": -2.89,
+            "direction": "DOWN"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 2575.3,
+        "reference_low": 2568.14,
+        "final_hour_high": 2574.66,
+        "final_hour_low": 2567.45,
+        "price_before_news": 2568.09,
+        "swept_upside_liquidity": false,
+        "swept_downside_liquidity": true,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 7.21,
+        "distance_to_reference_low_usd": -0.05,
+        "sequence": "DOWNSIDE_LIQUIDITY_TAKEN"
+      },
+      "impulse_candle": {
+        "open": 2568.14,
+        "high": 2587.54,
+        "low": 2568.14,
+        "close": 2579.93,
+        "body_move_usd": 11.79,
+        "body_direction": "UP",
+        "full_range_usd": 19.4,
+        "maximum_up_from_open_usd": 19.4,
+        "maximum_down_from_open_usd": 0.0,
+        "tick_volume": 765,
+        "broker_spread_points": 18
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": true,
+        "swept_pre_news_day_low": false
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 2576.14,
+          "move_usd": 8.0,
+          "direction": "UP",
+          "maximum_up_usd": 19.4,
+          "maximum_down_usd": 0.0,
+          "highest_price": 2587.54,
+          "lowest_price": 2568.14
+        },
+        "5m": {
+          "available": true,
+          "close": 2584.69,
+          "move_usd": 16.55,
+          "direction": "UP",
+          "maximum_up_usd": 19.4,
+          "maximum_down_usd": 0.0,
+          "highest_price": 2587.54,
+          "lowest_price": 2568.14
+        },
+        "15m": {
+          "available": true,
+          "close": 2589.99,
+          "move_usd": 21.85,
+          "direction": "UP",
+          "maximum_up_usd": 23.61,
+          "maximum_down_usd": 0.0,
+          "highest_price": 2591.75,
+          "lowest_price": 2568.14
+        },
+        "30m": {
+          "available": true,
+          "close": 2595.98,
+          "move_usd": 27.84,
+          "direction": "UP",
+          "maximum_up_usd": 29.77,
+          "maximum_down_usd": 0.0,
+          "highest_price": 2597.91,
+          "lowest_price": 2568.14
+        },
+        "1h": {
+          "available": true,
+          "close": 2574.63,
+          "move_usd": 6.49,
+          "direction": "UP",
+          "maximum_up_usd": 31.84,
+          "maximum_down_usd": 0.0,
+          "highest_price": 2599.98,
+          "lowest_price": 2568.14
+        },
+        "4h": {
+          "available": true,
+          "close": 2557.58,
+          "move_usd": -10.56,
+          "direction": "DOWN",
+          "maximum_up_usd": 31.84,
+          "maximum_down_usd": -21.59,
+          "highest_price": 2599.98,
+          "lowest_price": 2546.55
+        },
+        "24h": {
+          "available": true,
+          "close": 2590.55,
+          "move_usd": 22.41,
+          "direction": "UP",
+          "maximum_up_usd": 31.84,
+          "maximum_down_usd": -21.59,
+          "highest_price": 2599.98,
+          "lowest_price": 2546.55
+        },
+        "2d": {
+          "available": true,
+          "close": 2619.74,
+          "move_usd": 51.6,
+          "direction": "UP",
+          "maximum_up_usd": 57.52,
+          "maximum_down_usd": -21.59,
+          "highest_price": 2625.66,
+          "lowest_price": 2546.55
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 2627.86,
+          "move_usd": 59.72,
+          "direction": "UP",
+          "maximum_up_usd": 66.62,
+          "maximum_down_usd": -21.59,
+          "highest_price": 2634.76,
+          "lowest_price": 2546.55
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "November 2024"
+      ],
+      "numbers": {
+        "previous_target_lower": 4.75,
+        "previous_target_upper": 5.0,
+        "actual_target_lower": 4.5,
+        "actual_target_upper": 4.75,
+        "change_bps": -25,
+        "decision": "CUT"
+      },
+      "release": {
+        "previous": "4.75%-5.00%",
+        "actual": "4.50%-4.75%",
+        "result": "CUT -25 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2024-11-07T19:00:00+00:00",
+        "news_time_ist": "2024-11-08T00:30:00+05:30",
+        "winpro_chart_time": "2024-11-07T21:00:00+02:00",
+        "winpro_offset_hours": 2,
+        "mt5_api_news_candle_time": "2024-11-07T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 2659.28,
+        "price_before_news": 2695.7,
+        "pre_news_move_usd": 36.42,
+        "pre_news_direction": "UP",
+        "day_high_before_news": 2700.28,
+        "day_low_before_news": 2643.1,
+        "pre_news_range_usd": 57.18,
+        "range_position_percent": 92.0,
+        "location": "NEAR_DAY_HIGH",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": -0.46,
+            "direction": "DOWN"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": -2.8,
+            "direction": "DOWN"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": -3.24,
+            "direction": "DOWN"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": 3.52,
+            "direction": "UP"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 2700.28,
+        "reference_low": 2689.98,
+        "final_hour_high": 2699.5,
+        "final_hour_low": 2693.98,
+        "price_before_news": 2695.7,
+        "swept_upside_liquidity": false,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 4.58,
+        "distance_to_reference_low_usd": 5.72,
+        "sequence": "NO_RECENT_SWEEP"
+      },
+      "impulse_candle": {
+        "open": 2695.54,
+        "high": 2698.12,
+        "low": 2692.52,
+        "close": 2693.64,
+        "body_move_usd": -1.9,
+        "body_direction": "DOWN",
+        "full_range_usd": 5.6,
+        "maximum_up_from_open_usd": 2.58,
+        "maximum_down_from_open_usd": -3.02,
+        "tick_volume": 474,
+        "broker_spread_points": 18
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": false,
+        "swept_pre_news_day_low": false
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 2693.08,
+          "move_usd": -2.46,
+          "direction": "DOWN",
+          "maximum_up_usd": 2.58,
+          "maximum_down_usd": -3.02,
+          "highest_price": 2698.12,
+          "lowest_price": 2692.52
+        },
+        "5m": {
+          "available": true,
+          "close": 2691.69,
+          "move_usd": -3.85,
+          "direction": "DOWN",
+          "maximum_up_usd": 2.58,
+          "maximum_down_usd": -6.98,
+          "highest_price": 2698.12,
+          "lowest_price": 2688.56
+        },
+        "15m": {
+          "available": true,
+          "close": 2694.0,
+          "move_usd": -1.54,
+          "direction": "DOWN",
+          "maximum_up_usd": 2.58,
+          "maximum_down_usd": -6.98,
+          "highest_price": 2698.12,
+          "lowest_price": 2688.56
+        },
+        "30m": {
+          "available": true,
+          "close": 2690.9,
+          "move_usd": -4.64,
+          "direction": "DOWN",
+          "maximum_up_usd": 2.58,
+          "maximum_down_usd": -6.98,
+          "highest_price": 2698.12,
+          "lowest_price": 2688.56
+        },
+        "1h": {
+          "available": true,
+          "close": 2693.4,
+          "move_usd": -2.14,
+          "direction": "DOWN",
+          "maximum_up_usd": 2.58,
+          "maximum_down_usd": -7.98,
+          "highest_price": 2698.12,
+          "lowest_price": 2687.56
+        },
+        "4h": {
+          "available": true,
+          "close": 2704.24,
+          "move_usd": 8.7,
+          "direction": "UP",
+          "maximum_up_usd": 14.74,
+          "maximum_down_usd": -7.98,
+          "highest_price": 2710.28,
+          "lowest_price": 2687.56
+        },
+        "24h": {
+          "available": true,
+          "close": 2685.54,
+          "move_usd": -10.0,
+          "direction": "DOWN",
+          "maximum_up_usd": 14.85,
+          "maximum_down_usd": -15.11,
+          "highest_price": 2710.39,
+          "lowest_price": 2680.43
+        },
+        "2d": {
+          "available": false
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 2599.58,
+          "move_usd": -95.96,
+          "direction": "DOWN",
+          "maximum_up_usd": 14.85,
+          "maximum_down_usd": -105.92,
+          "highest_price": 2710.39,
+          "lowest_price": 2589.62
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "December 2024"
+      ],
+      "numbers": {
+        "previous_target_lower": 4.5,
+        "previous_target_upper": 4.75,
+        "actual_target_lower": 4.25,
+        "actual_target_upper": 4.5,
+        "change_bps": -25,
+        "decision": "CUT"
+      },
+      "release": {
+        "previous": "4.50%-4.75%",
+        "actual": "4.25%-4.50%",
+        "result": "CUT -25 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2024-12-18T19:00:00+00:00",
+        "news_time_ist": "2024-12-19T00:30:00+05:30",
+        "winpro_chart_time": "2024-12-18T21:00:00+02:00",
+        "winpro_offset_hours": 2,
+        "mt5_api_news_candle_time": "2024-12-18T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 2645.34,
+        "price_before_news": 2636.71,
+        "pre_news_move_usd": -8.63,
+        "pre_news_direction": "DOWN",
+        "day_high_before_news": 2651.67,
+        "day_low_before_news": 2633.06,
+        "pre_news_range_usd": 18.61,
+        "range_position_percent": 19.6,
+        "location": "NEAR_DAY_LOW",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": 0.61,
+            "direction": "UP"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": -1.48,
+            "direction": "DOWN"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": 0.07,
+            "direction": "UP"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": 0.48,
+            "direction": "UP"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 2640.01,
+        "reference_low": 2633.06,
+        "final_hour_high": 2638.94,
+        "final_hour_low": 2635.27,
+        "price_before_news": 2636.71,
+        "swept_upside_liquidity": false,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 3.3,
+        "distance_to_reference_low_usd": 3.65,
+        "sequence": "NO_RECENT_SWEEP"
+      },
+      "impulse_candle": {
+        "open": 2636.66,
+        "high": 2636.66,
+        "low": 2627.79,
+        "close": 2632.73,
+        "body_move_usd": -3.93,
+        "body_direction": "DOWN",
+        "full_range_usd": 8.87,
+        "maximum_up_from_open_usd": 0.0,
+        "maximum_down_from_open_usd": -8.87,
+        "tick_volume": 235,
+        "broker_spread_points": 18
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": false,
+        "swept_pre_news_day_low": true
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 2630.44,
+          "move_usd": -6.22,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -8.87,
+          "highest_price": 2636.66,
+          "lowest_price": 2627.79
+        },
+        "5m": {
+          "available": true,
+          "close": 2623.01,
+          "move_usd": -13.65,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -13.86,
+          "highest_price": 2636.66,
+          "lowest_price": 2622.8
+        },
+        "15m": {
+          "available": true,
+          "close": 2616.75,
+          "move_usd": -19.91,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -21.3,
+          "highest_price": 2636.66,
+          "lowest_price": 2615.36
+        },
+        "30m": {
+          "available": true,
+          "close": 2617.66,
+          "move_usd": -19.0,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -21.3,
+          "highest_price": 2636.66,
+          "lowest_price": 2615.36
+        },
+        "1h": {
+          "available": true,
+          "close": 2606.97,
+          "move_usd": -29.69,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -32.68,
+          "highest_price": 2636.66,
+          "lowest_price": 2603.98
+        },
+        "4h": {
+          "available": true,
+          "close": 2583.88,
+          "move_usd": -52.78,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -53.09,
+          "highest_price": 2636.66,
+          "lowest_price": 2583.57
+        },
+        "24h": {
+          "available": true,
+          "close": 2600.45,
+          "move_usd": -36.21,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -53.2,
+          "highest_price": 2636.66,
+          "lowest_price": 2583.46
+        },
+        "2d": {
+          "available": true,
+          "close": 2626.39,
+          "move_usd": -10.27,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -53.2,
+          "highest_price": 2636.66,
+          "lowest_price": 2583.46
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 2610.89,
+          "move_usd": -25.77,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -53.2,
+          "highest_price": 2636.66,
+          "lowest_price": 2583.46
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "January 2025"
+      ],
+      "numbers": {
+        "previous_target_lower": 4.25,
+        "previous_target_upper": 4.5,
+        "actual_target_lower": 4.25,
+        "actual_target_upper": 4.5,
+        "change_bps": 0,
+        "decision": "HOLD"
+      },
+      "release": {
+        "previous": "4.25%-4.50%",
+        "actual": "4.25%-4.50%",
+        "result": "HOLD +0 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2025-01-29T19:00:00+00:00",
+        "news_time_ist": "2025-01-30T00:30:00+05:30",
+        "winpro_chart_time": "2025-01-29T21:00:00+02:00",
+        "winpro_offset_hours": 2,
+        "mt5_api_news_candle_time": "2025-01-29T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 2763.17,
+        "price_before_news": 2751.09,
+        "pre_news_move_usd": -12.08,
+        "pre_news_direction": "DOWN",
+        "day_high_before_news": 2766.22,
+        "day_low_before_news": 2748.41,
+        "pre_news_range_usd": 17.81,
+        "range_position_percent": 15.0,
+        "location": "NEAR_DAY_LOW",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": -1.56,
+            "direction": "DOWN"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": -2.12,
+            "direction": "DOWN"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": -1.23,
+            "direction": "DOWN"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": -6.96,
+            "direction": "DOWN"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 2759.61,
+        "reference_low": 2748.41,
+        "final_hour_high": 2753.83,
+        "final_hour_low": 2748.76,
+        "price_before_news": 2751.09,
+        "swept_upside_liquidity": false,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 8.52,
+        "distance_to_reference_low_usd": 2.68,
+        "sequence": "NO_RECENT_SWEEP"
+      },
+      "impulse_candle": {
+        "open": 2750.93,
+        "high": 2751.39,
+        "low": 2746.67,
+        "close": 2746.9,
+        "body_move_usd": -4.03,
+        "body_direction": "DOWN",
+        "full_range_usd": 4.72,
+        "maximum_up_from_open_usd": 0.46,
+        "maximum_down_from_open_usd": -4.26,
+        "tick_volume": 183,
+        "broker_spread_points": 18
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": false,
+        "swept_pre_news_day_low": true
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 2749.55,
+          "move_usd": -1.38,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.46,
+          "maximum_down_usd": -4.42,
+          "highest_price": 2751.39,
+          "lowest_price": 2746.51
+        },
+        "5m": {
+          "available": true,
+          "close": 2745.61,
+          "move_usd": -5.32,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.46,
+          "maximum_down_usd": -5.44,
+          "highest_price": 2751.39,
+          "lowest_price": 2745.49
+        },
+        "15m": {
+          "available": true,
+          "close": 2747.89,
+          "move_usd": -3.04,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.46,
+          "maximum_down_usd": -5.44,
+          "highest_price": 2751.39,
+          "lowest_price": 2745.49
+        },
+        "30m": {
+          "available": true,
+          "close": 2745.77,
+          "move_usd": -5.16,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.46,
+          "maximum_down_usd": -6.05,
+          "highest_price": 2751.39,
+          "lowest_price": 2744.88
+        },
+        "1h": {
+          "available": true,
+          "close": 2755.31,
+          "move_usd": 4.38,
+          "direction": "UP",
+          "maximum_up_usd": 6.79,
+          "maximum_down_usd": -6.05,
+          "highest_price": 2757.72,
+          "lowest_price": 2744.88
+        },
+        "4h": {
+          "available": false
+        },
+        "24h": {
+          "available": true,
+          "close": 2795.03,
+          "move_usd": 44.1,
+          "direction": "UP",
+          "maximum_up_usd": 47.54,
+          "maximum_down_usd": -6.05,
+          "highest_price": 2798.47,
+          "lowest_price": 2744.88
+        },
+        "2d": {
+          "available": true,
+          "close": 2797.94,
+          "move_usd": 47.01,
+          "direction": "UP",
+          "maximum_up_usd": 66.16,
+          "maximum_down_usd": -6.05,
+          "highest_price": 2817.09,
+          "lowest_price": 2744.88
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 2821.03,
+          "move_usd": 70.1,
+          "direction": "UP",
+          "maximum_up_usd": 79.67,
+          "maximum_down_usd": -6.05,
+          "highest_price": 2830.6,
+          "lowest_price": 2744.88
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "March 2025"
+      ],
+      "numbers": {
+        "previous_target_lower": 4.25,
+        "previous_target_upper": 4.5,
+        "actual_target_lower": 4.25,
+        "actual_target_upper": 4.5,
+        "change_bps": 0,
+        "decision": "HOLD"
+      },
+      "release": {
+        "previous": "4.25%-4.50%",
+        "actual": "4.25%-4.50%",
+        "result": "HOLD +0 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2025-03-19T18:00:00+00:00",
+        "news_time_ist": "2025-03-19T23:30:00+05:30",
+        "winpro_chart_time": "2025-03-19T20:00:00+02:00",
+        "winpro_offset_hours": 2,
+        "mt5_api_news_candle_time": "2025-03-19T20:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 3033.92,
+        "price_before_news": 3033.08,
+        "pre_news_move_usd": -0.84,
+        "pre_news_direction": "DOWN",
+        "day_high_before_news": 3045.29,
+        "day_low_before_news": 3022.77,
+        "pre_news_range_usd": 22.52,
+        "range_position_percent": 45.8,
+        "location": "MIDDLE_DAY_RANGE",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": -1.77,
+            "direction": "DOWN"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": -3.79,
+            "direction": "DOWN"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": 0.95,
+            "direction": "UP"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": -3.27,
+            "direction": "DOWN"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 3038.23,
+        "reference_low": 3025.94,
+        "final_hour_high": 3038.3,
+        "final_hour_low": 3031.34,
+        "price_before_news": 3033.08,
+        "swept_upside_liquidity": true,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": true,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 5.15,
+        "distance_to_reference_low_usd": 7.14,
+        "sequence": "UPSIDE_SWEEP_REJECT"
+      },
+      "impulse_candle": {
+        "open": 3033.07,
+        "high": 3033.2,
+        "low": 3031.58,
+        "close": 3031.58,
+        "body_move_usd": -1.49,
+        "body_direction": "DOWN",
+        "full_range_usd": 1.62,
+        "maximum_up_from_open_usd": 0.13,
+        "maximum_down_from_open_usd": -1.49,
+        "tick_volume": 116,
+        "broker_spread_points": 18
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": false,
+        "swept_pre_news_day_low": false
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 3032.04,
+          "move_usd": -1.03,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.13,
+          "maximum_down_usd": -1.49,
+          "highest_price": 3033.2,
+          "lowest_price": 3031.58
+        },
+        "5m": {
+          "available": true,
+          "close": 3033.61,
+          "move_usd": 0.54,
+          "direction": "UP",
+          "maximum_up_usd": 1.04,
+          "maximum_down_usd": -1.49,
+          "highest_price": 3034.11,
+          "lowest_price": 3031.58
+        },
+        "15m": {
+          "available": true,
+          "close": 3032.18,
+          "move_usd": -0.89,
+          "direction": "DOWN",
+          "maximum_up_usd": 1.04,
+          "maximum_down_usd": -1.49,
+          "highest_price": 3034.11,
+          "lowest_price": 3031.58
+        },
+        "30m": {
+          "available": true,
+          "close": 3032.89,
+          "move_usd": -0.18,
+          "direction": "DOWN",
+          "maximum_up_usd": 1.04,
+          "maximum_down_usd": -1.94,
+          "highest_price": 3034.11,
+          "lowest_price": 3031.13
+        },
+        "1h": {
+          "available": true,
+          "close": 3035.85,
+          "move_usd": 2.78,
+          "direction": "UP",
+          "maximum_up_usd": 3.66,
+          "maximum_down_usd": -3.64,
+          "highest_price": 3036.73,
+          "lowest_price": 3029.43
+        },
+        "4h": {
+          "available": true,
+          "close": 3047.29,
+          "move_usd": 14.22,
+          "direction": "UP",
+          "maximum_up_usd": 18.81,
+          "maximum_down_usd": -3.64,
+          "highest_price": 3051.88,
+          "lowest_price": 3029.43
+        },
+        "24h": {
+          "available": true,
+          "close": 3038.23,
+          "move_usd": 5.16,
+          "direction": "UP",
+          "maximum_up_usd": 24.32,
+          "maximum_down_usd": -7.38,
+          "highest_price": 3057.39,
+          "lowest_price": 3025.69
+        },
+        "2d": {
+          "available": true,
+          "close": 3014.63,
+          "move_usd": -18.44,
+          "direction": "DOWN",
+          "maximum_up_usd": 24.32,
+          "maximum_down_usd": -33.63,
+          "highest_price": 3057.39,
+          "lowest_price": 2999.44
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 3007.92,
+          "move_usd": -25.15,
+          "direction": "DOWN",
+          "maximum_up_usd": 24.32,
+          "maximum_down_usd": -33.63,
+          "highest_price": 3057.39,
+          "lowest_price": 2999.44
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "May 2025"
+      ],
+      "numbers": {
+        "previous_target_lower": 4.25,
+        "previous_target_upper": 4.5,
+        "actual_target_lower": 4.25,
+        "actual_target_upper": 4.5,
+        "change_bps": 0,
+        "decision": "HOLD"
+      },
+      "release": {
+        "previous": "4.25%-4.50%",
+        "actual": "4.25%-4.50%",
+        "result": "HOLD +0 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2025-05-07T18:00:00+00:00",
+        "news_time_ist": "2025-05-07T23:30:00+05:30",
+        "winpro_chart_time": "2025-05-07T21:00:00+03:00",
+        "winpro_offset_hours": 3,
+        "mt5_api_news_candle_time": "2025-05-07T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 3425.92,
+        "price_before_news": 3385.4,
+        "pre_news_move_usd": -40.52,
+        "pre_news_direction": "DOWN",
+        "day_high_before_news": 3430.36,
+        "day_low_before_news": 3360.11,
+        "pre_news_range_usd": 70.25,
+        "range_position_percent": 36.0,
+        "location": "LOWER_DAY_RANGE",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": -0.61,
+            "direction": "DOWN"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": 0.24,
+            "direction": "UP"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": -0.67,
+            "direction": "DOWN"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": -6.07,
+            "direction": "DOWN"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 3394.71,
+        "reference_low": 3375.73,
+        "final_hour_high": 3389.76,
+        "final_hour_low": 3383.77,
+        "price_before_news": 3385.4,
+        "swept_upside_liquidity": false,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 9.31,
+        "distance_to_reference_low_usd": 9.67,
+        "sequence": "NO_RECENT_SWEEP"
+      },
+      "impulse_candle": {
+        "open": 3385.45,
+        "high": 3388.14,
+        "low": 3385.1,
+        "close": 3386.44,
+        "body_move_usd": 0.99,
+        "body_direction": "UP",
+        "full_range_usd": 3.04,
+        "maximum_up_from_open_usd": 2.69,
+        "maximum_down_from_open_usd": -0.35,
+        "tick_volume": 370,
+        "broker_spread_points": 18
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": false,
+        "swept_pre_news_day_low": false
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 3390.91,
+          "move_usd": 5.46,
+          "direction": "UP",
+          "maximum_up_usd": 6.87,
+          "maximum_down_usd": -0.35,
+          "highest_price": 3392.32,
+          "lowest_price": 3385.1
+        },
+        "5m": {
+          "available": true,
+          "close": 3389.03,
+          "move_usd": 3.58,
+          "direction": "UP",
+          "maximum_up_usd": 8.05,
+          "maximum_down_usd": -0.35,
+          "highest_price": 3393.5,
+          "lowest_price": 3385.1
+        },
+        "15m": {
+          "available": true,
+          "close": 3395.41,
+          "move_usd": 9.96,
+          "direction": "UP",
+          "maximum_up_usd": 12.45,
+          "maximum_down_usd": -0.35,
+          "highest_price": 3397.9,
+          "lowest_price": 3385.1
+        },
+        "30m": {
+          "available": true,
+          "close": 3385.02,
+          "move_usd": -0.43,
+          "direction": "DOWN",
+          "maximum_up_usd": 12.45,
+          "maximum_down_usd": -0.43,
+          "highest_price": 3397.9,
+          "lowest_price": 3385.02
+        },
+        "1h": {
+          "available": true,
+          "close": 3386.54,
+          "move_usd": 1.09,
+          "direction": "UP",
+          "maximum_up_usd": 12.45,
+          "maximum_down_usd": -9.45,
+          "highest_price": 3397.9,
+          "lowest_price": 3376.0
+        },
+        "4h": {
+          "available": true,
+          "close": 3366.93,
+          "move_usd": -18.52,
+          "direction": "DOWN",
+          "maximum_up_usd": 12.45,
+          "maximum_down_usd": -21.75,
+          "highest_price": 3397.9,
+          "lowest_price": 3363.7
+        },
+        "24h": {
+          "available": true,
+          "close": 3309.65,
+          "move_usd": -75.8,
+          "direction": "DOWN",
+          "maximum_up_usd": 29.3,
+          "maximum_down_usd": -87.72,
+          "highest_price": 3414.75,
+          "lowest_price": 3297.73
+        },
+        "2d": {
+          "available": true,
+          "close": 3342.06,
+          "move_usd": -43.39,
+          "direction": "DOWN",
+          "maximum_up_usd": 29.3,
+          "maximum_down_usd": -110.68,
+          "highest_price": 3414.75,
+          "lowest_price": 3274.77
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 3223.45,
+          "move_usd": -162.0,
+          "direction": "DOWN",
+          "maximum_up_usd": 29.3,
+          "maximum_down_usd": -177.72,
+          "highest_price": 3414.75,
+          "lowest_price": 3207.73
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "June 2025"
+      ],
+      "numbers": {
+        "previous_target_lower": 4.25,
+        "previous_target_upper": 4.5,
+        "actual_target_lower": 4.25,
+        "actual_target_upper": 4.5,
+        "change_bps": 0,
+        "decision": "HOLD"
+      },
+      "release": {
+        "previous": "4.25%-4.50%",
+        "actual": "4.25%-4.50%",
+        "result": "HOLD +0 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2025-06-18T18:00:00+00:00",
+        "news_time_ist": "2025-06-18T23:30:00+05:30",
+        "winpro_chart_time": "2025-06-18T21:00:00+03:00",
+        "winpro_offset_hours": 3,
+        "mt5_api_news_candle_time": "2025-06-18T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 3392.57,
+        "price_before_news": 3385.21,
+        "pre_news_move_usd": -7.36,
+        "pre_news_direction": "DOWN",
+        "day_high_before_news": 3399.96,
+        "day_low_before_news": 3370.62,
+        "pre_news_range_usd": 29.34,
+        "range_position_percent": 49.7,
+        "location": "MIDDLE_DAY_RANGE",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": -1.37,
+            "direction": "DOWN"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": -3.74,
+            "direction": "DOWN"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": -5.17,
+            "direction": "DOWN"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": -6.52,
+            "direction": "DOWN"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 3394.68,
+        "reference_low": 3373.79,
+        "final_hour_high": 3391.17,
+        "final_hour_low": 3384.41,
+        "price_before_news": 3385.21,
+        "swept_upside_liquidity": false,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 9.47,
+        "distance_to_reference_low_usd": 11.42,
+        "sequence": "NO_RECENT_SWEEP"
+      },
+      "impulse_candle": {
+        "open": 3385.18,
+        "high": 3393.59,
+        "low": 3385.18,
+        "close": 3388.3,
+        "body_move_usd": 3.12,
+        "body_direction": "UP",
+        "full_range_usd": 8.41,
+        "maximum_up_from_open_usd": 8.41,
+        "maximum_down_from_open_usd": 0.0,
+        "tick_volume": 755,
+        "broker_spread_points": 18
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": false,
+        "swept_pre_news_day_low": false
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 3390.84,
+          "move_usd": 5.66,
+          "direction": "UP",
+          "maximum_up_usd": 8.41,
+          "maximum_down_usd": 0.0,
+          "highest_price": 3393.59,
+          "lowest_price": 3385.18
+        },
+        "5m": {
+          "available": true,
+          "close": 3386.64,
+          "move_usd": 1.46,
+          "direction": "UP",
+          "maximum_up_usd": 8.41,
+          "maximum_down_usd": 0.0,
+          "highest_price": 3393.59,
+          "lowest_price": 3385.18
+        },
+        "15m": {
+          "available": true,
+          "close": 3393.28,
+          "move_usd": 8.1,
+          "direction": "UP",
+          "maximum_up_usd": 10.46,
+          "maximum_down_usd": 0.0,
+          "highest_price": 3395.64,
+          "lowest_price": 3385.18
+        },
+        "30m": {
+          "available": true,
+          "close": 3390.43,
+          "move_usd": 5.25,
+          "direction": "UP",
+          "maximum_up_usd": 10.46,
+          "maximum_down_usd": 0.0,
+          "highest_price": 3395.64,
+          "lowest_price": 3385.18
+        },
+        "1h": {
+          "available": true,
+          "close": 3375.9,
+          "move_usd": -9.28,
+          "direction": "DOWN",
+          "maximum_up_usd": 10.46,
+          "maximum_down_usd": -9.29,
+          "highest_price": 3395.64,
+          "lowest_price": 3375.89
+        },
+        "4h": {
+          "available": false
+        },
+        "24h": {
+          "available": true,
+          "close": 3367.81,
+          "move_usd": -17.37,
+          "direction": "DOWN",
+          "maximum_up_usd": 10.46,
+          "maximum_down_usd": -37.71,
+          "highest_price": 3395.64,
+          "lowest_price": 3347.47
+        },
+        "2d": {
+          "available": true,
+          "close": 3367.23,
+          "move_usd": -17.95,
+          "direction": "DOWN",
+          "maximum_up_usd": 10.46,
+          "maximum_down_usd": -44.83,
+          "highest_price": 3395.64,
+          "lowest_price": 3340.35
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 3382.54,
+          "move_usd": -2.64,
+          "direction": "DOWN",
+          "maximum_up_usd": 10.46,
+          "maximum_down_usd": -44.83,
+          "highest_price": 3395.64,
+          "lowest_price": 3340.35
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "July 2025"
+      ],
+      "numbers": {
+        "previous_target_lower": 4.25,
+        "previous_target_upper": 4.5,
+        "actual_target_lower": 4.25,
+        "actual_target_upper": 4.5,
+        "change_bps": 0,
+        "decision": "HOLD"
+      },
+      "release": {
+        "previous": "4.25%-4.50%",
+        "actual": "4.25%-4.50%",
+        "result": "HOLD +0 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2025-07-30T18:00:00+00:00",
+        "news_time_ist": "2025-07-30T23:30:00+05:30",
+        "winpro_chart_time": "2025-07-30T21:00:00+03:00",
+        "winpro_offset_hours": 3,
+        "mt5_api_news_candle_time": "2025-07-30T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 3327.06,
+        "price_before_news": 3301.42,
+        "pre_news_move_usd": -25.64,
+        "pre_news_direction": "DOWN",
+        "day_high_before_news": 3334.06,
+        "day_low_before_news": 3288.64,
+        "pre_news_range_usd": 45.42,
+        "range_position_percent": 28.1,
+        "location": "LOWER_DAY_RANGE",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": 1.25,
+            "direction": "UP"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": 1.7,
+            "direction": "UP"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": 2.85,
+            "direction": "UP"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": -2.42,
+            "direction": "DOWN"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 3308.39,
+        "reference_low": 3288.64,
+        "final_hour_high": 3302.09,
+        "final_hour_low": 3297.73,
+        "price_before_news": 3301.42,
+        "swept_upside_liquidity": false,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 6.97,
+        "distance_to_reference_low_usd": 12.78,
+        "sequence": "NO_RECENT_SWEEP"
+      },
+      "impulse_candle": {
+        "open": 3301.4,
+        "high": 3304.76,
+        "low": 3301.27,
+        "close": 3302.33,
+        "body_move_usd": 0.93,
+        "body_direction": "UP",
+        "full_range_usd": 3.49,
+        "maximum_up_from_open_usd": 3.36,
+        "maximum_down_from_open_usd": -0.13,
+        "tick_volume": 313,
+        "broker_spread_points": 17
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": false,
+        "swept_pre_news_day_low": true
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 3301.94,
+          "move_usd": 0.54,
+          "direction": "UP",
+          "maximum_up_usd": 3.36,
+          "maximum_down_usd": -0.13,
+          "highest_price": 3304.76,
+          "lowest_price": 3301.27
+        },
+        "5m": {
+          "available": true,
+          "close": 3297.71,
+          "move_usd": -3.69,
+          "direction": "DOWN",
+          "maximum_up_usd": 3.36,
+          "maximum_down_usd": -4.24,
+          "highest_price": 3304.76,
+          "lowest_price": 3297.16
+        },
+        "15m": {
+          "available": true,
+          "close": 3298.94,
+          "move_usd": -2.46,
+          "direction": "DOWN",
+          "maximum_up_usd": 3.36,
+          "maximum_down_usd": -4.37,
+          "highest_price": 3304.76,
+          "lowest_price": 3297.03
+        },
+        "30m": {
+          "available": true,
+          "close": 3295.03,
+          "move_usd": -6.37,
+          "direction": "DOWN",
+          "maximum_up_usd": 3.36,
+          "maximum_down_usd": -6.42,
+          "highest_price": 3304.76,
+          "lowest_price": 3294.98
+        },
+        "1h": {
+          "available": true,
+          "close": 3280.55,
+          "move_usd": -20.85,
+          "direction": "DOWN",
+          "maximum_up_usd": 3.36,
+          "maximum_down_usd": -21.82,
+          "highest_price": 3304.76,
+          "lowest_price": 3279.58
+        },
+        "4h": {
+          "available": true,
+          "close": 3275.2,
+          "move_usd": -26.2,
+          "direction": "DOWN",
+          "maximum_up_usd": 3.36,
+          "maximum_down_usd": -33.27,
+          "highest_price": 3304.76,
+          "lowest_price": 3268.13
+        },
+        "24h": {
+          "available": true,
+          "close": 3294.9,
+          "move_usd": -6.5,
+          "direction": "DOWN",
+          "maximum_up_usd": 13.4,
+          "maximum_down_usd": -33.27,
+          "highest_price": 3314.8,
+          "lowest_price": 3268.13
+        },
+        "2d": {
+          "available": true,
+          "close": 3348.52,
+          "move_usd": 47.12,
+          "direction": "UP",
+          "maximum_up_usd": 53.69,
+          "maximum_down_usd": -33.27,
+          "highest_price": 3355.09,
+          "lowest_price": 3268.13
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 3373.83,
+          "move_usd": 72.43,
+          "direction": "UP",
+          "maximum_up_usd": 83.97,
+          "maximum_down_usd": -33.27,
+          "highest_price": 3385.37,
+          "lowest_price": 3268.13
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "September 2025"
+      ],
+      "numbers": {
+        "previous_target_lower": 4.25,
+        "previous_target_upper": 4.5,
+        "actual_target_lower": 4.0,
+        "actual_target_upper": 4.25,
+        "change_bps": -25,
+        "decision": "CUT"
+      },
+      "release": {
+        "previous": "4.25%-4.50%",
+        "actual": "4.00%-4.25%",
+        "result": "CUT -25 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2025-09-17T18:00:00+00:00",
+        "news_time_ist": "2025-09-17T23:30:00+05:30",
+        "winpro_chart_time": "2025-09-17T21:00:00+03:00",
+        "winpro_offset_hours": 3,
+        "mt5_api_news_candle_time": "2025-09-17T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 3690.09,
+        "price_before_news": 3686.98,
+        "pre_news_move_usd": -3.11,
+        "pre_news_direction": "DOWN",
+        "day_high_before_news": 3695.34,
+        "day_low_before_news": 3659.73,
+        "pre_news_range_usd": 35.61,
+        "range_position_percent": 76.5,
+        "location": "UPPER_DAY_RANGE",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": 2.01,
+            "direction": "UP"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": 3.33,
+            "direction": "UP"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": 2.6,
+            "direction": "UP"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": 7.76,
+            "direction": "UP"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 3688.55,
+        "reference_low": 3676.87,
+        "final_hour_high": 3687.79,
+        "final_hour_low": 3678.66,
+        "price_before_news": 3686.98,
+        "swept_upside_liquidity": false,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 1.57,
+        "distance_to_reference_low_usd": 10.11,
+        "sequence": "NO_RECENT_SWEEP"
+      },
+      "impulse_candle": {
+        "open": 3686.96,
+        "high": 3697.8,
+        "low": 3679.23,
+        "close": 3679.52,
+        "body_move_usd": -7.44,
+        "body_direction": "DOWN",
+        "full_range_usd": 18.57,
+        "maximum_up_from_open_usd": 10.84,
+        "maximum_down_from_open_usd": -7.73,
+        "tick_volume": 559,
+        "broker_spread_points": 17
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": true,
+        "swept_pre_news_day_low": true
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 3680.89,
+          "move_usd": -6.07,
+          "direction": "DOWN",
+          "maximum_up_usd": 10.84,
+          "maximum_down_usd": -34.88,
+          "highest_price": 3697.8,
+          "lowest_price": 3652.08
+        },
+        "5m": {
+          "available": true,
+          "close": 3690.45,
+          "move_usd": 3.49,
+          "direction": "UP",
+          "maximum_up_usd": 10.99,
+          "maximum_down_usd": -34.88,
+          "highest_price": 3697.95,
+          "lowest_price": 3652.08
+        },
+        "15m": {
+          "available": true,
+          "close": 3690.53,
+          "move_usd": 3.57,
+          "direction": "UP",
+          "maximum_up_usd": 20.47,
+          "maximum_down_usd": -34.88,
+          "highest_price": 3707.43,
+          "lowest_price": 3652.08
+        },
+        "30m": {
+          "available": true,
+          "close": 3683.83,
+          "move_usd": -3.13,
+          "direction": "DOWN",
+          "maximum_up_usd": 20.47,
+          "maximum_down_usd": -34.88,
+          "highest_price": 3707.43,
+          "lowest_price": 3652.08
+        },
+        "1h": {
+          "available": true,
+          "close": 3647.26,
+          "move_usd": -39.7,
+          "direction": "DOWN",
+          "maximum_up_usd": 20.47,
+          "maximum_down_usd": -40.84,
+          "highest_price": 3707.43,
+          "lowest_price": 3646.12
+        },
+        "4h": {
+          "available": true,
+          "close": 3661.21,
+          "move_usd": -25.75,
+          "direction": "DOWN",
+          "maximum_up_usd": 20.47,
+          "maximum_down_usd": -40.84,
+          "highest_price": 3707.43,
+          "lowest_price": 3646.12
+        },
+        "24h": {
+          "available": true,
+          "close": 3643.48,
+          "move_usd": -43.48,
+          "direction": "DOWN",
+          "maximum_up_usd": 20.47,
+          "maximum_down_usd": -59.17,
+          "highest_price": 3707.43,
+          "lowest_price": 3627.79
+        },
+        "2d": {
+          "available": true,
+          "close": 3679.2,
+          "move_usd": -7.76,
+          "direction": "DOWN",
+          "maximum_up_usd": 20.47,
+          "maximum_down_usd": -59.17,
+          "highest_price": 3707.43,
+          "lowest_price": 3627.79
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 3746.34,
+          "move_usd": 59.38,
+          "direction": "UP",
+          "maximum_up_usd": 60.25,
+          "maximum_down_usd": -59.17,
+          "highest_price": 3747.21,
+          "lowest_price": 3627.79
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "October 2025"
+      ],
+      "numbers": {
+        "previous_target_lower": 4.0,
+        "previous_target_upper": 4.25,
+        "actual_target_lower": 3.75,
+        "actual_target_upper": 4.0,
+        "change_bps": -25,
+        "decision": "CUT"
+      },
+      "release": {
+        "previous": "4.00%-4.25%",
+        "actual": "3.75%-4.00%",
+        "result": "CUT -25 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2025-10-29T18:00:00+00:00",
+        "news_time_ist": "2025-10-29T23:30:00+05:30",
+        "winpro_chart_time": "2025-10-29T20:00:00+02:00",
+        "winpro_offset_hours": 2,
+        "mt5_api_news_candle_time": "2025-10-29T20:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 3955.64,
+        "price_before_news": 3992.86,
+        "pre_news_move_usd": 37.22,
+        "pre_news_direction": "UP",
+        "day_high_before_news": 4030.36,
+        "day_low_before_news": 3916.33,
+        "pre_news_range_usd": 114.03,
+        "range_position_percent": 67.1,
+        "location": "UPPER_DAY_RANGE",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": -3.58,
+            "direction": "DOWN"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": -4.56,
+            "direction": "DOWN"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": 0.2,
+            "direction": "UP"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": -26.27,
+            "direction": "DOWN"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 4025.51,
+        "reference_low": 3989.08,
+        "final_hour_high": 4001.28,
+        "final_hour_low": 3991.47,
+        "price_before_news": 3992.86,
+        "swept_upside_liquidity": false,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 32.65,
+        "distance_to_reference_low_usd": 3.78,
+        "sequence": "NO_RECENT_SWEEP"
+      },
+      "impulse_candle": {
+        "open": 3992.8,
+        "high": 3993.18,
+        "low": 3992.16,
+        "close": 3993.15,
+        "body_move_usd": 0.35,
+        "body_direction": "UP",
+        "full_range_usd": 1.02,
+        "maximum_up_from_open_usd": 0.38,
+        "maximum_down_from_open_usd": -0.64,
+        "tick_volume": 272,
+        "broker_spread_points": 17
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": false,
+        "swept_pre_news_day_low": false
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 3991.34,
+          "move_usd": -1.46,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.38,
+          "maximum_down_usd": -1.66,
+          "highest_price": 3993.18,
+          "lowest_price": 3991.14
+        },
+        "5m": {
+          "available": true,
+          "close": 3989.62,
+          "move_usd": -3.18,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.38,
+          "maximum_down_usd": -3.18,
+          "highest_price": 3993.18,
+          "lowest_price": 3989.62
+        },
+        "15m": {
+          "available": true,
+          "close": 3994.81,
+          "move_usd": 2.01,
+          "direction": "UP",
+          "maximum_up_usd": 4.98,
+          "maximum_down_usd": -3.6,
+          "highest_price": 3997.78,
+          "lowest_price": 3989.2
+        },
+        "30m": {
+          "available": true,
+          "close": 3987.5,
+          "move_usd": -5.3,
+          "direction": "DOWN",
+          "maximum_up_usd": 4.98,
+          "maximum_down_usd": -7.27,
+          "highest_price": 3997.78,
+          "lowest_price": 3985.53
+        },
+        "1h": {
+          "available": true,
+          "close": 3988.56,
+          "move_usd": -4.24,
+          "direction": "DOWN",
+          "maximum_up_usd": 4.98,
+          "maximum_down_usd": -7.27,
+          "highest_price": 3997.78,
+          "lowest_price": 3985.53
+        },
+        "4h": {
+          "available": true,
+          "close": 3930.26,
+          "move_usd": -62.54,
+          "direction": "DOWN",
+          "maximum_up_usd": 14.52,
+          "maximum_down_usd": -64.9,
+          "highest_price": 4007.32,
+          "lowest_price": 3927.9
+        },
+        "24h": {
+          "available": true,
+          "close": 4001.41,
+          "move_usd": 8.61,
+          "direction": "UP",
+          "maximum_up_usd": 21.88,
+          "maximum_down_usd": -77.69,
+          "highest_price": 4014.68,
+          "lowest_price": 3915.11
+        },
+        "2d": {
+          "available": true,
+          "close": 3982.24,
+          "move_usd": -10.56,
+          "direction": "DOWN",
+          "maximum_up_usd": 53.61,
+          "maximum_down_usd": -77.69,
+          "highest_price": 4046.41,
+          "lowest_price": 3915.11
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 4006.57,
+          "move_usd": 13.77,
+          "direction": "UP",
+          "maximum_up_usd": 53.61,
+          "maximum_down_usd": -77.69,
+          "highest_price": 4046.41,
+          "lowest_price": 3915.11
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "December 2025"
+      ],
+      "numbers": {
+        "previous_target_lower": 3.75,
+        "previous_target_upper": 4.0,
+        "actual_target_lower": 3.5,
+        "actual_target_upper": 3.75,
+        "change_bps": -25,
+        "decision": "CUT"
+      },
+      "release": {
+        "previous": "3.75%-4.00%",
+        "actual": "3.50%-3.75%",
+        "result": "CUT -25 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2025-12-10T19:00:00+00:00",
+        "news_time_ist": "2025-12-11T00:30:00+05:30",
+        "winpro_chart_time": "2025-12-10T21:00:00+02:00",
+        "winpro_offset_hours": 2,
+        "mt5_api_news_candle_time": "2025-12-10T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 4208.17,
+        "price_before_news": 4194.27,
+        "pre_news_move_usd": -13.9,
+        "pre_news_direction": "DOWN",
+        "day_high_before_news": 4218.83,
+        "day_low_before_news": 4187.93,
+        "pre_news_range_usd": 30.9,
+        "range_position_percent": 20.5,
+        "location": "LOWER_DAY_RANGE",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": 0.3,
+            "direction": "UP"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": -1.91,
+            "direction": "DOWN"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": -5.75,
+            "direction": "DOWN"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": -0.51,
+            "direction": "DOWN"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 4205.19,
+        "reference_low": 4189.09,
+        "final_hour_high": 4200.79,
+        "final_hour_low": 4191.9,
+        "price_before_news": 4194.27,
+        "swept_upside_liquidity": false,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 10.92,
+        "distance_to_reference_low_usd": 5.18,
+        "sequence": "NO_RECENT_SWEEP"
+      },
+      "impulse_candle": {
+        "open": 4194.29,
+        "high": 4211.31,
+        "low": 4190.83,
+        "close": 4210.98,
+        "body_move_usd": 16.69,
+        "body_direction": "UP",
+        "full_range_usd": 20.48,
+        "maximum_up_from_open_usd": 17.02,
+        "maximum_down_from_open_usd": -3.46,
+        "tick_volume": 444,
+        "broker_spread_points": 17
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": true,
+        "swept_pre_news_day_low": true
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 4203.94,
+          "move_usd": 9.65,
+          "direction": "UP",
+          "maximum_up_usd": 17.02,
+          "maximum_down_usd": -3.46,
+          "highest_price": 4211.31,
+          "lowest_price": 4190.83
+        },
+        "5m": {
+          "available": true,
+          "close": 4205.97,
+          "move_usd": 11.68,
+          "direction": "UP",
+          "maximum_up_usd": 17.02,
+          "maximum_down_usd": -3.46,
+          "highest_price": 4211.31,
+          "lowest_price": 4190.83
+        },
+        "15m": {
+          "available": true,
+          "close": 4214.32,
+          "move_usd": 20.03,
+          "direction": "UP",
+          "maximum_up_usd": 25.46,
+          "maximum_down_usd": -3.46,
+          "highest_price": 4219.75,
+          "lowest_price": 4190.83
+        },
+        "30m": {
+          "available": true,
+          "close": 4201.1,
+          "move_usd": 6.81,
+          "direction": "UP",
+          "maximum_up_usd": 25.46,
+          "maximum_down_usd": -3.46,
+          "highest_price": 4219.75,
+          "lowest_price": 4190.83
+        },
+        "1h": {
+          "available": true,
+          "close": 4211.64,
+          "move_usd": 17.35,
+          "direction": "UP",
+          "maximum_up_usd": 25.46,
+          "maximum_down_usd": -12.61,
+          "highest_price": 4219.75,
+          "lowest_price": 4181.68
+        },
+        "4h": {
+          "available": false
+        },
+        "24h": {
+          "available": true,
+          "close": 4264.43,
+          "move_usd": 70.14,
+          "direction": "UP",
+          "maximum_up_usd": 91.67,
+          "maximum_down_usd": -12.61,
+          "highest_price": 4285.96,
+          "lowest_price": 4181.68
+        },
+        "2d": {
+          "available": true,
+          "close": 4295.26,
+          "move_usd": 100.97,
+          "direction": "UP",
+          "maximum_up_usd": 159.34,
+          "maximum_down_usd": -12.61,
+          "highest_price": 4353.63,
+          "lowest_price": 4181.68
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 4314.25,
+          "move_usd": 119.96,
+          "direction": "UP",
+          "maximum_up_usd": 159.34,
+          "maximum_down_usd": -12.61,
+          "highest_price": 4353.63,
+          "lowest_price": 4181.68
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "January 2026"
+      ],
+      "numbers": {
+        "previous_target_lower": 3.5,
+        "previous_target_upper": 3.75,
+        "actual_target_lower": 3.5,
+        "actual_target_upper": 3.75,
+        "change_bps": 0,
+        "decision": "HOLD"
+      },
+      "release": {
+        "previous": "3.50%-3.75%",
+        "actual": "3.50%-3.75%",
+        "result": "HOLD +0 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2026-01-28T19:00:00+00:00",
+        "news_time_ist": "2026-01-29T00:30:00+05:30",
+        "winpro_chart_time": "2026-01-28T21:00:00+02:00",
+        "winpro_offset_hours": 2,
+        "mt5_api_news_candle_time": "2026-01-28T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 5180.19,
+        "price_before_news": 5283.5,
+        "pre_news_move_usd": 103.31,
+        "pre_news_direction": "UP",
+        "day_high_before_news": 5326.27,
+        "day_low_before_news": 5157.21,
+        "pre_news_range_usd": 169.06,
+        "range_position_percent": 74.7,
+        "location": "UPPER_DAY_RANGE",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": 10.15,
+            "direction": "UP"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": -7.03,
+            "direction": "DOWN"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": -14.5,
+            "direction": "DOWN"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": -10.94,
+            "direction": "DOWN"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 5307.03,
+        "reference_low": 5235.34,
+        "final_hour_high": 5326.27,
+        "final_hour_low": 5268.3,
+        "price_before_news": 5283.5,
+        "swept_upside_liquidity": true,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": true,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 23.53,
+        "distance_to_reference_low_usd": 48.16,
+        "sequence": "UPSIDE_SWEEP_REJECT"
+      },
+      "impulse_candle": {
+        "open": 5282.17,
+        "high": 5292.74,
+        "low": 5278.57,
+        "close": 5291.95,
+        "body_move_usd": 9.78,
+        "body_direction": "UP",
+        "full_range_usd": 14.17,
+        "maximum_up_from_open_usd": 10.57,
+        "maximum_down_from_open_usd": -3.6,
+        "tick_volume": 470,
+        "broker_spread_points": 17
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": true,
+        "swept_pre_news_day_low": false
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 5269.62,
+          "move_usd": -12.55,
+          "direction": "DOWN",
+          "maximum_up_usd": 10.8,
+          "maximum_down_usd": -12.55,
+          "highest_price": 5292.97,
+          "lowest_price": 5269.62
+        },
+        "5m": {
+          "available": true,
+          "close": 5278.16,
+          "move_usd": -4.01,
+          "direction": "DOWN",
+          "maximum_up_usd": 10.8,
+          "maximum_down_usd": -13.07,
+          "highest_price": 5292.97,
+          "lowest_price": 5269.1
+        },
+        "15m": {
+          "available": true,
+          "close": 5298.2,
+          "move_usd": 16.03,
+          "direction": "UP",
+          "maximum_up_usd": 20.0,
+          "maximum_down_usd": -13.07,
+          "highest_price": 5302.17,
+          "lowest_price": 5269.1
+        },
+        "30m": {
+          "available": true,
+          "close": 5285.14,
+          "move_usd": 2.97,
+          "direction": "UP",
+          "maximum_up_usd": 20.0,
+          "maximum_down_usd": -13.07,
+          "highest_price": 5302.17,
+          "lowest_price": 5269.1
+        },
+        "1h": {
+          "available": true,
+          "close": 5333.0,
+          "move_usd": 50.83,
+          "direction": "UP",
+          "maximum_up_usd": 51.95,
+          "maximum_down_usd": -13.07,
+          "highest_price": 5334.12,
+          "lowest_price": 5269.1
+        },
+        "4h": {
+          "available": true,
+          "close": 5422.81,
+          "move_usd": 140.64,
+          "direction": "UP",
+          "maximum_up_usd": 143.04,
+          "maximum_down_usd": -13.07,
+          "highest_price": 5425.21,
+          "lowest_price": 5269.1
+        },
+        "24h": {
+          "available": true,
+          "close": 5327.15,
+          "move_usd": 44.98,
+          "direction": "UP",
+          "maximum_up_usd": 315.83,
+          "maximum_down_usd": -181.86,
+          "highest_price": 5598.0,
+          "lowest_price": 5100.31
+        },
+        "2d": {
+          "available": true,
+          "close": 4903.27,
+          "move_usd": -378.9,
+          "direction": "DOWN",
+          "maximum_up_usd": 315.83,
+          "maximum_down_usd": -598.09,
+          "highest_price": 5598.0,
+          "lowest_price": 4684.08
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 4648.02,
+          "move_usd": -634.15,
+          "direction": "DOWN",
+          "maximum_up_usd": 315.83,
+          "maximum_down_usd": -879.77,
+          "highest_price": 5598.0,
+          "lowest_price": 4402.4
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "March 2026"
+      ],
+      "numbers": {
+        "previous_target_lower": 3.5,
+        "previous_target_upper": 3.75,
+        "actual_target_lower": 3.5,
+        "actual_target_upper": 3.75,
+        "change_bps": 0,
+        "decision": "HOLD"
+      },
+      "release": {
+        "previous": "3.50%-3.75%",
+        "actual": "3.50%-3.75%",
+        "result": "HOLD +0 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2026-03-18T18:00:00+00:00",
+        "news_time_ist": "2026-03-18T23:30:00+05:30",
+        "winpro_chart_time": "2026-03-18T20:00:00+02:00",
+        "winpro_offset_hours": 2,
+        "mt5_api_news_candle_time": "2026-03-18T20:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 5005.93,
+        "price_before_news": 4886.88,
+        "pre_news_move_usd": -119.05,
+        "pre_news_direction": "DOWN",
+        "day_high_before_news": 5016.39,
+        "day_low_before_news": 4834.28,
+        "pre_news_range_usd": 182.11,
+        "range_position_percent": 28.9,
+        "location": "LOWER_DAY_RANGE",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": 2.69,
+            "direction": "UP"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": 4.58,
+            "direction": "UP"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": 25.03,
+            "direction": "UP"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": 25.18,
+            "direction": "UP"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 4894.69,
+        "reference_low": 4834.28,
+        "final_hour_high": 4890.34,
+        "final_hour_low": 4860.92,
+        "price_before_news": 4886.88,
+        "swept_upside_liquidity": false,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 7.81,
+        "distance_to_reference_low_usd": 52.6,
+        "sequence": "NO_RECENT_SWEEP"
+      },
+      "impulse_candle": {
+        "open": 4886.87,
+        "high": 4888.43,
+        "low": 4886.12,
+        "close": 4886.65,
+        "body_move_usd": -0.22,
+        "body_direction": "DOWN",
+        "full_range_usd": 2.31,
+        "maximum_up_from_open_usd": 1.56,
+        "maximum_down_from_open_usd": -0.75,
+        "tick_volume": 332,
+        "broker_spread_points": 17
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": false,
+        "swept_pre_news_day_low": false
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 4886.0,
+          "move_usd": -0.87,
+          "direction": "DOWN",
+          "maximum_up_usd": 1.56,
+          "maximum_down_usd": -2.34,
+          "highest_price": 4888.43,
+          "lowest_price": 4884.53
+        },
+        "5m": {
+          "available": true,
+          "close": 4887.94,
+          "move_usd": 1.07,
+          "direction": "UP",
+          "maximum_up_usd": 3.31,
+          "maximum_down_usd": -2.34,
+          "highest_price": 4890.18,
+          "lowest_price": 4884.53
+        },
+        "15m": {
+          "available": true,
+          "close": 4885.69,
+          "move_usd": -1.18,
+          "direction": "DOWN",
+          "maximum_up_usd": 3.31,
+          "maximum_down_usd": -2.95,
+          "highest_price": 4890.18,
+          "lowest_price": 4883.92
+        },
+        "30m": {
+          "available": true,
+          "close": 4889.92,
+          "move_usd": 3.05,
+          "direction": "UP",
+          "maximum_up_usd": 11.32,
+          "maximum_down_usd": -2.95,
+          "highest_price": 4898.19,
+          "lowest_price": 4883.92
+        },
+        "1h": {
+          "available": true,
+          "close": 4895.97,
+          "move_usd": 9.1,
+          "direction": "UP",
+          "maximum_up_usd": 12.48,
+          "maximum_down_usd": -2.95,
+          "highest_price": 4899.35,
+          "lowest_price": 4883.92
+        },
+        "4h": {
+          "available": true,
+          "close": 4818.74,
+          "move_usd": -68.13,
+          "direction": "DOWN",
+          "maximum_up_usd": 12.48,
+          "maximum_down_usd": -79.89,
+          "highest_price": 4899.35,
+          "lowest_price": 4806.98
+        },
+        "24h": {
+          "available": true,
+          "close": 4587.92,
+          "move_usd": -298.95,
+          "direction": "DOWN",
+          "maximum_up_usd": 12.48,
+          "maximum_down_usd": -384.4,
+          "highest_price": 4899.35,
+          "lowest_price": 4502.47
+        },
+        "2d": {
+          "available": true,
+          "close": 4585.38,
+          "move_usd": -301.49,
+          "direction": "DOWN",
+          "maximum_up_usd": 12.48,
+          "maximum_down_usd": -384.4,
+          "highest_price": 4899.35,
+          "lowest_price": 4502.47
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 4384.95,
+          "move_usd": -501.92,
+          "direction": "DOWN",
+          "maximum_up_usd": 12.48,
+          "maximum_down_usd": -788.59,
+          "highest_price": 4899.35,
+          "lowest_price": 4098.28
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "April 2026"
+      ],
+      "numbers": {
+        "previous_target_lower": 3.5,
+        "previous_target_upper": 3.75,
+        "actual_target_lower": 3.5,
+        "actual_target_upper": 3.75,
+        "change_bps": 0,
+        "decision": "HOLD"
+      },
+      "release": {
+        "previous": "3.50%-3.75%",
+        "actual": "3.50%-3.75%",
+        "result": "HOLD +0 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2026-04-29T18:00:00+00:00",
+        "news_time_ist": "2026-04-29T23:30:00+05:30",
+        "winpro_chart_time": "2026-04-29T21:00:00+03:00",
+        "winpro_offset_hours": 3,
+        "mt5_api_news_candle_time": "2026-04-29T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 4596.82,
+        "price_before_news": 4546.85,
+        "pre_news_move_usd": -49.97,
+        "pre_news_direction": "DOWN",
+        "day_high_before_news": 4610.45,
+        "day_low_before_news": 4510.18,
+        "pre_news_range_usd": 100.27,
+        "range_position_percent": 36.6,
+        "location": "LOWER_DAY_RANGE",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": 2.64,
+            "direction": "UP"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": 0.73,
+            "direction": "UP"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": 1.24,
+            "direction": "UP"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": 27.61,
+            "direction": "UP"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 4565.02,
+        "reference_low": 4517.82,
+        "final_hour_high": 4554.43,
+        "final_hour_low": 4541.55,
+        "price_before_news": 4546.85,
+        "swept_upside_liquidity": false,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": 18.17,
+        "distance_to_reference_low_usd": 29.03,
+        "sequence": "NO_RECENT_SWEEP"
+      },
+      "impulse_candle": {
+        "open": 4547.09,
+        "high": 4547.7,
+        "low": 4538.44,
+        "close": 4543.86,
+        "body_move_usd": -3.23,
+        "body_direction": "DOWN",
+        "full_range_usd": 9.26,
+        "maximum_up_from_open_usd": 0.61,
+        "maximum_down_from_open_usd": -8.65,
+        "tick_volume": 1211,
+        "broker_spread_points": 17
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": false,
+        "swept_pre_news_day_low": false
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 4548.06,
+          "move_usd": 0.97,
+          "direction": "UP",
+          "maximum_up_usd": 5.83,
+          "maximum_down_usd": -8.65,
+          "highest_price": 4552.92,
+          "lowest_price": 4538.44
+        },
+        "5m": {
+          "available": true,
+          "close": 4541.3,
+          "move_usd": -5.79,
+          "direction": "DOWN",
+          "maximum_up_usd": 5.83,
+          "maximum_down_usd": -8.65,
+          "highest_price": 4552.92,
+          "lowest_price": 4538.44
+        },
+        "15m": {
+          "available": true,
+          "close": 4527.97,
+          "move_usd": -19.12,
+          "direction": "DOWN",
+          "maximum_up_usd": 5.83,
+          "maximum_down_usd": -22.11,
+          "highest_price": 4552.92,
+          "lowest_price": 4524.98
+        },
+        "30m": {
+          "available": true,
+          "close": 4529.51,
+          "move_usd": -17.58,
+          "direction": "DOWN",
+          "maximum_up_usd": 5.83,
+          "maximum_down_usd": -22.11,
+          "highest_price": 4552.92,
+          "lowest_price": 4524.98
+        },
+        "1h": {
+          "available": true,
+          "close": 4542.93,
+          "move_usd": -4.16,
+          "direction": "DOWN",
+          "maximum_up_usd": 5.83,
+          "maximum_down_usd": -29.01,
+          "highest_price": 4552.92,
+          "lowest_price": 4518.08
+        },
+        "4h": {
+          "available": true,
+          "close": 4542.97,
+          "move_usd": -4.12,
+          "direction": "DOWN",
+          "maximum_up_usd": 6.53,
+          "maximum_down_usd": -29.01,
+          "highest_price": 4553.62,
+          "lowest_price": 4518.08
+        },
+        "24h": {
+          "available": true,
+          "close": 4621.87,
+          "move_usd": 74.78,
+          "direction": "UP",
+          "maximum_up_usd": 99.89,
+          "maximum_down_usd": -29.01,
+          "highest_price": 4646.98,
+          "lowest_price": 4518.08
+        },
+        "2d": {
+          "available": true,
+          "close": 4629.72,
+          "move_usd": 82.63,
+          "direction": "UP",
+          "maximum_up_usd": 113.28,
+          "maximum_down_usd": -29.01,
+          "highest_price": 4660.37,
+          "lowest_price": 4518.08
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 4522.35,
+          "move_usd": -24.74,
+          "direction": "DOWN",
+          "maximum_up_usd": 113.28,
+          "maximum_down_usd": -46.39,
+          "highest_price": 4660.37,
+          "lowest_price": 4500.7
+        }
+      }
+    },
+    {
+      "success": true,
+      "events": [
+        "FED Interest Rate Decision"
+      ],
+      "category": "FED_RATE_DECISION",
+      "reference_periods": [
+        "June 2026"
+      ],
+      "numbers": {
+        "previous_target_lower": 3.5,
+        "previous_target_upper": 3.75,
+        "actual_target_lower": 3.5,
+        "actual_target_upper": 3.75,
+        "change_bps": 0,
+        "decision": "HOLD"
+      },
+      "release": {
+        "previous": "3.50%-3.75%",
+        "actual": "3.50%-3.75%",
+        "result": "HOLD +0 bps"
+      },
+      "official_source": "Board of Governors of the Federal Reserve System",
+      "time_validation": {
+        "news_time_utc": "2026-06-17T18:00:00+00:00",
+        "news_time_ist": "2026-06-17T23:30:00+05:30",
+        "winpro_chart_time": "2026-06-17T21:00:00+03:00",
+        "winpro_offset_hours": 3,
+        "mt5_api_news_candle_time": "2026-06-17T21:00:00+00:00",
+        "corrected_winpro_match": true
+      },
+      "pre_news_behavior": {
+        "available": true,
+        "day_open": 4333.04,
+        "price_before_news": 4380.2,
+        "pre_news_move_usd": 47.16,
+        "pre_news_direction": "UP",
+        "day_high_before_news": 4382.35,
+        "day_low_before_news": 4316.97,
+        "pre_news_range_usd": 65.38,
+        "range_position_percent": 96.7,
+        "location": "NEAR_DAY_HIGH",
+        "periods": {
+          "15m": {
+            "available": true,
+            "move_usd": 4.38,
+            "direction": "UP"
+          },
+          "30m": {
+            "available": true,
+            "move_usd": 17.14,
+            "direction": "UP"
+          },
+          "1h": {
+            "available": true,
+            "move_usd": 21.65,
+            "direction": "UP"
+          },
+          "4h": {
+            "available": true,
+            "move_usd": 41.82,
+            "direction": "UP"
+          }
+        }
+      },
+      "pre_news_liquidity": {
+        "available": true,
+        "reference_window": "4H_TO_1H_BEFORE_NEWS",
+        "sweep_window": "FINAL_1H_BEFORE_NEWS",
+        "reference_high": 4366.32,
+        "reference_low": 4330.89,
+        "final_hour_high": 4382.35,
+        "final_hour_low": 4355.31,
+        "price_before_news": 4380.2,
+        "swept_upside_liquidity": true,
+        "swept_downside_liquidity": false,
+        "upside_sweep_rejected": false,
+        "downside_sweep_reclaimed": false,
+        "distance_to_reference_high_usd": -13.88,
+        "distance_to_reference_low_usd": 49.31,
+        "sequence": "UPSIDE_LIQUIDITY_TAKEN"
+      },
+      "impulse_candle": {
+        "open": 4379.81,
+        "high": 4379.81,
+        "low": 4338.54,
+        "close": 4347.79,
+        "body_move_usd": -32.02,
+        "body_direction": "DOWN",
+        "full_range_usd": 41.27,
+        "maximum_up_from_open_usd": 0.0,
+        "maximum_down_from_open_usd": -41.27,
+        "tick_volume": 1011,
+        "broker_spread_points": 17
+      },
+      "post_news_behavior": {
+        "swept_pre_news_day_high": false,
+        "swept_pre_news_day_low": true
+      },
+      "reactions": {
+        "1m": {
+          "available": true,
+          "close": 4345.67,
+          "move_usd": -34.14,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -41.27,
+          "highest_price": 4379.81,
+          "lowest_price": 4338.54
+        },
+        "5m": {
+          "available": true,
+          "close": 4303.62,
+          "move_usd": -76.19,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -78.3,
+          "highest_price": 4379.81,
+          "lowest_price": 4301.51
+        },
+        "15m": {
+          "available": true,
+          "close": 4296.79,
+          "move_usd": -83.02,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -102.62,
+          "highest_price": 4379.81,
+          "lowest_price": 4277.19
+        },
+        "30m": {
+          "available": true,
+          "close": 4286.86,
+          "move_usd": -92.95,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -102.62,
+          "highest_price": 4379.81,
+          "lowest_price": 4277.19
+        },
+        "1h": {
+          "available": true,
+          "close": 4293.21,
+          "move_usd": -86.6,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -109.89,
+          "highest_price": 4379.81,
+          "lowest_price": 4269.92
+        },
+        "4h": {
+          "available": true,
+          "close": 4257.11,
+          "move_usd": -122.7,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -161.05,
+          "highest_price": 4379.81,
+          "lowest_price": 4218.76
+        },
+        "24h": {
+          "available": true,
+          "close": 4228.34,
+          "move_usd": -151.47,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -165.63,
+          "highest_price": 4379.81,
+          "lowest_price": 4214.18
+        },
+        "2d": {
+          "available": true,
+          "close": 4155.65,
+          "move_usd": -224.16,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -258.06,
+          "highest_price": 4379.81,
+          "lowest_price": 4121.75
+        },
+        "3d": {
+          "available": false
+        },
+        "5d": {
+          "available": true,
+          "close": 4183.0,
+          "move_usd": -196.81,
+          "direction": "DOWN",
+          "maximum_up_usd": 0.0,
+          "maximum_down_usd": -258.06,
+          "highest_price": 4379.81,
+          "lowest_price": 4121.75
+        }
+      }
+    }
+  ]
+}

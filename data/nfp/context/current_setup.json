@@ -1,0 +1,152 @@
+{
+  "category": "nfp",
+  "event_name": "US Nonfarm Payrolls",
+  "event_time_utc": null,
+  "fundamental": {
+    "macro": {
+      "cpi": {
+        "actual_mom": -0.4,
+        "actual_yoy": 3.5,
+        "raw_mom": -0.4225,
+        "raw_yoy": 3.4635,
+        "index": 332.568,
+        "release_period": "2026-06-01",
+        "source": "U.S. Bureau of Labor Statistics",
+        "forecast": null
+      },
+      "core_cpi": {
+        "actual_mom": -0.0,
+        "actual_yoy": 2.6,
+        "raw_mom": -0.0167,
+        "raw_yoy": 2.5658,
+        "index": 336.065,
+        "release_period": "2026-06-01",
+        "source": "U.S. Bureau of Labor Statistics",
+        "forecast": null
+      },
+      "nfp": {
+        "actual": 57.0,
+        "previous": 129.0,
+        "forecast": null,
+        "release_period": "2026-06-01",
+        "unit": "thousand jobs",
+        "source": "U.S. Bureau of Labor Statistics"
+      },
+      "unemployment": {
+        "actual": 4.2,
+        "previous": 4.3,
+        "forecast": null,
+        "release_period": "2026-06-01",
+        "unit": "percent",
+        "source": "U.S. Bureau of Labor Statistics"
+      }
+    },
+    "inflation_trend": "COOLING",
+    "labor_market": "WEAKENING",
+    "markets": {
+      "dxy": {
+        "value": 100.936,
+        "date": "2026-07-20",
+        "direction": "MIXED",
+        "direction_1d": "RISING",
+        "direction_5d": "FALLING",
+        "direction_20d": "FLAT",
+        "change_1d_percent": 0.185,
+        "change_5d_percent": -0.34,
+        "change_20d_percent": 0.085,
+        "source": "Yahoo Finance chart data"
+      },
+      "us10y": {
+        "value": 4.598,
+        "date": "2026-07-20",
+        "direction": "RISING",
+        "direction_1d": "RISING",
+        "direction_5d": "FLAT",
+        "direction_20d": "RISING",
+        "change_1d_percent": 1.255,
+        "change_5d_percent": -0.239,
+        "change_20d_percent": 3.303,
+        "source": "Yahoo Finance chart data"
+      }
+    },
+    "data_quality": {
+      "cpi_data": true,
+      "core_cpi_data": true,
+      "nfp_data": true,
+      "unemployment_data": true,
+      "macro_data": true,
+      "dxy_data": true,
+      "us10y_data": true,
+      "market_data": true
+    },
+    "macro_source_status": "LIVE_BLS",
+    "macro_updated_at_utc": "2026-07-20T18:34:34.178407+00:00",
+    "dollar_bias": "MIXED",
+    "treasury_yields": "RISING",
+    "gold_market_bias": {
+      "bias": "BEARISH",
+      "score": -2,
+      "reasons": [
+        "US dollar trend is mixed.",
+        "Rising Treasury yields pressure gold."
+      ]
+    },
+    "market_context_updated_at_utc": "2026-07-20T18:34:35.328089+00:00"
+  },
+  "technical": {
+    "collected_at_utc": "2026-07-20T18:34:32.031678+00:00",
+    "symbol": "XAUUSD",
+    "broker": "Winprofx Limited",
+    "latest_candle_time_utc": "2026-07-20T21:34:00+00:00",
+    "day_direction": "UP",
+    "day_location": "LOWER_DAY_RANGE",
+    "day_context": {
+      "day_open": 4001.9,
+      "current_price": 4004.87,
+      "day_high": 4040.73,
+      "day_low": 3982.48,
+      "day_move_usd": 2.97,
+      "day_direction": "UP",
+      "day_range_usd": 58.25,
+      "range_position_percent": 38.4,
+      "day_location": "LOWER_DAY_RANGE"
+    },
+    "timeframes": {
+      "15m": "DOWN",
+      "30m": "DOWN",
+      "1h": "DOWN",
+      "4h": "DOWN"
+    },
+    "timeframe_details": {
+      "15m": {
+        "direction": "DOWN",
+        "move_usd": -3.18
+      },
+      "30m": {
+        "direction": "DOWN",
+        "move_usd": -2.6
+      },
+      "1h": {
+        "direction": "DOWN",
+        "move_usd": -7.31
+      },
+      "4h": {
+        "direction": "DOWN",
+        "move_usd": -4.68
+      }
+    },
+    "liquidity": {
+      "available": true,
+      "sequence": "NO_RECENT_SWEEP",
+      "upside_swept": false,
+      "downside_swept": false,
+      "upside_rejected": false,
+      "downside_reclaimed": false,
+      "reference_high": 4019.52,
+      "reference_low": 4001.22,
+      "final_hour_high": 4013.04,
+      "final_hour_low": 4003.34,
+      "current_price": 4004.87
+    }
+  }
+}
