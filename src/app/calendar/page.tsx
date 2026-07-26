@@ -2,26 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Sidebar from "../../components/Sidebar";
-
-type Trade = {
-  id: number;
-  date?: string;
-  time?: string;
-  symbol?: string;
-  direction?: string;
-  pnl?: number;
-  strategy?: string;
-  session?: string;
-};
-
-type DayData = {
-  pnl: number;
-  trades: number;
-  wins: number;
-  losses: number;
-  breakeven: number;
-  tradeList: Trade[];
-};
+import type { Trade, DayData } from "@/types/trade";
 
 const monthNames = [
   "January",
@@ -743,7 +724,6 @@ function formatMoney(value: number) {
 
   return "$0.00";
 }
-
 function StatCard({
   title,
   value,
@@ -757,3 +737,33 @@ function StatCard({
     <div className="rounded-xl border border-slate-800 bg-slate-900 p-5">
       <p className="text-sm text-slate-400">
         {title}
+      </p>
+
+      <p className={`mt-2 text-3xl font-bold ${valueClass}`}>
+        {value}
+      </p>
+    </div>
+  );
+}
+
+function SummaryRow({
+  label,
+  value,
+  valueClass = "text-white",
+}: {
+  label: string;
+  value: string;
+  valueClass?: string;
+}) {
+  return (
+    <div className="flex items-center justify-between border-b border-slate-800 py-3 last:border-b-0">
+      <span className="text-sm text-slate-400">
+        {label}
+      </span>
+
+      <span className={`font-semibold ${valueClass}`}>
+        {value}
+      </span>
+    </div>
+  );
+}

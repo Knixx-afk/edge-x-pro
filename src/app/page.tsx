@@ -100,8 +100,28 @@ export default function Home() {
     <div className="flex min-h-screen bg-slate-950 text-white">
       <Sidebar />
 
-      <main className="min-w-0 flex-1 overflow-hidden p-8">
+      <main className="min-w-0 flex-1 overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 p-8">
         <Header />
+
+        <div className="mb-8 rounded-2xl border border-slate-800 bg-slate-900/70 p-8 shadow-2xl">
+          <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <h1 className="text-4xl font-extrabold">EDGE X PRO Dashboard</h1>
+              <p className="mt-2 text-slate-400">Monitor performance and prepare for the next opportunity.</p>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              <div className="rounded-xl bg-slate-950 p-4">
+                <p className="text-xs uppercase text-slate-500">Win Rate</p>
+                <p className="mt-2 text-2xl font-bold text-emerald-400">{stats.winRate.toFixed(1)}%</p>
+              </div>
+              <div className="rounded-xl bg-slate-950 p-4">
+                <p className="text-xs uppercase text-slate-500">Net Profit</p>
+                <p className={`mt-2 text-2xl font-bold ${stats.netProfit>=0?"text-emerald-400":"text-red-400"}`}>{stats.netProfit>=0?"+":"-"}${Math.abs(stats.netProfit).toFixed(2)}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
           <StatCard
@@ -159,11 +179,39 @@ export default function Home() {
           </div>
         </div>
 
+
+
+        <div className="mb-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
+          <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-5">
+            <div className="text-xs uppercase text-slate-500">Current Streak</div>
+            <div className="mt-2 text-3xl font-bold">🔥 {stats.wins}</div>
+          </div>
+          <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-5">
+            <div className="text-xs uppercase text-slate-500">Profit Factor</div>
+            <div className="mt-2 text-3xl font-bold text-cyan-400">{stats.profitFactor.toFixed(2)}</div>
+          </div>
+          <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-5">
+            <div className="text-xs uppercase text-slate-500">Winning Trades</div>
+            <div className="mt-2 text-3xl font-bold text-emerald-400">{stats.wins}</div>
+          </div>
+          <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-5">
+            <div className="text-xs uppercase text-slate-500">Losing Trades</div>
+            <div className="mt-2 text-3xl font-bold text-red-400">{stats.losses}</div>
+          </div>
+        </div>
+
+        <div className="mt-8 grid grid-cols-1 gap-6 xl:grid-cols-3">
+          <div className="rounded-2xl border border-slate-800 bg-slate-900 p-6"><h2 className="text-xl font-bold">🤖 AI Coach</h2><p className="mt-4 text-slate-300">Maintain discipline and review losing trades before your next position.</p></div>
+          <div className="rounded-2xl border border-slate-800 bg-slate-900 p-6"><h2 className="text-xl font-bold">📰 Gold Intelligence</h2><ul className="mt-4 space-y-2 text-slate-300"><li>• CPI</li><li>• NFP</li><li>• FOMC</li></ul></div>
+          <div className="rounded-2xl border border-slate-800 bg-slate-900 p-6"><h2 className="text-xl font-bold">📅 Economic Calendar</h2><p className="mt-4 text-slate-300">Connect your upcoming event API here.</p></div>
+        </div>
+
         <div className="mt-8 grid grid-cols-1 gap-6 xl:grid-cols-2">
+
           <div className="min-w-0 rounded-xl border border-slate-800 bg-slate-900 p-6">
             <div className="mb-6">
               <h2 className="text-xl font-bold">
-                📈 Equity Curve
+                📈 Equity Curve & Growth
               </h2>
 
               <p className="mt-1 text-sm text-slate-400">
@@ -177,7 +225,7 @@ export default function Home() {
           <div className="min-w-0 rounded-xl border border-slate-800 bg-slate-900 p-6">
             <div className="mb-6">
               <h2 className="text-xl font-bold">
-                📝 Recent Trades
+                📝 Latest Trading Activity
               </h2>
 
               <p className="mt-1 text-sm text-slate-400">

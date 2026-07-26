@@ -4,6 +4,8 @@ import { FormEvent, useEffect, useState } from "react";
 import Sidebar from "../../components/Sidebar";
 import ChartModal from "../../components/ChartModal";
 
+import TradeDetailsDrawer from "@/components/trade/TradeDetailsDrawer";
+
 type Trade = {
   id: number;
   date: string;
@@ -52,6 +54,8 @@ export default function JournalPage() {
   const [editingId, setEditingId] = useState<number | null>(null);
   const [chartImages, setChartImages] = useState<string[]>([]);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedTrade, setSelectedTrade] = useState<Trade | null>(null);
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   useEffect(() => {
     try {
@@ -620,99 +624,12 @@ export default function JournalPage() {
                       className="border-b border-slate-800 last:border-0"
                     >
                       <TableCell>{trade.date || "—"}</TableCell>
-                      <TableCell>{trade.time || "—"}</TableCell>
-                      <TableCell>{trade.symbol}</TableCell>
-
-                      <TableCell>
-                        <span
-                          className={
-                            trade.direction === "Buy"
-                              ? "text-emerald-400"
-                              : "text-red-400"
-                          }
-                        >
-                          {trade.direction}
-                        </span>
-                      </TableCell>
-
-                      <TableCell>
-                        {trade.strategy || "—"}
-                      </TableCell>
-
-                      <TableCell>
-                        {trade.session || "—"}
-                      </TableCell>
-
-                      <TableCell>
-                        {trade.risk || 0}%
-                      </TableCell>
-
-                      <TableCell>
-                        <span
-                          className={
-                            trade.pnl > 0
-                              ? "font-bold text-emerald-400"
-                              : trade.pnl < 0
-                              ? "font-bold text-red-400"
-                              : "text-slate-400"
-                          }
-                        >
-                          {trade.pnl > 0 ? "+" : ""}
-                          ${trade.pnl}
-                        </span>
-                      </TableCell>
-
-                      <TableCell>
-                        {trade.chartImages?.length ? (
-                          <div className="flex gap-2">
-                            {trade.chartImages
-                              .slice(0, 3)
-                              .map((image, index) => (
-                                <button
-                                  key={index}
-                                  type="button"
-                                  onClick={() =>
-                                    setSelectedImage(image)
-                                  }
-                                >
-                                  <img
-                                    src={image}
-                                    alt={`Chart ${index + 1}`}
-                                    className="h-14 w-20 rounded-md object-cover"
-                                  />
-                                </button>
-                              ))}
-
-                            {trade.chartImages.length > 3 && (
-                              <span className="flex items-center text-sm text-slate-400">
-                                +{trade.chartImages.length - 3}
-                              </span>
-                            )}
-                          </div>
-                        ) : (
-                          <span className="text-slate-600">
-                            No charts
-                          </span>
-                        )}
-                      </TableCell>
 
                       <TableCell>
                         <div className="flex gap-2">
-                          <button
-                            type="button"
-                            onClick={() => editTrade(trade)}
-                            className="rounded-lg bg-blue-500/10 px-3 py-2 text-blue-400"
-                          >
-                            Edit
-                          </button>
-
-                          <button
-                            type="button"
-                            onClick={() => deleteTrade(trade.id)}
-                            className="rounded-lg bg-red-500/10 px-3 py-2 text-red-400"
-                          >
-                            Delete
-                          </button>
+                          <button type="button" onClick={() => { setSelectedTrade(trade); setDrawerOpen(true); }} className="rounded-lg bg-yellow-500/10 px-3 py-2 text-yellow-400">View</button>
+                          <button type="button" onClick={() => editTrade(trade)} className="rounded-lg bg-blue-500/10 px-3 py-2 text-blue-400">Edit</button>
+                          <button type="button" onClick={() => deleteTrade(trade.id)} className="rounded-lg bg-red-500/10 px-3 py-2 text-red-400">Delete</button>
                         </div>
                       </TableCell>
                     </tr>
@@ -728,6 +645,13 @@ export default function JournalPage() {
         image={selectedImage}
         onClose={() => setSelectedImage(null)}
       />
+
+      <TradeDetailsDrawer
+  trade={selectedTrade}
+  trades={trades}
+  open={drawerOpen}
+  onClose={() => setDrawerOpen(false)}
+/>
     </div>
   );
 }

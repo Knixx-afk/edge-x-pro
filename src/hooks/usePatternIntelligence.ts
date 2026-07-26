@@ -1,7 +1,9 @@
-export default function Component() {
-  return (
-    <div>
-      TODO
-    </div>
-  );
+export function usePatternIntelligence() {
+  return {
+    loading: false,
+    error: null,
+    data: null,
+  };
 }
+
+export default usePatternIntelligence;

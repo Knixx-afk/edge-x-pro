@@ -1,7 +1,14 @@
-export default function Component() {
-  return (
-    <div>
-      TODO
-    </div>
-  );
+export async function getPatternIntelligence() {
+  return null;
 }
+
+export async function getUpcomingIntelligence() {
+  return null;
+}
+
+const intelligenceService = {
+  getPatternIntelligence,
+  getUpcomingIntelligence,
+};
+
+export default intelligenceService;

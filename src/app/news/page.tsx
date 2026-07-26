@@ -183,7 +183,89 @@ export default function NewsPage() {
     <div className="flex min-h-screen bg-slate-950 text-white">
       <Sidebar />
 
-      <main className="min-w-0 flex-1 p-8">
+      <main className="min-w-0 flex-1 bg-gradient-to-br from-black via-slate-950 to-slate-900 p-8">
+
+        <section className="mb-8 overflow-hidden rounded-3xl border border-yellow-500/20 bg-gradient-to-r from-slate-900 via-slate-900 to-yellow-950/30 p-8 shadow-2xl">
+          <div className="flex flex-col gap-8 2xl:flex-row 2xl:items-center 2xl:justify-between">
+            <div>
+              <span className="rounded-full border border-yellow-500/30 bg-yellow-500/10 px-4 py-1 text-xs font-bold tracking-[0.2em] text-yellow-400">
+                EDGE X PRO • V7 COMMAND CENTER
+              </span>
+              <h1 className="mt-5 text-5xl font-black">XAUUSD Intelligence Command Center</h1>
+              <p className="mt-3 max-w-3xl text-slate-400">
+                Unified dashboard for macroeconomic releases, historical gold reactions and AI-assisted execution.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              <div className="rounded-2xl bg-slate-950 p-5">
+                <div className="text-xs uppercase text-slate-500">Upcoming Events</div>
+                <div className="mt-2 text-5xl font-black text-red-400">{events.length}</div>
+              </div>
+              <div className="rounded-2xl bg-slate-950 p-5">
+                <div className="text-xs uppercase text-slate-500">System Status</div>
+                <div className="mt-3 rounded-lg bg-emerald-500/10 px-3 py-2 text-center font-bold text-emerald-400">
+                  ONLINE
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div className="mb-8 grid grid-cols-2 gap-4 xl:grid-cols-4 2xl:grid-cols-8">
+          {[
+            ["AI Bias","Waiting","text-cyan-400"],
+            ["Confidence","--%","text-emerald-400"],
+            ["Expected Move","-- pts","text-yellow-400"],
+            ["Volatility","High","text-orange-400"],
+            ["Risk","Extreme","text-red-400"],
+            ["Trade Bias","Neutral","text-slate-200"],
+            ["Countdown","--:--","text-blue-400"],
+            ["Engine","READY","text-purple-400"],
+          ].map(([t,v,c])=>(
+            <div key={String(t)} className="rounded-2xl border border-slate-800 bg-slate-900 p-5 shadow-lg">
+              <div className="text-xs uppercase tracking-wider text-slate-500">{t}</div>
+              <div className={`mt-3 text-2xl font-bold ${c}`}>{v}</div>
+            </div>
+          ))}
+        </div>
+
+        <section className="mb-8 grid grid-cols-1 gap-6 xl:grid-cols-3">
+          <div className="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+            <h2 className="text-xl font-bold">AI Execution Plan</h2>
+            <div className="mt-4 space-y-2 text-sm text-slate-300">
+              <p>Direction: Waiting for release</p>
+              <p>Entry: --</p>
+              <p>Stop Loss: --</p>
+              <p>Take Profit: --</p>
+              <p>Risk: 1%</p>
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+            <h2 className="text-xl font-bold">Gold Reaction Matrix</h2>
+            <div className="mt-4 grid grid-cols-3 gap-3">
+              {["1m","5m","15m","30m","1h","4h"].map(x=>(
+                <div key={x} className="rounded-lg bg-slate-950 p-4 text-center">
+                  <div className="text-xs text-slate-500">{x}</div>
+                  <div className="mt-2 font-bold">--</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+            <h2 className="text-xl font-bold">Pre-News Checklist</h2>
+            <ul className="mt-4 space-y-2 text-sm text-slate-300">
+              <li>✓ Liquidity confirmed</li>
+              <li>✓ Spread acceptable</li>
+              <li>□ AI signal pending</li>
+              <li>□ Execution confirmation pending</li>
+              <li>□ Post-news monitoring</li>
+            </ul>
+          </div>
+        </section>
+
         {/* HEADER */}
 
         <div className="mb-8 flex flex-wrap items-start justify-between gap-5">

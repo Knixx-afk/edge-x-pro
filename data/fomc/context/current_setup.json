@@ -3,45 +3,45 @@
   "event_name": "FED Interest Rate Decision",
   "event_time_utc": "2026-07-25T18:00:00+00:00",
   "technical": {
-    "collected_at_utc": "2026-07-20T18:39:36.395208+00:00",
+    "collected_at_utc": "2026-07-26T15:58:58.009534+00:00",
     "symbol": "XAUUSD",
     "broker": "Winprofx Limited",
-    "latest_candle_time_utc": "2026-07-20T21:39:00+00:00",
+    "latest_candle_time_utc": "2026-07-24T23:59:00+00:00",
     "day_direction": "UP",
     "day_location": "MIDDLE_DAY_RANGE",
     "day_context": {
-      "day_open": 4001.9,
-      "current_price": 4005.95,
-      "day_high": 4040.73,
-      "day_low": 3982.48,
-      "day_move_usd": 4.05,
+      "day_open": 4048.0,
+      "current_price": 4052.99,
+      "day_high": 4082.08,
+      "day_low": 4022.04,
+      "day_move_usd": 4.99,
       "day_direction": "UP",
-      "day_range_usd": 58.25,
-      "range_position_percent": 40.3,
+      "day_range_usd": 60.04,
+      "range_position_percent": 51.5,
       "day_location": "MIDDLE_DAY_RANGE"
     },
     "timeframes": {
-      "15m": "UP",
+      "15m": "DOWN",
       "30m": "DOWN",
       "1h": "DOWN",
       "4h": "DOWN"
     },
     "timeframe_details": {
       "15m": {
-        "direction": "UP",
-        "move_usd": 0.88
+        "direction": "DOWN",
+        "move_usd": -2.48
       },
       "30m": {
         "direction": "DOWN",
-        "move_usd": -3.65
+        "move_usd": -0.77
       },
       "1h": {
         "direction": "DOWN",
-        "move_usd": -4.14
+        "move_usd": -0.71
       },
       "4h": {
         "direction": "DOWN",
-        "move_usd": -3.79
+        "move_usd": -14.05
       }
     },
     "liquidity": {
@@ -51,11 +51,11 @@
       "downside_swept": false,
       "upside_rejected": false,
       "downside_reclaimed": false,
-      "reference_high": 4019.52,
-      "reference_low": 4001.22,
-      "final_hour_high": 4012.2,
-      "final_hour_low": 4003.34,
-      "current_price": 4005.95
+      "reference_high": 4069.89,
+      "reference_low": 4049.25,
+      "final_hour_high": 4056.21,
+      "final_hour_low": 4051.7,
+      "current_price": 4052.99
     }
   },
   "fundamental": {
@@ -78,7 +78,7 @@
       "updated_at": null
     },
     "expected_decision": "UNKNOWN",
-    "dollar_bias": "MIXED",
+    "dollar_bias": "RISING",
     "treasury_yields": "RISING",
     "inflation_trend": "COOLING",
     "labor_market": "WEAKENING",
@@ -120,27 +120,27 @@
     },
     "markets": {
       "dxy": {
-        "value": 100.931,
-        "date": "2026-07-20",
-        "direction": "MIXED",
-        "direction_1d": "RISING",
-        "direction_5d": "FALLING",
+        "value": 101.47,
+        "date": "2026-07-24",
+        "direction": "RISING",
+        "direction_1d": "FLAT",
+        "direction_5d": "RISING",
         "direction_20d": "FLAT",
-        "change_1d_percent": 0.18,
-        "change_5d_percent": -0.345,
-        "change_20d_percent": 0.08,
+        "change_1d_percent": 0.039,
+        "change_5d_percent": 0.715,
+        "change_20d_percent": 0.039,
         "source": "Yahoo Finance chart data"
       },
       "us10y": {
-        "value": 4.598,
-        "date": "2026-07-20",
+        "value": 4.679,
+        "date": "2026-07-24",
         "direction": "RISING",
-        "direction_1d": "RISING",
-        "direction_5d": "FLAT",
+        "direction_1d": "FALLING",
+        "direction_5d": "RISING",
         "direction_20d": "RISING",
-        "change_1d_percent": 1.255,
-        "change_5d_percent": -0.239,
-        "change_20d_percent": 3.303,
+        "change_1d_percent": -0.51,
+        "change_5d_percent": 3.039,
+        "change_20d_percent": 6.535,
         "source": "Yahoo Finance chart data"
       },
       "gold": {
@@ -171,17 +171,17 @@
       "us10y_data": true
     },
     "macro_source_status": "LIVE_BLS",
-    "macro_updated_at_utc": "2026-07-20T18:39:35.090400+00:00",
+    "macro_updated_at_utc": "2026-07-26T15:58:56.083109+00:00",
     "gold_market_bias": {
-      "bias": "BEARISH",
-      "score": -2,
+      "bias": "STRONGLY_BEARISH",
+      "score": -4,
       "reasons": [
-        "US dollar trend is mixed.",
+        "Rising US dollar pressures gold.",
         "Rising Treasury yields pressure gold."
       ]
     },
-    "market_context_updated_at_utc": "2026-07-20T18:39:36.085493+00:00"
+    "market_context_updated_at_utc": "2026-07-26T15:58:57.271739+00:00"
   },
-  "fundamental_updated_at_utc": "2026-07-20T18:39:33.351922+00:00",
+  "fundamental_updated_at_utc": "2026-07-26T15:58:54.305006+00:00",
   "event_date": "2026-07-29"
 }

@@ -2,6 +2,9 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Sidebar from "../../components/Sidebar";
+import AICoachCard from "@/components/ai/AICoachCard";
+import TradeQualityCard from "@/components/ai/TradeQualityCard";
+import MistakeDetectorCard from "@/components/ai/MistakeDetectorCard";
 
 type Trade = {
   id: number;
@@ -885,6 +888,34 @@ export default function AIReviewPage() {
             </div>
           </div>
         </section>
+        <div className="mt-8">
+          <AICoachCard trades={trades} />
+        </div>
+        <div className="mt-8">
+  {trades.length > 0 && (
+    <TradeQualityCard
+      trade={{
+        rr: 2,
+        riskPercent: trades[trades.length - 1].risk ?? 1,
+        followedPlan:
+          trades[trades.length - 1].ruleFollowed?.toLowerCase() === "yes",
+        respectedStopLoss: true,
+        emotions: trades[trades.length - 1].emotion ?? "",
+        outcome:
+          (trades[trades.length - 1].pnl ?? 0) > 0
+            ? "WIN"
+            : (trades[trades.length - 1].pnl ?? 0) < 0
+            ? "LOSS"
+            : "BE",
+      }}
+    />
+  )}
+</div>
+        <div className="mt-8">
+          {trades.length > 0 && (
+            <MistakeDetectorCard trades={trades} />
+          )}
+        </div>
       </main>
     </div>
   );

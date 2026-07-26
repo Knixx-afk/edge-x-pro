@@ -2,6 +2,9 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Sidebar from "../../components/Sidebar";
+import EquityCurve from "@/components/dashboard/EquityCurve";
+import DrawdownChart from "@/components/dashboard/DrawdownChart";
+import MonthlyPerformance from "@/components/dashboard/MonthlyPerformance";
 import {
   Bar,
   BarChart,
@@ -259,7 +262,35 @@ export default function AnalyticsPage() {
     <div className="flex min-h-screen bg-slate-950 text-white">
       <Sidebar />
 
-      <main className="min-w-0 flex-1 p-8">
+      <main className="min-w-0 flex-1 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 p-8">
+        
+        <section className="mb-8 rounded-2xl border border-slate-800 bg-slate-900/70 p-8 shadow-2xl">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <h1 className="text-4xl font-extrabold">EDGE X PRO Analytics</h1>
+              <p className="mt-2 text-slate-400">
+                Measure your edge, identify weaknesses and improve consistency.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              <div className="rounded-xl bg-slate-950 p-4">
+                <div className="text-xs uppercase text-slate-500">EDGE Score</div>
+                <div className="mt-2 text-3xl font-bold text-cyan-400">
+                  {Math.min(100, Math.round(analytics.winRate + analytics.profitFactor * 10))}
+                </div>
+              </div>
+
+              <div className="rounded-xl bg-slate-950 p-4">
+                <div className="text-xs uppercase text-slate-500">Performance</div>
+                <div className="mt-2 text-3xl font-bold text-emerald-400">
+                  {analytics.winRate >= 60 ? "Excellent" : analytics.winRate >= 45 ? "Good" : "Needs Work"}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <div className="mb-8">
           <h1 className="text-3xl font-bold">
             Analytics
@@ -268,6 +299,14 @@ export default function AnalyticsPage() {
           <p className="mt-2 text-slate-400">
             Deep analysis of your trading performance.
           </p>
+        </div>
+
+
+        <div className="mb-8 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <MetricCard title="Best Trade" value={formatMoney(analytics.bestTrade)} valueClass="text-emerald-400" />
+          <MetricCard title="Worst Trade" value={formatMoney(analytics.worstTrade)} valueClass="text-red-400" />
+          <MetricCard title="Gross Profit" value={formatMoney(analytics.grossProfit)} valueClass="text-emerald-400" />
+          <MetricCard title="Gross Loss" value={`-$${analytics.grossLoss.toFixed(2)}`} valueClass="text-red-400" />
         </div>
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -543,7 +582,15 @@ export default function AnalyticsPage() {
             </div>
           )}
         </section>
-      </main>
+        <div className="mt-8 grid grid-cols-1 gap-6 xl:grid-cols-2">
+          <EquityCurve trades={trades} />
+          <DrawdownChart trades={trades} />
+        </div>
+
+        <div className="mt-8">
+          <MonthlyPerformance trades={trades} />
+        </div>
+      </main>   
     </div>
   );
 }

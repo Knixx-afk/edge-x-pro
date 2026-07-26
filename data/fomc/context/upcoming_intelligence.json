@@ -1,42 +1,117 @@
 {
   "category": "fomc",
-  "generated_at_utc": "2026-07-18T15:01:13.262262+00:00",
+  "generated_at_utc": "2026-07-26T15:58:58.227905+00:00",
   "current_conditions": [
     "DAY_DIRECTION=UP",
-    "PRE_15M=UP",
-    "PRE_30M=UP",
-    "PRE_1H=UP",
-    "PRE_4H=UP",
-    "LIQUIDITY_SEQUENCE=UPSIDE_SWEEP_REJECT"
+    "PRE_15M=DOWN",
+    "PRE_30M=DOWN",
+    "PRE_1H=DOWN",
+    "PRE_4H=DOWN",
+    "LIQUIDITY_SEQUENCE=NO_RECENT_SWEEP"
   ],
-  "matched_pattern_count": 25,
+  "matched_pattern_count": 37,
   "matched_patterns": [
+    {
+      "horizon": "24h",
+      "direction": "UP",
+      "probability": 90.9,
+      "sample_size": 11,
+      "evidence_strength": "STRONG",
+      "matched_conditions": 2,
+      "condition_count": 2,
+      "match_ratio": 1.0,
+      "weight": 0.51547,
+      "conditions": [
+        "PRE_30M=DOWN",
+        "PRE_4H=DOWN"
+      ],
+      "readable_conditions": [
+        "30m before news: DOWN",
+        "4h before news: DOWN"
+      ],
+      "summary": "30m before news: DOWN + 4h before news: DOWN -> UP after 24h in 90.9% of 11 cases. Average move +19.16 USD. Median move +9.55 USD.",
+      "pattern_score": 505.9,
+      "average_move_usd": 19.159,
+      "median_move_usd": 9.55,
+      "average_max_up_usd": 56.25,
+      "average_max_down_usd": -36.622
+    },
+    {
+      "horizon": "30m",
+      "direction": "DOWN",
+      "probability": 90.0,
+      "sample_size": 10,
+      "evidence_strength": "STRONG",
+      "matched_conditions": 2,
+      "condition_count": 2,
+      "match_ratio": 1.0,
+      "weight": 0.480666,
+      "conditions": [
+        "DAY_DIRECTION=UP",
+        "PRE_30M=DOWN"
+      ],
+      "readable_conditions": [
+        "Pre-news day: UP",
+        "30m before news: DOWN"
+      ],
+      "summary": "Pre-news day: UP + 30m before news: DOWN -> DOWN after 30m in 90.0% of 10 cases. Average move -2.92 USD. Median move -2.46 USD.",
+      "pattern_score": 456.0,
+      "average_move_usd": -2.923,
+      "median_move_usd": -2.46,
+      "average_max_up_usd": 4.707,
+      "average_max_down_usd": -7.718
+    },
     {
       "horizon": "30m",
       "direction": "DOWN",
       "probability": 83.3,
       "sample_size": 12,
       "evidence_strength": "STRONG",
+      "matched_conditions": 2,
+      "condition_count": 2,
+      "match_ratio": 1.0,
+      "weight": 0.438347,
+      "conditions": [
+        "PRE_15M=DOWN",
+        "PRE_30M=DOWN"
+      ],
+      "readable_conditions": [
+        "15m before news: DOWN",
+        "30m before news: DOWN"
+      ],
+      "summary": "15m before news: DOWN + 30m before news: DOWN -> DOWN after 30m in 83.3% of 12 cases. Average move -0.23 USD. Median move -2.46 USD.",
+      "pattern_score": 455.6,
+      "average_move_usd": -0.228,
+      "median_move_usd": -2.46,
+      "average_max_up_usd": 5.733,
+      "average_max_down_usd": -5.186
+    },
+    {
+      "horizon": "24h",
+      "direction": "UP",
+      "probability": 80.0,
+      "sample_size": 15,
+      "evidence_strength": "STRONG",
       "matched_conditions": 1,
       "condition_count": 1,
       "match_ratio": 1.0,
-      "weight": 0.392206,
+      "weight": 0.395044,
       "conditions": [
-        "PRE_4H=UP"
+        "PRE_4H=DOWN"
       ],
       "readable_conditions": [
-        "4h before news: UP"
+        "4h before news: DOWN"
       ],
-      "summary": "4h before news: UP -> DOWN after 30m in 83.3% of 12 cases. Average move -11.98 USD. Median move -2.46 USD.",
-      "pattern_score": 452.6,
-      "average_move_usd": -11.984,
-      "median_move_usd": -2.46,
-      "average_max_up_usd": 4.888,
-      "average_max_down_usd": -18.381
+      "summary": "4h before news: DOWN -> UP after 24h in 80.0% of 15 cases. Average move +12.51 USD. Median move +9.55 USD.",
+      "pattern_score": 503.0,
+      "average_move_usd": 12.511,
+      "median_move_usd": 9.55,
+      "average_max_up_usd": 50.491,
+      "average_max_down_usd": -35.779
     },
     {
-      "horizon": "30m",
-      "direction": "DOWN",
+      "horizon": "24h",
+      "direction": "UP",
       "probability": 100.0,
       "sample_size": 7,
       "evidence_strength": "MODERATE",
@@ -46,18 +121,18 @@
       "weight": 0.37702,
       "conditions": [
         "DAY_DIRECTION=UP",
-        "PRE_4H=UP"
+        "PRE_4H=DOWN"
       ],
       "readable_conditions": [
         "Pre-news day: UP",
-        "4h before news: UP"
+        "4h before news: DOWN"
       ],
-      "summary": "Pre-news day: UP + 4h before news: UP -> DOWN after 30m in 100.0% of 7 cases. Average move -15.41 USD. Median move -2.05 USD.",
+      "summary": "Pre-news day: UP + 4h before news: DOWN -> UP after 24h in 100.0% of 7 cases. Average move +20.26 USD. Median move +9.77 USD.",
       "pattern_score": 406.0,
-      "average_move_usd": -15.407,
-      "median_move_usd": -2.05,
-      "average_max_up_usd": 2.891,
-      "average_max_down_usd": -19.753
+      "average_move_usd": 20.26,
+      "median_move_usd": 9.77,
+      "average_max_up_usd": 70.816,
+      "average_max_down_usd": -46.046
     },
     {
       "horizon": "30m",
@@ -83,152 +158,127 @@
       "average_max_down_usd": -13.287
     },
     {
-      "horizon": "4h",
-      "direction": "DOWN",
-      "probability": 85.7,
-      "sample_size": 7,
-      "evidence_strength": "MODERATE",
-      "matched_conditions": 2,
-      "condition_count": 2,
-      "match_ratio": 1.0,
-      "weight": 0.269192,
-      "conditions": [
-        "PRE_15M=UP",
-        "PRE_4H=UP"
-      ],
-      "readable_conditions": [
-        "15m before news: UP",
-        "4h before news: UP"
-      ],
-      "summary": "15m before news: UP + 4h before news: UP -> DOWN after 4h in 85.7% of 7 cases. Average move -36.31 USD. Median move -25.75 USD.",
-      "pattern_score": 305.9,
-      "average_move_usd": -36.314,
-      "median_move_usd": -25.75,
-      "average_max_up_usd": 10.084,
-      "average_max_down_usd": -54.72
-    },
-    {
       "horizon": "30m",
       "direction": "DOWN",
-      "probability": 72.7,
-      "sample_size": 11,
+      "probability": 78.6,
+      "sample_size": 14,
       "evidence_strength": "STRONG",
       "matched_conditions": 1,
       "condition_count": 1,
       "match_ratio": 1.0,
-      "weight": 0.255977,
+      "weight": 0.363839,
       "conditions": [
-        "PRE_1H=UP"
+        "PRE_15M=DOWN"
       ],
       "readable_conditions": [
-        "1h before news: UP"
+        "15m before news: DOWN"
       ],
-      "summary": "1h before news: UP -> DOWN after 30m in 72.7% of 11 cases. Average move -10.85 USD. Median move -3.13 USD.",
-      "pattern_score": 302.7,
-      "average_move_usd": -10.852,
-      "median_move_usd": -3.13,
-      "average_max_up_usd": 6.876,
-      "average_max_down_usd": -18.579
+      "summary": "15m before news: DOWN -> DOWN after 30m in 78.6% of 14 cases. Average move +0.72 USD. Median move -1.97 USD. Move magnitude is only partially consistent.",
+      "pattern_score": 413.4,
+      "average_move_usd": 0.717,
+      "median_move_usd": -1.97,
+      "average_max_up_usd": 6.912,
+      "average_max_down_usd": -4.647
     },
     {
-      "horizon": "4h",
+      "horizon": "30m",
       "direction": "DOWN",
       "probability": 75.0,
-      "sample_size": 8,
-      "evidence_strength": "MODERATE",
+      "sample_size": 12,
+      "evidence_strength": "STRONG",
       "matched_conditions": 2,
       "condition_count": 2,
       "match_ratio": 1.0,
-      "weight": 0.201525,
+      "weight": 0.32909,
       "conditions": [
-        "PRE_15M=UP",
-        "PRE_1H=UP"
+        "PRE_15M=DOWN",
+        "PRE_1H=DOWN"
       ],
       "readable_conditions": [
-        "15m before news: UP",
-        "1h before news: UP"
+        "15m before news: DOWN",
+        "1h before news: DOWN"
       ],
-      "summary": "15m before news: UP + 1h before news: UP -> DOWN after 4h in 75.0% of 8 cases. Average move -28.50 USD. Median move -25.98 USD.",
-      "pattern_score": 256.0,
-      "average_move_usd": -28.504,
-      "median_move_usd": -25.975,
-      "average_max_up_usd": 15.105,
-      "average_max_down_usd": -49.776
+      "summary": "15m before news: DOWN + 1h before news: DOWN -> DOWN after 30m in 75.0% of 12 cases. Average move +1.29 USD. Median move -1.97 USD. Move magnitude is only partially consistent.",
+      "pattern_score": 316.0,
+      "average_move_usd": 1.293,
+      "median_move_usd": -1.97,
+      "average_max_up_usd": 7.562,
+      "average_max_down_usd": -4.654
+    },
+    {
+      "horizon": "1h",
+      "direction": "UP",
+      "probability": 72.7,
+      "sample_size": 11,
+      "evidence_strength": "STRONG",
+      "matched_conditions": 2,
+      "condition_count": 2,
+      "match_ratio": 1.0,
+      "weight": 0.286092,
+      "conditions": [
+        "PRE_1H=DOWN",
+        "PRE_4H=DOWN"
+      ],
+      "readable_conditions": [
+        "1h before news: DOWN",
+        "4h before news: DOWN"
+      ],
+      "summary": "1h before news: DOWN + 4h before news: DOWN -> UP after 1h in 72.7% of 11 cases. Average move +9.59 USD. Median move +4.38 USD.",
+      "pattern_score": 305.7,
+      "average_move_usd": 9.585,
+      "median_move_usd": 4.38,
+      "average_max_up_usd": 17.02,
+      "average_max_down_usd": -7.126
     },
     {
       "horizon": "1m",
       "direction": "DOWN",
-      "probability": 75.0,
-      "sample_size": 8,
-      "evidence_strength": "MODERATE",
+      "probability": 70.0,
+      "sample_size": 10,
+      "evidence_strength": "STRONG",
       "matched_conditions": 2,
       "condition_count": 2,
       "match_ratio": 1.0,
-      "weight": 0.201525,
+      "weight": 0.240333,
       "conditions": [
-        "PRE_15M=UP",
-        "PRE_4H=UP"
+        "DAY_DIRECTION=UP",
+        "PRE_1H=DOWN"
       ],
       "readable_conditions": [
-        "15m before news: UP",
-        "4h before news: UP"
+        "Pre-news day: UP",
+        "1h before news: DOWN"
       ],
-      "summary": "15m before news: UP + 4h before news: UP -> DOWN after 1m in 75.0% of 8 cases. Average move -6.41 USD. Median move -2.89 USD.",
+      "summary": "Pre-news day: UP + 1h before news: DOWN -> DOWN after 1m in 70.0% of 10 cases. Average move -2.38 USD. Median move -2.86 USD.",
       "pattern_score": 256.0,
-      "average_move_usd": -6.411,
-      "median_move_usd": -2.89,
-      "average_max_up_usd": 2.37,
-      "average_max_down_usd": -13.306
+      "average_move_usd": -2.376,
+      "median_move_usd": -2.86,
+      "average_max_up_usd": 3.434,
+      "average_max_down_usd": -5.85
     },
     {
       "horizon": "5m",
       "direction": "DOWN",
-      "probability": 75.0,
-      "sample_size": 8,
-      "evidence_strength": "MODERATE",
+      "probability": 70.0,
+      "sample_size": 10,
+      "evidence_strength": "STRONG",
       "matched_conditions": 2,
       "condition_count": 2,
       "match_ratio": 1.0,
-      "weight": 0.201525,
+      "weight": 0.240333,
       "conditions": [
-        "PRE_15M=UP",
-        "PRE_4H=UP"
+        "DAY_DIRECTION=UP",
+        "PRE_30M=DOWN"
       ],
       "readable_conditions": [
-        "15m before news: UP",
-        "4h before news: UP"
+        "Pre-news day: UP",
+        "30m before news: DOWN"
       ],
-      "summary": "15m before news: UP + 4h before news: UP -> DOWN after 5m in 75.0% of 8 cases. Average move -12.06 USD. Median move -2.41 USD.",
+      "summary": "Pre-news day: UP + 30m before news: DOWN -> DOWN after 5m in 70.0% of 10 cases. Average move -2.45 USD. Median move -3.52 USD.",
       "pattern_score": 256.0,
-      "average_move_usd": -12.057,
-      "median_move_usd": -2.41,
-      "average_max_up_usd": 2.749,
-      "average_max_down_usd": -18.675
-    },
-    {
-      "horizon": "15m",
-      "direction": "DOWN",
-      "probability": 75.0,
-      "sample_size": 8,
-      "evidence_strength": "MODERATE",
-      "matched_conditions": 2,
-      "condition_count": 2,
-      "match_ratio": 1.0,
-      "weight": 0.201525,
-      "conditions": [
-        "PRE_15M=UP",
-        "PRE_4H=UP"
-      ],
-      "readable_conditions": [
-        "15m before news: UP",
-        "4h before news: UP"
-      ],
-      "summary": "15m before news: UP + 4h before news: UP -> DOWN after 15m in 75.0% of 8 cases. Average move -16.17 USD. Median move -5.01 USD.",
-      "pattern_score": 256.0,
-      "average_move_usd": -16.169,
-      "median_move_usd": -5.015,
-      "average_max_up_usd": 3.971,
-      "average_max_down_usd": -24.706
+      "average_move_usd": -2.45,
+      "median_move_usd": -3.515,
+      "average_max_up_usd": 3.313,
+      "average_max_down_usd": -6.504
     },
     {
       "horizon": "1m",
@@ -277,29 +327,121 @@
       "average_max_down_usd": -9.441
     },
     {
+      "horizon": "1m",
+      "direction": "DOWN",
+      "probability": 66.7,
+      "sample_size": 18,
+      "evidence_strength": "MODERATE",
+      "matched_conditions": 1,
+      "condition_count": 1,
+      "match_ratio": 1.0,
+      "weight": 0.180673,
+      "conditions": [
+        "PRE_30M=DOWN"
+      ],
+      "readable_conditions": [
+        "30m before news: DOWN"
+      ],
+      "summary": "30m before news: DOWN -> DOWN after 1m in 66.7% of 18 cases. Average move -0.78 USD. Median move -1.42 USD.",
+      "pattern_score": 353.6,
+      "average_move_usd": -0.783,
+      "median_move_usd": -1.42,
+      "average_max_up_usd": 4.181,
+      "average_max_down_usd": -4.252
+    },
+    {
       "horizon": "30m",
       "direction": "DOWN",
-      "probability": 90.0,
-      "sample_size": 10,
+      "probability": 66.7,
+      "sample_size": 18,
+      "evidence_strength": "MODERATE",
+      "matched_conditions": 1,
+      "condition_count": 1,
+      "match_ratio": 1.0,
+      "weight": 0.180673,
+      "conditions": [
+        "PRE_30M=DOWN"
+      ],
+      "readable_conditions": [
+        "30m before news: DOWN"
+      ],
+      "summary": "30m before news: DOWN -> DOWN after 30m in 66.7% of 18 cases. Average move -0.64 USD. Median move -1.80 USD.",
+      "pattern_score": 353.6,
+      "average_move_usd": -0.636,
+      "median_move_usd": -1.8,
+      "average_max_up_usd": 6.504,
+      "average_max_down_usd": -6.171
+    },
+    {
+      "horizon": "24h",
+      "direction": "UP",
+      "probability": 66.7,
+      "sample_size": 18,
+      "evidence_strength": "MODERATE",
+      "matched_conditions": 1,
+      "condition_count": 1,
+      "match_ratio": 1.0,
+      "weight": 0.180673,
+      "conditions": [
+        "PRE_30M=DOWN"
+      ],
+      "readable_conditions": [
+        "30m before news: DOWN"
+      ],
+      "summary": "30m before news: DOWN -> UP after 24h in 66.7% of 18 cases. Average move +7.25 USD. Median move +7.16 USD.",
+      "pattern_score": 353.6,
+      "average_move_usd": 7.252,
+      "median_move_usd": 7.155,
+      "average_max_up_usd": 42.668,
+      "average_max_down_usd": -32.021
+    },
+    {
+      "horizon": "1h",
+      "direction": "UP",
+      "probability": 66.7,
+      "sample_size": 15,
+      "evidence_strength": "MODERATE",
+      "matched_conditions": 1,
+      "condition_count": 1,
+      "match_ratio": 1.0,
+      "weight": 0.164931,
+      "conditions": [
+        "PRE_4H=DOWN"
+      ],
+      "readable_conditions": [
+        "4h before news: DOWN"
+      ],
+      "summary": "4h before news: DOWN -> UP after 1h in 66.7% of 15 cases. Average move +7.62 USD. Median move +3.03 USD.",
+      "pattern_score": 303.5,
+      "average_move_usd": 7.621,
+      "median_move_usd": 3.03,
+      "average_max_up_usd": 15.648,
+      "average_max_down_usd": -7.408
+    },
+    {
+      "horizon": "1m",
+      "direction": "DOWN",
+      "probability": 81.8,
+      "sample_size": 11,
       "evidence_strength": "STRONG",
       "matched_conditions": 1,
       "condition_count": 2,
       "match_ratio": 0.5,
-      "weight": 0.120167,
+      "weight": 0.100195,
       "conditions": [
-        "DAY_DIRECTION=UP",
+        "FED_DECISION=HOLD",
         "PRE_30M=DOWN"
       ],
       "readable_conditions": [
-        "Pre-news day: UP",
+        "Fed decision: HOLD",
         "30m before news: DOWN"
       ],
-      "summary": "Pre-news day: UP + 30m before news: DOWN -> DOWN after 30m in 90.0% of 10 cases. Average move -2.92 USD. Median move -2.46 USD.",
-      "pattern_score": 456.0,
-      "average_move_usd": -2.923,
-      "median_move_usd": -2.46,
-      "average_max_up_usd": 4.707,
-      "average_max_down_usd": -7.718
+      "summary": "Fed decision: HOLD + 30m before news: DOWN -> DOWN after 1m in 81.8% of 11 cases. Average move -2.73 USD. Median move -2.28 USD.",
+      "pattern_score": 405.8,
+      "average_move_usd": -2.73,
+      "median_move_usd": -2.28,
+      "average_max_up_usd": 2.207,
+      "average_max_down_usd": -5.072
     },
     {
       "horizon": "5m",
@@ -327,8 +469,8 @@
       "average_max_down_usd": -16.267
     },
     {
-      "horizon": "24h",
-      "direction": "UP",
+      "horizon": "30m",
+      "direction": "DOWN",
       "probability": 100.0,
       "sample_size": 7,
       "evidence_strength": "MODERATE",
@@ -338,18 +480,43 @@
       "weight": 0.094255,
       "conditions": [
         "DAY_DIRECTION=UP",
-        "PRE_4H=DOWN"
+        "PRE_4H=UP"
       ],
       "readable_conditions": [
         "Pre-news day: UP",
+        "4h before news: UP"
+      ],
+      "summary": "Pre-news day: UP + 4h before news: UP -> DOWN after 30m in 100.0% of 7 cases. Average move -15.41 USD. Median move -2.05 USD.",
+      "pattern_score": 406.0,
+      "average_move_usd": -15.407,
+      "median_move_usd": -2.05,
+      "average_max_up_usd": 2.891,
+      "average_max_down_usd": -19.753
+    },
+    {
+      "horizon": "24h",
+      "direction": "UP",
+      "probability": 75.0,
+      "sample_size": 12,
+      "evidence_strength": "STRONG",
+      "matched_conditions": 1,
+      "condition_count": 2,
+      "match_ratio": 0.5,
+      "weight": 0.082272,
+      "conditions": [
+        "FED_DECISION=HOLD",
+        "PRE_4H=DOWN"
+      ],
+      "readable_conditions": [
+        "Fed decision: HOLD",
         "4h before news: DOWN"
       ],
-      "summary": "Pre-news day: UP + 4h before news: DOWN -> UP after 24h in 100.0% of 7 cases. Average move +20.26 USD. Median move +9.77 USD.",
-      "pattern_score": 406.0,
-      "average_move_usd": 20.26,
-      "median_move_usd": 9.77,
-      "average_max_up_usd": 70.816,
-      "average_max_down_usd": -46.046
+      "summary": "Fed decision: HOLD + 4h before news: DOWN -> UP after 24h in 75.0% of 12 cases. Average move +7.21 USD. Median move +7.62 USD.",
+      "pattern_score": 356.0,
+      "average_move_usd": 7.208,
+      "median_move_usd": 7.625,
+      "average_max_up_usd": 50.998,
+      "average_max_down_usd": -35.4
     },
     {
       "horizon": "24h",
@@ -377,6 +544,31 @@
       "average_max_down_usd": -45.215
     },
     {
+      "horizon": "30m",
+      "direction": "DOWN",
+      "probability": 87.5,
+      "sample_size": 8,
+      "evidence_strength": "MODERATE",
+      "matched_conditions": 1,
+      "condition_count": 2,
+      "match_ratio": 0.5,
+      "weight": 0.075572,
+      "conditions": [
+        "PRE_15M=DOWN",
+        "PRE_NEWS_ALIGNMENT=MOSTLY_DOWN"
+      ],
+      "readable_conditions": [
+        "15m before news: DOWN",
+        "Timeframe alignment: MOSTLY DOWN"
+      ],
+      "summary": "15m before news: DOWN + Timeframe alignment: MOSTLY DOWN -> DOWN after 30m in 87.5% of 8 cases. Average move -0.52 USD. Median move -1.97 USD.",
+      "pattern_score": 356.0,
+      "average_move_usd": -0.519,
+      "median_move_usd": -1.97,
+      "average_max_up_usd": 6.559,
+      "average_max_down_usd": -4.25
+    },
+    {
       "horizon": "1m",
       "direction": "DOWN",
       "probability": 85.7,
@@ -402,33 +594,83 @@
       "average_max_down_usd": -10.316
     },
     {
-      "horizon": "1m",
-      "direction": "DOWN",
-      "probability": 70.0,
-      "sample_size": 10,
-      "evidence_strength": "STRONG",
+      "horizon": "15m",
+      "direction": "UP",
+      "probability": 85.7,
+      "sample_size": 7,
+      "evidence_strength": "MODERATE",
       "matched_conditions": 1,
       "condition_count": 2,
       "match_ratio": 0.5,
-      "weight": 0.060083,
+      "weight": 0.067298,
       "conditions": [
-        "DAY_DIRECTION=UP",
-        "PRE_1H=DOWN"
+        "PRE_4H=DOWN",
+        "PRE_NEWS_ALIGNMENT=MOSTLY_DOWN"
       ],
       "readable_conditions": [
-        "Pre-news day: UP",
-        "1h before news: DOWN"
+        "4h before news: DOWN",
+        "Timeframe alignment: MOSTLY DOWN"
       ],
-      "summary": "Pre-news day: UP + 1h before news: DOWN -> DOWN after 1m in 70.0% of 10 cases. Average move -2.38 USD. Median move -2.86 USD.",
-      "pattern_score": 256.0,
-      "average_move_usd": -2.376,
-      "median_move_usd": -2.86,
-      "average_max_up_usd": 3.434,
-      "average_max_down_usd": -5.85
+      "summary": "4h before news: DOWN + Timeframe alignment: MOSTLY DOWN -> UP after 15m in 85.7% of 7 cases. Average move +7.63 USD. Median move +5.65 USD.",
+      "pattern_score": 305.9,
+      "average_move_usd": 7.63,
+      "median_move_usd": 5.65,
+      "average_max_up_usd": 10.643,
+      "average_max_down_usd": -3.487
     },
     {
-      "horizon": "5m",
-      "direction": "DOWN",
+      "horizon": "1h",
+      "direction": "UP",
+      "probability": 85.7,
+      "sample_size": 7,
+      "evidence_strength": "MODERATE",
+      "matched_conditions": 1,
+      "condition_count": 2,
+      "match_ratio": 0.5,
+      "weight": 0.067298,
+      "conditions": [
+        "PRE_4H=DOWN",
+        "PRE_NEWS_ALIGNMENT=MOSTLY_DOWN"
+      ],
+      "readable_conditions": [
+        "4h before news: DOWN",
+        "Timeframe alignment: MOSTLY DOWN"
+      ],
+      "summary": "4h before news: DOWN + Timeframe alignment: MOSTLY DOWN -> UP after 1h in 85.7% of 7 cases. Average move +14.05 USD. Median move +3.03 USD.",
+      "pattern_score": 305.9,
+      "average_move_usd": 14.049,
+      "median_move_usd": 3.03,
+      "average_max_up_usd": 18.974,
+      "average_max_down_usd": -6.993
+    },
+    {
+      "horizon": "24h",
+      "direction": "UP",
+      "probability": 85.7,
+      "sample_size": 7,
+      "evidence_strength": "MODERATE",
+      "matched_conditions": 1,
+      "condition_count": 2,
+      "match_ratio": 0.5,
+      "weight": 0.067298,
+      "conditions": [
+        "PRE_4H=DOWN",
+        "PRE_NEWS_ALIGNMENT=MOSTLY_DOWN"
+      ],
+      "readable_conditions": [
+        "4h before news: DOWN",
+        "Timeframe alignment: MOSTLY DOWN"
+      ],
+      "summary": "4h before news: DOWN + Timeframe alignment: MOSTLY DOWN -> UP after 24h in 85.7% of 7 cases. Average move +9.51 USD. Median move +8.61 USD.",
+      "pattern_score": 305.9,
+      "average_move_usd": 9.509,
+      "median_move_usd": 8.61,
+      "average_max_up_usd": 75.159,
+      "average_max_down_usd": -55.451
+    },
+    {
+      "horizon": "1h",
+      "direction": "UP",
       "probability": 70.0,
       "sample_size": 10,
       "evidence_strength": "STRONG",
@@ -437,19 +679,44 @@
       "match_ratio": 0.5,
       "weight": 0.060083,
       "conditions": [
-        "DAY_DIRECTION=UP",
-        "PRE_30M=DOWN"
+        "FED_DECISION=HOLD",
+        "LIQUIDITY_SEQUENCE=NO_RECENT_SWEEP"
       ],
       "readable_conditions": [
-        "Pre-news day: UP",
-        "30m before news: DOWN"
+        "Fed decision: HOLD",
+        "Liquidity: NO RECENT SWEEP"
       ],
-      "summary": "Pre-news day: UP + 30m before news: DOWN -> DOWN after 5m in 70.0% of 10 cases. Average move -2.45 USD. Median move -3.52 USD.",
+      "summary": "Fed decision: HOLD + Liquidity: NO RECENT SWEEP -> UP after 1h in 70.0% of 10 cases. Average move +5.17 USD. Median move +4.45 USD.",
       "pattern_score": 256.0,
-      "average_move_usd": -2.45,
-      "median_move_usd": -3.515,
-      "average_max_up_usd": 3.313,
-      "average_max_down_usd": -6.504
+      "average_move_usd": 5.168,
+      "median_move_usd": 4.45,
+      "average_max_up_usd": 13.379,
+      "average_max_down_usd": -8.67
+    },
+    {
+      "horizon": "15m",
+      "direction": "UP",
+      "probability": 77.8,
+      "sample_size": 9,
+      "evidence_strength": "MODERATE",
+      "matched_conditions": 1,
+      "condition_count": 2,
+      "match_ratio": 0.5,
+      "weight": 0.059422,
+      "conditions": [
+        "PRE_1H=DOWN",
+        "PRE_NEWS_ALIGNMENT=MOSTLY_DOWN"
+      ],
+      "readable_conditions": [
+        "1h before news: DOWN",
+        "Timeframe alignment: MOSTLY DOWN"
+      ],
+      "summary": "1h before news: DOWN + Timeframe alignment: MOSTLY DOWN -> UP after 15m in 77.8% of 9 cases. Average move +5.23 USD. Median move +0.90 USD.",
+      "pattern_score": 306.2,
+      "average_move_usd": 5.228,
+      "median_move_usd": 0.9,
+      "average_max_up_usd": 9.662,
+      "average_max_down_usd": -4.587
     },
     {
       "horizon": "1m",
@@ -527,6 +794,31 @@
       "average_max_down_usd": -21.117
     },
     {
+      "horizon": "4h",
+      "direction": "DOWN",
+      "probability": 75.0,
+      "sample_size": 8,
+      "evidence_strength": "MODERATE",
+      "matched_conditions": 1,
+      "condition_count": 2,
+      "match_ratio": 0.5,
+      "weight": 0.050381,
+      "conditions": [
+        "DAY_DIRECTION=DOWN",
+        "LIQUIDITY_SEQUENCE=NO_RECENT_SWEEP"
+      ],
+      "readable_conditions": [
+        "Pre-news day: DOWN",
+        "Liquidity: NO RECENT SWEEP"
+      ],
+      "summary": "Pre-news day: DOWN + Liquidity: NO RECENT SWEEP -> DOWN after 4h in 75.0% of 8 cases. Average move -17.72 USD. Median move -22.14 USD.",
+      "pattern_score": 256.0,
+      "average_move_usd": -17.718,
+      "median_move_usd": -22.135,
+      "average_max_up_usd": 14.352,
+      "average_max_down_usd": -33.175
+    },
+    {
       "horizon": "1m",
       "direction": "UP",
       "probability": 75.0,
@@ -577,6 +869,31 @@
       "average_max_down_usd": -12.104
     },
     {
+      "horizon": "4h",
+      "direction": "UP",
+      "probability": 75.0,
+      "sample_size": 8,
+      "evidence_strength": "MODERATE",
+      "matched_conditions": 1,
+      "condition_count": 2,
+      "match_ratio": 0.5,
+      "weight": 0.050381,
+      "conditions": [
+        "PRE_1H=DOWN",
+        "PRE_NEWS_ALIGNMENT=MOSTLY_DOWN"
+      ],
+      "readable_conditions": [
+        "1h before news: DOWN",
+        "Timeframe alignment: MOSTLY DOWN"
+      ],
+      "summary": "1h before news: DOWN + Timeframe alignment: MOSTLY DOWN -> UP after 4h in 75.0% of 8 cases. Average move +22.73 USD. Median move +6.75 USD.",
+      "pattern_score": 256.0,
+      "average_move_usd": 22.732,
+      "median_move_usd": 6.755,
+      "average_max_up_usd": 32.734,
+      "average_max_down_usd": -10.096
+    },
+    {
       "horizon": "15m",
       "direction": "DOWN",
       "probability": 100.0,
@@ -600,173 +917,224 @@
       "median_move_usd": -3.63,
       "average_max_up_usd": 1.122,
       "average_max_down_usd": -24.836
-    },
-    {
-      "horizon": "4h",
-      "direction": "DOWN",
-      "probability": 100.0,
-      "sample_size": 5,
-      "evidence_strength": "DEVELOPING",
-      "matched_conditions": 1,
-      "condition_count": 2,
-      "match_ratio": 0.5,
-      "weight": 0.042485,
-      "conditions": [
-        "DAY_DIRECTION=DOWN",
-        "PRE_30M=UP"
-      ],
-      "readable_conditions": [
-        "Pre-news day: DOWN",
-        "30m before news: UP"
-      ],
-      "summary": "Pre-news day: DOWN + 30m before news: UP -> DOWN after 4h in 100.0% of 5 cases. Average move -28.54 USD. Median move -25.75 USD.",
-      "pattern_score": 306.0,
-      "average_move_usd": -28.544,
-      "median_move_usd": -25.75,
-      "average_max_up_usd": 11.058,
-      "average_max_down_usd": -40.952
     }
   ],
   "horizon_predictions": {
     "1m": {
       "direction": "DOWN",
-      "confidence": 58.4,
-      "consensus": 83.3,
+      "confidence": 61.2,
+      "consensus": 85.7,
       "evidence": "STRONG",
-      "pattern_count": 6,
-      "up_probability": 8.6,
-      "down_probability": 91.4,
-      "conflict_score": 17.3
+      "pattern_count": 7,
+      "up_probability": 6.5,
+      "down_probability": 93.5,
+      "conflict_score": 13.0
     },
     "5m": {
       "direction": "DOWN",
-      "confidence": 60.5,
+      "confidence": 59.6,
       "consensus": 100.0,
       "evidence": "STRONG",
-      "pattern_count": 5,
+      "pattern_count": 4,
       "up_probability": 0.0,
       "down_probability": 100.0,
       "conflict_score": 0.0
     },
     "15m": {
-      "direction": "DOWN",
-      "confidence": 55.3,
-      "consensus": 100.0,
+      "direction": "NO_CLEAR_EDGE",
+      "confidence": 51.5,
+      "consensus": 66.7,
       "evidence": "MODERATE",
-      "pattern_count": 2,
-      "up_probability": 0.0,
-      "down_probability": 100.0,
-      "conflict_score": 0.0
+      "pattern_count": 3,
+      "up_probability": 65.6,
+      "down_probability": 34.4,
+      "conflict_score": 68.8
     },
     "30m": {
       "direction": "DOWN",
-      "confidence": 76.5,
+      "confidence": 81.0,
       "consensus": 100.0,
       "evidence": "STRONG",
-      "pattern_count": 6,
+      "pattern_count": 9,
       "up_probability": 0.0,
       "down_probability": 100.0,
       "conflict_score": 0.0
     },
     "1h": {
-      "direction": "NO_CLEAR_EDGE",
-      "confidence": 51.0,
-      "consensus": 100.0,
-      "evidence": "MODERATE",
-      "pattern_count": 1,
-      "up_probability": 0.0,
-      "down_probability": 100.0,
-      "conflict_score": 0.0
+      "direction": "UP",
+      "confidence": 58.1,
+      "consensus": 80.0,
+      "evidence": "STRONG",
+      "pattern_count": 5,
+      "up_probability": 91.1,
+      "down_probability": 8.9,
+      "conflict_score": 17.8
     },
     "4h": {
-      "direction": "DOWN",
-      "confidence": 61.4,
-      "consensus": 100.0,
+      "direction": "NO_CLEAR_EDGE",
+      "confidence": 50.0,
+      "consensus": 50.0,
       "evidence": "MODERATE",
-      "pattern_count": 3,
-      "up_probability": 0.0,
-      "down_probability": 100.0,
-      "conflict_score": 0.0
+      "pattern_count": 2,
+      "up_probability": 50.0,
+      "down_probability": 50.0,
+      "conflict_score": 100.0
     },
     "24h": {
       "direction": "UP",
-      "confidence": 55.6,
+      "confidence": 78.4,
       "consensus": 100.0,
-      "evidence": "MODERATE",
-      "pattern_count": 2,
+      "evidence": "STRONG",
+      "pattern_count": 7,
       "up_probability": 100.0,
       "down_probability": 0.0,
       "conflict_score": 0.0
     }
   },
   "technical_summary": {
-    "bias": "BEARISH",
-    "confidence": 56.5,
-    "bullish_support": 0.0262,
-    "bearish_support": 0.1928,
-    "conflict_score": 23.9
+    "bias": "NO_CLEAR_EDGE",
+    "confidence": 51.6,
+    "bullish_support": 0.1927,
+    "bearish_support": 0.1494,
+    "conflict_score": 87.4
   },
   "fundamental_summary": {
-    "bias": "NO_CLEAR_EDGE",
-    "confidence": 54.5,
-    "score": 1.0,
+    "bias": "BEARISH",
+    "confidence": 59.0,
+    "score": -2.0,
     "maximum_score": 10.0,
     "reasons": [
       "Cooling inflation may support easier Fed policy.",
       "Weakening labor conditions may support lower rates.",
-      "Rising US dollar pressures gold."
+      "Rising US dollar pressures gold.",
+      "Rising Treasury yields pressure gold."
     ],
     "inputs": {
       "inflation_trend": "COOLING",
       "labor_market": "WEAKENING",
       "dxy_direction": "RISING",
-      "dxy_value": 100.75,
-      "us10y_direction": "MIXED",
-      "us10y_value": 4.541
+      "dxy_value": 101.47,
+      "us10y_direction": "RISING",
+      "us10y_value": 4.679
     }
   },
   "edge_x_prediction": {
     "bias": "BEARISH",
-    "confidence": 53.9,
-    "technical_bias": "BEARISH",
-    "technical_confidence": 56.5,
-    "fundamental_bias": "NO_CLEAR_EDGE",
-    "fundamental_confidence": 54.5,
+    "confidence": 53.6,
+    "technical_bias": "NO_CLEAR_EDGE",
+    "technical_confidence": 51.6,
+    "fundamental_bias": "BEARISH",
+    "fundamental_confidence": 59.0,
     "technical_weight": 60,
     "fundamental_weight": 40,
     "alignment": "PARTIAL",
-    "combined_score": -3.9
+    "combined_score": -3.6
   },
   "technical_intelligence": {
     "available": true,
-    "matched_pattern_count": 25,
+    "matched_pattern_count": 37,
     "patterns": [
+      {
+        "horizon": "24h",
+        "direction": "UP",
+        "probability": 90.9,
+        "sample_size": 11,
+        "evidence_strength": "STRONG",
+        "matched_conditions": 2,
+        "condition_count": 2,
+        "match_ratio": 1.0,
+        "weight": 0.51547,
+        "conditions": [
+          "PRE_30M=DOWN",
+          "PRE_4H=DOWN"
+        ],
+        "readable_conditions": [
+          "30m before news: DOWN",
+          "4h before news: DOWN"
+        ],
+        "summary": "30m before news: DOWN + 4h before news: DOWN -> UP after 24h in 90.9% of 11 cases. Average move +19.16 USD. Median move +9.55 USD.",
+        "pattern_score": 505.9,
+        "average_move_usd": 19.159,
+        "median_move_usd": 9.55,
+        "average_max_up_usd": 56.25,
+        "average_max_down_usd": -36.622
+      },
+      {
+        "horizon": "30m",
+        "direction": "DOWN",
+        "probability": 90.0,
+        "sample_size": 10,
+        "evidence_strength": "STRONG",
+        "matched_conditions": 2,
+        "condition_count": 2,
+        "match_ratio": 1.0,
+        "weight": 0.480666,
+        "conditions": [
+          "DAY_DIRECTION=UP",
+          "PRE_30M=DOWN"
+        ],
+        "readable_conditions": [
+          "Pre-news day: UP",
+          "30m before news: DOWN"
+        ],
+        "summary": "Pre-news day: UP + 30m before news: DOWN -> DOWN after 30m in 90.0% of 10 cases. Average move -2.92 USD. Median move -2.46 USD.",
+        "pattern_score": 456.0,
+        "average_move_usd": -2.923,
+        "median_move_usd": -2.46,
+        "average_max_up_usd": 4.707,
+        "average_max_down_usd": -7.718
+      },
       {
         "horizon": "30m",
         "direction": "DOWN",
         "probability": 83.3,
         "sample_size": 12,
         "evidence_strength": "STRONG",
+        "matched_conditions": 2,
+        "condition_count": 2,
+        "match_ratio": 1.0,
+        "weight": 0.438347,
+        "conditions": [
+          "PRE_15M=DOWN",
+          "PRE_30M=DOWN"
+        ],
+        "readable_conditions": [
+          "15m before news: DOWN",
+          "30m before news: DOWN"
+        ],
+        "summary": "15m before news: DOWN + 30m before news: DOWN -> DOWN after 30m in 83.3% of 12 cases. Average move -0.23 USD. Median move -2.46 USD.",
+        "pattern_score": 455.6,
+        "average_move_usd": -0.228,
+        "median_move_usd": -2.46,
+        "average_max_up_usd": 5.733,
+        "average_max_down_usd": -5.186
+      },
+      {
+        "horizon": "24h",
+        "direction": "UP",
+        "probability": 80.0,
+        "sample_size": 15,
+        "evidence_strength": "STRONG",
         "matched_conditions": 1,
         "condition_count": 1,
         "match_ratio": 1.0,
-        "weight": 0.392206,
+        "weight": 0.395044,
         "conditions": [
-          "PRE_4H=UP"
+          "PRE_4H=DOWN"
         ],
         "readable_conditions": [
-          "4h before news: UP"
+          "4h before news: DOWN"
         ],
-        "summary": "4h before news: UP -> DOWN after 30m in 83.3% of 12 cases. Average move -11.98 USD. Median move -2.46 USD.",
-        "pattern_score": 452.6,
-        "average_move_usd": -11.984,
-        "median_move_usd": -2.46,
-        "average_max_up_usd": 4.888,
-        "average_max_down_usd": -18.381
+        "summary": "4h before news: DOWN -> UP after 24h in 80.0% of 15 cases. Average move +12.51 USD. Median move +9.55 USD.",
+        "pattern_score": 503.0,
+        "average_move_usd": 12.511,
+        "median_move_usd": 9.55,
+        "average_max_up_usd": 50.491,
+        "average_max_down_usd": -35.779
       },
       {
-        "horizon": "30m",
-        "direction": "DOWN",
+        "horizon": "24h",
+        "direction": "UP",
         "probability": 100.0,
         "sample_size": 7,
         "evidence_strength": "MODERATE",
@@ -776,18 +1144,18 @@
         "weight": 0.37702,
         "conditions": [
           "DAY_DIRECTION=UP",
-          "PRE_4H=UP"
+          "PRE_4H=DOWN"
         ],
         "readable_conditions": [
           "Pre-news day: UP",
-          "4h before news: UP"
+          "4h before news: DOWN"
         ],
-        "summary": "Pre-news day: UP + 4h before news: UP -> DOWN after 30m in 100.0% of 7 cases. Average move -15.41 USD. Median move -2.05 USD.",
+        "summary": "Pre-news day: UP + 4h before news: DOWN -> UP after 24h in 100.0% of 7 cases. Average move +20.26 USD. Median move +9.77 USD.",
         "pattern_score": 406.0,
-        "average_move_usd": -15.407,
-        "median_move_usd": -2.05,
-        "average_max_up_usd": 2.891,
-        "average_max_down_usd": -19.753
+        "average_move_usd": 20.26,
+        "median_move_usd": 9.77,
+        "average_max_up_usd": 70.816,
+        "average_max_down_usd": -46.046
       },
       {
         "horizon": "30m",
@@ -813,152 +1181,127 @@
         "average_max_down_usd": -13.287
       },
       {
-        "horizon": "4h",
-        "direction": "DOWN",
-        "probability": 85.7,
-        "sample_size": 7,
-        "evidence_strength": "MODERATE",
-        "matched_conditions": 2,
-        "condition_count": 2,
-        "match_ratio": 1.0,
-        "weight": 0.269192,
-        "conditions": [
-          "PRE_15M=UP",
-          "PRE_4H=UP"
-        ],
-        "readable_conditions": [
-          "15m before news: UP",
-          "4h before news: UP"
-        ],
-        "summary": "15m before news: UP + 4h before news: UP -> DOWN after 4h in 85.7% of 7 cases. Average move -36.31 USD. Median move -25.75 USD.",
-        "pattern_score": 305.9,
-        "average_move_usd": -36.314,
-        "median_move_usd": -25.75,
-        "average_max_up_usd": 10.084,
-        "average_max_down_usd": -54.72
-      },
-      {
         "horizon": "30m",
         "direction": "DOWN",
-        "probability": 72.7,
-        "sample_size": 11,
+        "probability": 78.6,
+        "sample_size": 14,
         "evidence_strength": "STRONG",
         "matched_conditions": 1,
         "condition_count": 1,
         "match_ratio": 1.0,
-        "weight": 0.255977,
+        "weight": 0.363839,
         "conditions": [
-          "PRE_1H=UP"
+          "PRE_15M=DOWN"
         ],
         "readable_conditions": [
-          "1h before news: UP"
+          "15m before news: DOWN"
         ],
-        "summary": "1h before news: UP -> DOWN after 30m in 72.7% of 11 cases. Average move -10.85 USD. Median move -3.13 USD.",
-        "pattern_score": 302.7,
-        "average_move_usd": -10.852,
-        "median_move_usd": -3.13,
-        "average_max_up_usd": 6.876,
-        "average_max_down_usd": -18.579
+        "summary": "15m before news: DOWN -> DOWN after 30m in 78.6% of 14 cases. Average move +0.72 USD. Median move -1.97 USD. Move magnitude is only partially consistent.",
+        "pattern_score": 413.4,
+        "average_move_usd": 0.717,
+        "median_move_usd": -1.97,
+        "average_max_up_usd": 6.912,
+        "average_max_down_usd": -4.647
       },
       {
-        "horizon": "4h",
+        "horizon": "30m",
         "direction": "DOWN",
         "probability": 75.0,
-        "sample_size": 8,
-        "evidence_strength": "MODERATE",
+        "sample_size": 12,
+        "evidence_strength": "STRONG",
         "matched_conditions": 2,
         "condition_count": 2,
         "match_ratio": 1.0,
-        "weight": 0.201525,
+        "weight": 0.32909,
         "conditions": [
-          "PRE_15M=UP",
-          "PRE_1H=UP"
+          "PRE_15M=DOWN",
+          "PRE_1H=DOWN"
         ],
         "readable_conditions": [
-          "15m before news: UP",
-          "1h before news: UP"
+          "15m before news: DOWN",
+          "1h before news: DOWN"
         ],
-        "summary": "15m before news: UP + 1h before news: UP -> DOWN after 4h in 75.0% of 8 cases. Average move -28.50 USD. Median move -25.98 USD.",
-        "pattern_score": 256.0,
-        "average_move_usd": -28.504,
-        "median_move_usd": -25.975,
-        "average_max_up_usd": 15.105,
-        "average_max_down_usd": -49.776
+        "summary": "15m before news: DOWN + 1h before news: DOWN -> DOWN after 30m in 75.0% of 12 cases. Average move +1.29 USD. Median move -1.97 USD. Move magnitude is only partially consistent.",
+        "pattern_score": 316.0,
+        "average_move_usd": 1.293,
+        "median_move_usd": -1.97,
+        "average_max_up_usd": 7.562,
+        "average_max_down_usd": -4.654
+      },
+      {
+        "horizon": "1h",
+        "direction": "UP",
+        "probability": 72.7,
+        "sample_size": 11,
+        "evidence_strength": "STRONG",
+        "matched_conditions": 2,
+        "condition_count": 2,
+        "match_ratio": 1.0,
+        "weight": 0.286092,
+        "conditions": [
+          "PRE_1H=DOWN",
+          "PRE_4H=DOWN"
+        ],
+        "readable_conditions": [
+          "1h before news: DOWN",
+          "4h before news: DOWN"
+        ],
+        "summary": "1h before news: DOWN + 4h before news: DOWN -> UP after 1h in 72.7% of 11 cases. Average move +9.59 USD. Median move +4.38 USD.",
+        "pattern_score": 305.7,
+        "average_move_usd": 9.585,
+        "median_move_usd": 4.38,
+        "average_max_up_usd": 17.02,
+        "average_max_down_usd": -7.126
       },
       {
         "horizon": "1m",
         "direction": "DOWN",
-        "probability": 75.0,
-        "sample_size": 8,
-        "evidence_strength": "MODERATE",
+        "probability": 70.0,
+        "sample_size": 10,
+        "evidence_strength": "STRONG",
         "matched_conditions": 2,
         "condition_count": 2,
         "match_ratio": 1.0,
-        "weight": 0.201525,
+        "weight": 0.240333,
         "conditions": [
-          "PRE_15M=UP",
-          "PRE_4H=UP"
+          "DAY_DIRECTION=UP",
+          "PRE_1H=DOWN"
         ],
         "readable_conditions": [
-          "15m before news: UP",
-          "4h before news: UP"
+          "Pre-news day: UP",
+          "1h before news: DOWN"
         ],
-        "summary": "15m before news: UP + 4h before news: UP -> DOWN after 1m in 75.0% of 8 cases. Average move -6.41 USD. Median move -2.89 USD.",
+        "summary": "Pre-news day: UP + 1h before news: DOWN -> DOWN after 1m in 70.0% of 10 cases. Average move -2.38 USD. Median move -2.86 USD.",
         "pattern_score": 256.0,
-        "average_move_usd": -6.411,
-        "median_move_usd": -2.89,
-        "average_max_up_usd": 2.37,
-        "average_max_down_usd": -13.306
+        "average_move_usd": -2.376,
+        "median_move_usd": -2.86,
+        "average_max_up_usd": 3.434,
+        "average_max_down_usd": -5.85
       },
       {
         "horizon": "5m",
         "direction": "DOWN",
-        "probability": 75.0,
-        "sample_size": 8,
-        "evidence_strength": "MODERATE",
+        "probability": 70.0,
+        "sample_size": 10,
+        "evidence_strength": "STRONG",
         "matched_conditions": 2,
         "condition_count": 2,
         "match_ratio": 1.0,
-        "weight": 0.201525,
+        "weight": 0.240333,
         "conditions": [
-          "PRE_15M=UP",
-          "PRE_4H=UP"
+          "DAY_DIRECTION=UP",
+          "PRE_30M=DOWN"
         ],
         "readable_conditions": [
-          "15m before news: UP",
-          "4h before news: UP"
+          "Pre-news day: UP",
+          "30m before news: DOWN"
         ],
-        "summary": "15m before news: UP + 4h before news: UP -> DOWN after 5m in 75.0% of 8 cases. Average move -12.06 USD. Median move -2.41 USD.",
+        "summary": "Pre-news day: UP + 30m before news: DOWN -> DOWN after 5m in 70.0% of 10 cases. Average move -2.45 USD. Median move -3.52 USD.",
         "pattern_score": 256.0,
-        "average_move_usd": -12.057,
-        "median_move_usd": -2.41,
-        "average_max_up_usd": 2.749,
-        "average_max_down_usd": -18.675
-      },
-      {
-        "horizon": "15m",
-        "direction": "DOWN",
-        "probability": 75.0,
-        "sample_size": 8,
-        "evidence_strength": "MODERATE",
-        "matched_conditions": 2,
-        "condition_count": 2,
-        "match_ratio": 1.0,
-        "weight": 0.201525,
-        "conditions": [
-          "PRE_15M=UP",
-          "PRE_4H=UP"
-        ],
-        "readable_conditions": [
-          "15m before news: UP",
-          "4h before news: UP"
-        ],
-        "summary": "15m before news: UP + 4h before news: UP -> DOWN after 15m in 75.0% of 8 cases. Average move -16.17 USD. Median move -5.01 USD.",
-        "pattern_score": 256.0,
-        "average_move_usd": -16.169,
-        "median_move_usd": -5.015,
-        "average_max_up_usd": 3.971,
-        "average_max_down_usd": -24.706
+        "average_move_usd": -2.45,
+        "median_move_usd": -3.515,
+        "average_max_up_usd": 3.313,
+        "average_max_down_usd": -6.504
       },
       {
         "horizon": "1m",
@@ -1007,29 +1350,121 @@
         "average_max_down_usd": -9.441
       },
       {
+        "horizon": "1m",
+        "direction": "DOWN",
+        "probability": 66.7,
+        "sample_size": 18,
+        "evidence_strength": "MODERATE",
+        "matched_conditions": 1,
+        "condition_count": 1,
+        "match_ratio": 1.0,
+        "weight": 0.180673,
+        "conditions": [
+          "PRE_30M=DOWN"
+        ],
+        "readable_conditions": [
+          "30m before news: DOWN"
+        ],
+        "summary": "30m before news: DOWN -> DOWN after 1m in 66.7% of 18 cases. Average move -0.78 USD. Median move -1.42 USD.",
+        "pattern_score": 353.6,
+        "average_move_usd": -0.783,
+        "median_move_usd": -1.42,
+        "average_max_up_usd": 4.181,
+        "average_max_down_usd": -4.252
+      },
+      {
         "horizon": "30m",
         "direction": "DOWN",
-        "probability": 90.0,
-        "sample_size": 10,
+        "probability": 66.7,
+        "sample_size": 18,
+        "evidence_strength": "MODERATE",
+        "matched_conditions": 1,
+        "condition_count": 1,
+        "match_ratio": 1.0,
+        "weight": 0.180673,
+        "conditions": [
+          "PRE_30M=DOWN"
+        ],
+        "readable_conditions": [
+          "30m before news: DOWN"
+        ],
+        "summary": "30m before news: DOWN -> DOWN after 30m in 66.7% of 18 cases. Average move -0.64 USD. Median move -1.80 USD.",
+        "pattern_score": 353.6,
+        "average_move_usd": -0.636,
+        "median_move_usd": -1.8,
+        "average_max_up_usd": 6.504,
+        "average_max_down_usd": -6.171
+      },
+      {
+        "horizon": "24h",
+        "direction": "UP",
+        "probability": 66.7,
+        "sample_size": 18,
+        "evidence_strength": "MODERATE",
+        "matched_conditions": 1,
+        "condition_count": 1,
+        "match_ratio": 1.0,
+        "weight": 0.180673,
+        "conditions": [
+          "PRE_30M=DOWN"
+        ],
+        "readable_conditions": [
+          "30m before news: DOWN"
+        ],
+        "summary": "30m before news: DOWN -> UP after 24h in 66.7% of 18 cases. Average move +7.25 USD. Median move +7.16 USD.",
+        "pattern_score": 353.6,
+        "average_move_usd": 7.252,
+        "median_move_usd": 7.155,
+        "average_max_up_usd": 42.668,
+        "average_max_down_usd": -32.021
+      },
+      {
+        "horizon": "1h",
+        "direction": "UP",
+        "probability": 66.7,
+        "sample_size": 15,
+        "evidence_strength": "MODERATE",
+        "matched_conditions": 1,
+        "condition_count": 1,
+        "match_ratio": 1.0,
+        "weight": 0.164931,
+        "conditions": [
+          "PRE_4H=DOWN"
+        ],
+        "readable_conditions": [
+          "4h before news: DOWN"
+        ],
+        "summary": "4h before news: DOWN -> UP after 1h in 66.7% of 15 cases. Average move +7.62 USD. Median move +3.03 USD.",
+        "pattern_score": 303.5,
+        "average_move_usd": 7.621,
+        "median_move_usd": 3.03,
+        "average_max_up_usd": 15.648,
+        "average_max_down_usd": -7.408
+      },
+      {
+        "horizon": "1m",
+        "direction": "DOWN",
+        "probability": 81.8,
+        "sample_size": 11,
         "evidence_strength": "STRONG",
         "matched_conditions": 1,
         "condition_count": 2,
         "match_ratio": 0.5,
-        "weight": 0.120167,
+        "weight": 0.100195,
         "conditions": [
-          "DAY_DIRECTION=UP",
+          "FED_DECISION=HOLD",
           "PRE_30M=DOWN"
         ],
         "readable_conditions": [
-          "Pre-news day: UP",
+          "Fed decision: HOLD",
           "30m before news: DOWN"
         ],
-        "summary": "Pre-news day: UP + 30m before news: DOWN -> DOWN after 30m in 90.0% of 10 cases. Average move -2.92 USD. Median move -2.46 USD.",
-        "pattern_score": 456.0,
-        "average_move_usd": -2.923,
-        "median_move_usd": -2.46,
-        "average_max_up_usd": 4.707,
-        "average_max_down_usd": -7.718
+        "summary": "Fed decision: HOLD + 30m before news: DOWN -> DOWN after 1m in 81.8% of 11 cases. Average move -2.73 USD. Median move -2.28 USD.",
+        "pattern_score": 405.8,
+        "average_move_usd": -2.73,
+        "median_move_usd": -2.28,
+        "average_max_up_usd": 2.207,
+        "average_max_down_usd": -5.072
       },
       {
         "horizon": "5m",
@@ -1057,8 +1492,8 @@
         "average_max_down_usd": -16.267
       },
       {
-        "horizon": "24h",
-        "direction": "UP",
+        "horizon": "30m",
+        "direction": "DOWN",
         "probability": 100.0,
         "sample_size": 7,
         "evidence_strength": "MODERATE",
@@ -1068,18 +1503,43 @@
         "weight": 0.094255,
         "conditions": [
           "DAY_DIRECTION=UP",
-          "PRE_4H=DOWN"
+          "PRE_4H=UP"
         ],
         "readable_conditions": [
           "Pre-news day: UP",
+          "4h before news: UP"
+        ],
+        "summary": "Pre-news day: UP + 4h before news: UP -> DOWN after 30m in 100.0% of 7 cases. Average move -15.41 USD. Median move -2.05 USD.",
+        "pattern_score": 406.0,
+        "average_move_usd": -15.407,
+        "median_move_usd": -2.05,
+        "average_max_up_usd": 2.891,
+        "average_max_down_usd": -19.753
+      },
+      {
+        "horizon": "24h",
+        "direction": "UP",
+        "probability": 75.0,
+        "sample_size": 12,
+        "evidence_strength": "STRONG",
+        "matched_conditions": 1,
+        "condition_count": 2,
+        "match_ratio": 0.5,
+        "weight": 0.082272,
+        "conditions": [
+          "FED_DECISION=HOLD",
+          "PRE_4H=DOWN"
+        ],
+        "readable_conditions": [
+          "Fed decision: HOLD",
           "4h before news: DOWN"
         ],
-        "summary": "Pre-news day: UP + 4h before news: DOWN -> UP after 24h in 100.0% of 7 cases. Average move +20.26 USD. Median move +9.77 USD.",
-        "pattern_score": 406.0,
-        "average_move_usd": 20.26,
-        "median_move_usd": 9.77,
-        "average_max_up_usd": 70.816,
-        "average_max_down_usd": -46.046
+        "summary": "Fed decision: HOLD + 4h before news: DOWN -> UP after 24h in 75.0% of 12 cases. Average move +7.21 USD. Median move +7.62 USD.",
+        "pattern_score": 356.0,
+        "average_move_usd": 7.208,
+        "median_move_usd": 7.625,
+        "average_max_up_usd": 50.998,
+        "average_max_down_usd": -35.4
       },
       {
         "horizon": "24h",
@@ -1107,6 +1567,31 @@
         "average_max_down_usd": -45.215
       },
       {
+        "horizon": "30m",
+        "direction": "DOWN",
+        "probability": 87.5,
+        "sample_size": 8,
+        "evidence_strength": "MODERATE",
+        "matched_conditions": 1,
+        "condition_count": 2,
+        "match_ratio": 0.5,
+        "weight": 0.075572,
+        "conditions": [
+          "PRE_15M=DOWN",
+          "PRE_NEWS_ALIGNMENT=MOSTLY_DOWN"
+        ],
+        "readable_conditions": [
+          "15m before news: DOWN",
+          "Timeframe alignment: MOSTLY DOWN"
+        ],
+        "summary": "15m before news: DOWN + Timeframe alignment: MOSTLY DOWN -> DOWN after 30m in 87.5% of 8 cases. Average move -0.52 USD. Median move -1.97 USD.",
+        "pattern_score": 356.0,
+        "average_move_usd": -0.519,
+        "median_move_usd": -1.97,
+        "average_max_up_usd": 6.559,
+        "average_max_down_usd": -4.25
+      },
+      {
         "horizon": "1m",
         "direction": "DOWN",
         "probability": 85.7,
@@ -1132,33 +1617,83 @@
         "average_max_down_usd": -10.316
       },
       {
-        "horizon": "1m",
-        "direction": "DOWN",
-        "probability": 70.0,
-        "sample_size": 10,
-        "evidence_strength": "STRONG",
+        "horizon": "15m",
+        "direction": "UP",
+        "probability": 85.7,
+        "sample_size": 7,
+        "evidence_strength": "MODERATE",
         "matched_conditions": 1,
         "condition_count": 2,
         "match_ratio": 0.5,
-        "weight": 0.060083,
+        "weight": 0.067298,
         "conditions": [
-          "DAY_DIRECTION=UP",
-          "PRE_1H=DOWN"
+          "PRE_4H=DOWN",
+          "PRE_NEWS_ALIGNMENT=MOSTLY_DOWN"
         ],
         "readable_conditions": [
-          "Pre-news day: UP",
-          "1h before news: DOWN"
+          "4h before news: DOWN",
+          "Timeframe alignment: MOSTLY DOWN"
         ],
-        "summary": "Pre-news day: UP + 1h before news: DOWN -> DOWN after 1m in 70.0% of 10 cases. Average move -2.38 USD. Median move -2.86 USD.",
-        "pattern_score": 256.0,
-        "average_move_usd": -2.376,
-        "median_move_usd": -2.86,
-        "average_max_up_usd": 3.434,
-        "average_max_down_usd": -5.85
+        "summary": "4h before news: DOWN + Timeframe alignment: MOSTLY DOWN -> UP after 15m in 85.7% of 7 cases. Average move +7.63 USD. Median move +5.65 USD.",
+        "pattern_score": 305.9,
+        "average_move_usd": 7.63,
+        "median_move_usd": 5.65,
+        "average_max_up_usd": 10.643,
+        "average_max_down_usd": -3.487
       },
       {
-        "horizon": "5m",
-        "direction": "DOWN",
+        "horizon": "1h",
+        "direction": "UP",
+        "probability": 85.7,
+        "sample_size": 7,
+        "evidence_strength": "MODERATE",
+        "matched_conditions": 1,
+        "condition_count": 2,
+        "match_ratio": 0.5,
+        "weight": 0.067298,
+        "conditions": [
+          "PRE_4H=DOWN",
+          "PRE_NEWS_ALIGNMENT=MOSTLY_DOWN"
+        ],
+        "readable_conditions": [
+          "4h before news: DOWN",
+          "Timeframe alignment: MOSTLY DOWN"
+        ],
+        "summary": "4h before news: DOWN + Timeframe alignment: MOSTLY DOWN -> UP after 1h in 85.7% of 7 cases. Average move +14.05 USD. Median move +3.03 USD.",
+        "pattern_score": 305.9,
+        "average_move_usd": 14.049,
+        "median_move_usd": 3.03,
+        "average_max_up_usd": 18.974,
+        "average_max_down_usd": -6.993
+      },
+      {
+        "horizon": "24h",
+        "direction": "UP",
+        "probability": 85.7,
+        "sample_size": 7,
+        "evidence_strength": "MODERATE",
+        "matched_conditions": 1,
+        "condition_count": 2,
+        "match_ratio": 0.5,
+        "weight": 0.067298,
+        "conditions": [
+          "PRE_4H=DOWN",
+          "PRE_NEWS_ALIGNMENT=MOSTLY_DOWN"
+        ],
+        "readable_conditions": [
+          "4h before news: DOWN",
+          "Timeframe alignment: MOSTLY DOWN"
+        ],
+        "summary": "4h before news: DOWN + Timeframe alignment: MOSTLY DOWN -> UP after 24h in 85.7% of 7 cases. Average move +9.51 USD. Median move +8.61 USD.",
+        "pattern_score": 305.9,
+        "average_move_usd": 9.509,
+        "median_move_usd": 8.61,
+        "average_max_up_usd": 75.159,
+        "average_max_down_usd": -55.451
+      },
+      {
+        "horizon": "1h",
+        "direction": "UP",
         "probability": 70.0,
         "sample_size": 10,
         "evidence_strength": "STRONG",
@@ -1167,19 +1702,44 @@
         "match_ratio": 0.5,
         "weight": 0.060083,
         "conditions": [
-          "DAY_DIRECTION=UP",
-          "PRE_30M=DOWN"
+          "FED_DECISION=HOLD",
+          "LIQUIDITY_SEQUENCE=NO_RECENT_SWEEP"
         ],
         "readable_conditions": [
-          "Pre-news day: UP",
-          "30m before news: DOWN"
+          "Fed decision: HOLD",
+          "Liquidity: NO RECENT SWEEP"
         ],
-        "summary": "Pre-news day: UP + 30m before news: DOWN -> DOWN after 5m in 70.0% of 10 cases. Average move -2.45 USD. Median move -3.52 USD.",
+        "summary": "Fed decision: HOLD + Liquidity: NO RECENT SWEEP -> UP after 1h in 70.0% of 10 cases. Average move +5.17 USD. Median move +4.45 USD.",
         "pattern_score": 256.0,
-        "average_move_usd": -2.45,
-        "median_move_usd": -3.515,
-        "average_max_up_usd": 3.313,
-        "average_max_down_usd": -6.504
+        "average_move_usd": 5.168,
+        "median_move_usd": 4.45,
+        "average_max_up_usd": 13.379,
+        "average_max_down_usd": -8.67
+      },
+      {
+        "horizon": "15m",
+        "direction": "UP",
+        "probability": 77.8,
+        "sample_size": 9,
+        "evidence_strength": "MODERATE",
+        "matched_conditions": 1,
+        "condition_count": 2,
+        "match_ratio": 0.5,
+        "weight": 0.059422,
+        "conditions": [
+          "PRE_1H=DOWN",
+          "PRE_NEWS_ALIGNMENT=MOSTLY_DOWN"
+        ],
+        "readable_conditions": [
+          "1h before news: DOWN",
+          "Timeframe alignment: MOSTLY DOWN"
+        ],
+        "summary": "1h before news: DOWN + Timeframe alignment: MOSTLY DOWN -> UP after 15m in 77.8% of 9 cases. Average move +5.23 USD. Median move +0.90 USD.",
+        "pattern_score": 306.2,
+        "average_move_usd": 5.228,
+        "median_move_usd": 0.9,
+        "average_max_up_usd": 9.662,
+        "average_max_down_usd": -4.587
       },
       {
         "horizon": "1m",
@@ -1257,6 +1817,31 @@
         "average_max_down_usd": -21.117
       },
       {
+        "horizon": "4h",
+        "direction": "DOWN",
+        "probability": 75.0,
+        "sample_size": 8,
+        "evidence_strength": "MODERATE",
+        "matched_conditions": 1,
+        "condition_count": 2,
+        "match_ratio": 0.5,
+        "weight": 0.050381,
+        "conditions": [
+          "DAY_DIRECTION=DOWN",
+          "LIQUIDITY_SEQUENCE=NO_RECENT_SWEEP"
+        ],
+        "readable_conditions": [
+          "Pre-news day: DOWN",
+          "Liquidity: NO RECENT SWEEP"
+        ],
+        "summary": "Pre-news day: DOWN + Liquidity: NO RECENT SWEEP -> DOWN after 4h in 75.0% of 8 cases. Average move -17.72 USD. Median move -22.14 USD.",
+        "pattern_score": 256.0,
+        "average_move_usd": -17.718,
+        "median_move_usd": -22.135,
+        "average_max_up_usd": 14.352,
+        "average_max_down_usd": -33.175
+      },
+      {
         "horizon": "1m",
         "direction": "UP",
         "probability": 75.0,
@@ -1307,6 +1892,31 @@
         "average_max_down_usd": -12.104
       },
       {
+        "horizon": "4h",
+        "direction": "UP",
+        "probability": 75.0,
+        "sample_size": 8,
+        "evidence_strength": "MODERATE",
+        "matched_conditions": 1,
+        "condition_count": 2,
+        "match_ratio": 0.5,
+        "weight": 0.050381,
+        "conditions": [
+          "PRE_1H=DOWN",
+          "PRE_NEWS_ALIGNMENT=MOSTLY_DOWN"
+        ],
+        "readable_conditions": [
+          "1h before news: DOWN",
+          "Timeframe alignment: MOSTLY DOWN"
+        ],
+        "summary": "1h before news: DOWN + Timeframe alignment: MOSTLY DOWN -> UP after 4h in 75.0% of 8 cases. Average move +22.73 USD. Median move +6.75 USD.",
+        "pattern_score": 256.0,
+        "average_move_usd": 22.732,
+        "median_move_usd": 6.755,
+        "average_max_up_usd": 32.734,
+        "average_max_down_usd": -10.096
+      },
+      {
         "horizon": "15m",
         "direction": "DOWN",
         "probability": 100.0,
@@ -1330,100 +1940,75 @@
         "median_move_usd": -3.63,
         "average_max_up_usd": 1.122,
         "average_max_down_usd": -24.836
-      },
-      {
-        "horizon": "4h",
-        "direction": "DOWN",
-        "probability": 100.0,
-        "sample_size": 5,
-        "evidence_strength": "DEVELOPING",
-        "matched_conditions": 1,
-        "condition_count": 2,
-        "match_ratio": 0.5,
-        "weight": 0.042485,
-        "conditions": [
-          "DAY_DIRECTION=DOWN",
-          "PRE_30M=UP"
-        ],
-        "readable_conditions": [
-          "Pre-news day: DOWN",
-          "30m before news: UP"
-        ],
-        "summary": "Pre-news day: DOWN + 30m before news: UP -> DOWN after 4h in 100.0% of 5 cases. Average move -28.54 USD. Median move -25.75 USD.",
-        "pattern_score": 306.0,
-        "average_move_usd": -28.544,
-        "median_move_usd": -25.75,
-        "average_max_up_usd": 11.058,
-        "average_max_down_usd": -40.952
       }
     ],
     "horizons": {
       "1m": {
         "direction": "DOWN",
-        "confidence": 58.4,
-        "consensus": 83.3,
+        "confidence": 61.2,
+        "consensus": 85.7,
         "evidence": "STRONG",
-        "pattern_count": 6,
-        "up_probability": 8.6,
-        "down_probability": 91.4,
-        "conflict_score": 17.3
+        "pattern_count": 7,
+        "up_probability": 6.5,
+        "down_probability": 93.5,
+        "conflict_score": 13.0
       },
       "5m": {
         "direction": "DOWN",
-        "confidence": 60.5,
+        "confidence": 59.6,
         "consensus": 100.0,
         "evidence": "STRONG",
-        "pattern_count": 5,
+        "pattern_count": 4,
         "up_probability": 0.0,
         "down_probability": 100.0,
         "conflict_score": 0.0
       },
       "15m": {
-        "direction": "DOWN",
-        "confidence": 55.3,
-        "consensus": 100.0,
+        "direction": "NO_CLEAR_EDGE",
+        "confidence": 51.5,
+        "consensus": 66.7,
         "evidence": "MODERATE",
-        "pattern_count": 2,
-        "up_probability": 0.0,
-        "down_probability": 100.0,
-        "conflict_score": 0.0
+        "pattern_count": 3,
+        "up_probability": 65.6,
+        "down_probability": 34.4,
+        "conflict_score": 68.8
       },
       "30m": {
         "direction": "DOWN",
-        "confidence": 76.5,
+        "confidence": 81.0,
         "consensus": 100.0,
         "evidence": "STRONG",
-        "pattern_count": 6,
+        "pattern_count": 9,
         "up_probability": 0.0,
         "down_probability": 100.0,
         "conflict_score": 0.0
       },
       "1h": {
-        "direction": "NO_CLEAR_EDGE",
-        "confidence": 51.0,
-        "consensus": 100.0,
-        "evidence": "MODERATE",
-        "pattern_count": 1,
-        "up_probability": 0.0,
-        "down_probability": 100.0,
-        "conflict_score": 0.0
+        "direction": "UP",
+        "confidence": 58.1,
+        "consensus": 80.0,
+        "evidence": "STRONG",
+        "pattern_count": 5,
+        "up_probability": 91.1,
+        "down_probability": 8.9,
+        "conflict_score": 17.8
       },
       "4h": {
-        "direction": "DOWN",
-        "confidence": 61.4,
-        "consensus": 100.0,
+        "direction": "NO_CLEAR_EDGE",
+        "confidence": 50.0,
+        "consensus": 50.0,
         "evidence": "MODERATE",
-        "pattern_count": 3,
-        "up_probability": 0.0,
-        "down_probability": 100.0,
-        "conflict_score": 0.0
+        "pattern_count": 2,
+        "up_probability": 50.0,
+        "down_probability": 50.0,
+        "conflict_score": 100.0
       },
       "24h": {
         "direction": "UP",
-        "confidence": 55.6,
+        "confidence": 78.4,
         "consensus": 100.0,
-        "evidence": "MODERATE",
-        "pattern_count": 2,
+        "evidence": "STRONG",
+        "pattern_count": 7,
         "up_probability": 100.0,
         "down_probability": 0.0,
         "conflict_score": 0.0
