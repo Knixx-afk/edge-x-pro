@@ -5,23 +5,38 @@ import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 
-export default function LoginPage() {
+export default function ResetPasswordPage() {
   const router = useRouter();
 
-  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
   const [error, setError] = useState("");
 
-  async function handleLogin(e: FormEvent<HTMLFormElement>) {
+  async function handleResetPassword(
+    e: FormEvent<HTMLFormElement>
+  ) {
     e.preventDefault();
 
     setError("");
+    setMessage("");
+
+    if (password.length < 6) {
+      setError("Password must be at least 6 characters.");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setError("Passwords do not match.");
+      return;
+    }
+
     setLoading(true);
 
     try {
-      const { error } = await supabase.auth.signInWithPassword({
-        email,
+      const { error } = await supabase.auth.updateUser({
         password,
       });
 
@@ -31,14 +46,21 @@ export default function LoginPage() {
         return;
       }
 
-      router.push("/");
-      router.refresh();
+      setMessage(
+        "Password updated successfully! Redirecting to login..."
+      );
+
+      setTimeout(async () => {
+        await supabase.auth.signOut();
+        router.push("/login");
+      }, 2000);
+
     } catch (err) {
       console.error(err);
-      setError("Failed to connect. Please try again.");
-    }
 
-    setLoading(false);
+      setError("Something went wrong. Please try again.");
+      setLoading(false);
+    }
   }
 
   return (
@@ -46,54 +68,47 @@ export default function LoginPage() {
       <div className="w-full max-w-md rounded-2xl border border-slate-700 bg-slate-900 p-8 shadow-2xl">
 
         <div className="mb-8 text-center">
-          <h1 className="text-3xl font-bold tracking-[0.2em] text-white">
-            EDGE X PRO
+          <h1 className="text-3xl font-bold tracking-wide text-white">
+            Reset Password
           </h1>
 
-          <p className="mt-2 text-sm text-slate-400">
-            Sign in to your trading workspace
+          <p className="mt-3 text-sm text-slate-400">
+            Enter your new password below.
           </p>
         </div>
 
-        <form onSubmit={handleLogin} className="space-y-5">
-
+        <form
+          onSubmit={handleResetPassword}
+          className="space-y-5"
+        >
           <div>
             <label className="mb-2 block text-sm font-medium text-slate-300">
-              Email Address
+              New Password
             </label>
 
             <input
-              type="email"
-              placeholder="you@example.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              type="password"
+              placeholder="Enter new password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               required
-              autoComplete="email"
+              autoComplete="new-password"
               className="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
             />
           </div>
 
           <div>
-            <div className="mb-2 flex items-center justify-between">
-              <label className="text-sm font-medium text-slate-300">
-                Password
-              </label>
-
-              <Link
-                href="/forgot-password"
-                className="text-sm font-medium text-blue-400 hover:text-blue-300 hover:underline"
-              >
-                Forgot Password?
-              </Link>
-            </div>
+            <label className="mb-2 block text-sm font-medium text-slate-300">
+              Confirm New Password
+            </label>
 
             <input
               type="password"
-              placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Confirm new password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
               required
-              autoComplete="current-password"
+              autoComplete="new-password"
               className="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
             />
           </div>
@@ -104,21 +119,27 @@ export default function LoginPage() {
             </div>
           )}
 
+          {message && (
+            <div className="rounded-lg border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm text-green-400">
+              {message}
+            </div>
+          )}
+
           <button
             type="submit"
             disabled={loading}
-            className="w-full rounded-lg bg-blue-600 px-4 py-3 font-semibold text-white transition hover:bg-blue-500 disabled:opacity-60"
+            className="w-full rounded-lg bg-blue-600 px-4 py-3 font-semibold text-white transition hover:bg-blue-500 disabled:cursor-not-allowed disabled:opacity-60"
           >
-            {loading ? "Signing in..." : "Sign In"}
+            {loading ? "Updating Password..." : "Update Password"}
           </button>
         </form>
 
         <div className="mt-6 border-t border-slate-800 pt-6">
           <Link
-            href="/signup"
+            href="/login"
             className="flex w-full items-center justify-center rounded-lg border border-slate-600 px-4 py-3 font-medium text-white transition hover:bg-slate-800"
           >
-            Create Account
+            Back to Login
           </Link>
         </div>
 
