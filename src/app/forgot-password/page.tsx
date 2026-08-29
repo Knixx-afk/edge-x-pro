@@ -8,34 +8,53 @@ export default function ForgotPasswordPage() {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
-  const [error, setError] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   async function handleForgotPassword(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     setLoading(true);
-    setError("");
+    setErrorMessage("");
     setMessage("");
 
+    const cleanEmail = email.trim().toLowerCase();
+
     try {
-      const { error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: `${window.location.origin}/reset-password`,
-      });
+      const { data, error } = await supabase.auth.resetPasswordForEmail(
+        cleanEmail,
+        {
+          redirectTo: `${window.location.origin}/reset-password`,
+        }
+      );
+
+      console.log("Password reset response:", data);
 
       if (error) {
-        setError(error.message);
-        setLoading(false);
+        console.error("Password reset error:", error);
+
+        setErrorMessage(
+          typeof error.message === "string" && error.message.length > 0
+            ? error.message
+            : "Unable to send the password reset email. Please try again later."
+        );
+
         return;
       }
 
       setMessage(
-        "Password reset email sent! Please check your inbox."
+        "Password reset link sent successfully! Please check your inbox and spam folder."
       );
+    } catch (err: unknown) {
+      console.error("Unexpected password reset error:", err);
 
-      setLoading(false);
-    } catch (err) {
-      console.error(err);
-      setError("Something went wrong. Please try again.");
+      if (err instanceof Error) {
+        setErrorMessage(err.message);
+      } else {
+        setErrorMessage(
+          "Something went wrong. Please check your connection and try again."
+        );
+      }
+    } finally {
       setLoading(false);
     }
   }
@@ -54,10 +73,8 @@ export default function ForgotPasswordPage() {
           </p>
         </div>
 
-        <form
-          onSubmit={handleForgotPassword}
-          className="space-y-5"
-        >
+        <form onSubmit={handleForgotPassword} className="space-y-5">
+
           <div>
             <label className="mb-2 block text-sm font-medium text-slate-300">
               Email Address
@@ -70,18 +87,24 @@ export default function ForgotPasswordPage() {
               onChange={(e) => setEmail(e.target.value)}
               required
               autoComplete="email"
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
+              disabled={loading}
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 disabled:opacity-60"
             />
           </div>
 
-          {error && (
-            <div className="rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-400">
-              {error}
+          {errorMessage && (
+            <div
+              role="alert"
+              className="rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-400"
+            >
+              {errorMessage}
             </div>
           )}
 
           {message && (
-            <div className="rounded-lg border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm text-green-400">
+            <div
+              className="rounded-lg border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm text-green-400"
+            >
               {message}
             </div>
           )}
@@ -93,6 +116,7 @@ export default function ForgotPasswordPage() {
           >
             {loading ? "Sending..." : "Send Reset Link"}
           </button>
+
         </form>
 
         <div className="mt-6 border-t border-slate-800 pt-6">
