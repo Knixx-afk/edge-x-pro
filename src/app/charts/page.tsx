@@ -55,7 +55,7 @@ export default function ChartsPage() {
           </div>
         </section>
 
-        <MT5LiveChart timeframe={timeframe} />
+        <MT5LiveChart />
 
         <div className="mt-6 grid grid-cols-1 gap-6 xl:grid-cols-3">
           <InfoCard title="Live Broker Data" value="WinPro MT5" description="Prices and candles come directly from the MT5 terminal used by EDGE X PRO." accent="text-emerald-400" />

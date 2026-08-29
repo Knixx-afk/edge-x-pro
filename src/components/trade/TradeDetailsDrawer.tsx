@@ -5,7 +5,7 @@ import TradeQualityCard from "@/components/ai/TradeQualityCard";
 import MistakeDetectorCard from "@/components/ai/MistakeDetectorCard";
 
 type Trade = {
-  id?: number;
+  id?: string;
   date?: string;
   time?: string;
   symbol?: string;
