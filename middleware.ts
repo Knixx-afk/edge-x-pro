@@ -14,9 +14,11 @@ export async function middleware(request: NextRequest) {
         getAll() {
           return request.cookies.getAll();
         },
+
         setAll(cookiesToSet) {
           cookiesToSet.forEach(({ name, value, options }) => {
             request.cookies.set(name, value);
+
             response.cookies.set(name, value, options);
           });
         },
@@ -30,13 +32,29 @@ export async function middleware(request: NextRequest) {
 
   const pathname = request.nextUrl.pathname;
 
-  const publicRoutes = ["/login", "/signup"];
+  // Pages that must work without logging in
+  const publicRoutes = [
+    "/login",
+    "/signup",
+    "/forgot-password",
+    "/reset-password",
+  ];
 
-  if (!user && !publicRoutes.includes(pathname)) {
+  const isPublicRoute = publicRoutes.some(
+    (route) => pathname === route || pathname.startsWith(`${route}/`)
+  );
+
+  // User is NOT logged in and tries to access protected pages
+  if (!user && !isPublicRoute) {
     return NextResponse.redirect(new URL("/login", request.url));
   }
 
-  if (user && publicRoutes.includes(pathname)) {
+  // Logged-in users should not return to login/signup pages.
+  // IMPORTANT: forgot/reset password are allowed.
+  if (
+    user &&
+    (pathname === "/login" || pathname === "/signup")
+  ) {
     return NextResponse.redirect(new URL("/", request.url));
   }
 
@@ -44,5 +62,7 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
+  matcher: [
+    "/((?!_next/static|_next/image|favicon.ico).*)",
+  ],
 };
