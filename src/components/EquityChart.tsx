@@ -11,10 +11,10 @@ import {
 } from "recharts";
 
 type Trade = {
-  id: number;
-  date?: string;
-  time?: string;
-  pnl?: number;
+  id: string;
+  date?: string | null;
+  time?: string | null;
+  pnl?: number | null;
 };
 
 type Props = {
@@ -38,6 +38,7 @@ export default function EquityChart({ trades }: Props) {
       trade: index + 1,
       pnl: Number(cumulativePnL.toFixed(2)),
       date: trade.date || "",
+      time: trade.time || "",
     };
   });
 
@@ -46,6 +47,7 @@ export default function EquityChart({ trades }: Props) {
       trade: 0,
       pnl: 0,
       date: "Start",
+      time: "",
     },
     ...chartData,
   ];

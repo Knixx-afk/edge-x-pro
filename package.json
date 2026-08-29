@@ -11,10 +11,13 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@supabase/ssr": "^0.12.3",
+    "@supabase/supabase-js": "^2.110.8",
     "cli-highlight": "^2.1.11",
     "clsx": "^2.1.1",
     "dukascopy-node": "^1.46.4",
     "framer-motion": "^12.42.2",
+    "lightweight-charts": "^5.2.1",
     "lucide-react": "^1.26.0",
     "lzma-purejs-requirejs": "^1.0.0",
     "next": "16.2.10",

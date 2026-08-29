@@ -1,10 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import Sidebar from "../../components/Sidebar";
-import EquityCurve from "@/components/dashboard/EquityCurve";
-import DrawdownChart from "@/components/dashboard/DrawdownChart";
-import MonthlyPerformance from "@/components/dashboard/MonthlyPerformance";
+import Sidebar from "@/components/Sidebar";
+import { supabase } from "@/lib/supabase";
 import {
   Bar,
   BarChart,
@@ -19,86 +17,91 @@ import {
 } from "recharts";
 
 type Trade = {
-  id: number;
-  date?: string;
-  time?: string;
-  symbol?: string;
-  direction?: string;
-  pnl?: number;
-  risk?: number;
-  session?: string;
-  strategy?: string;
-  ruleFollowed?: string;
+  id: string;
+  date?: string | null;
+  time?: string | null;
+  symbol?: string | null;
+  direction?: string | null;
+  pnl?: number | string | null;
+  risk?: number | string | null;
+  session?: string | null;
+  strategy?: string | null;
+  emotion?: string | null;
+  rule_followed?: string | null;
+  created_at?: string | null;
 };
 
 export default function AnalyticsPage() {
   const [trades, setTrades] = useState<Trade[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [message, setMessage] = useState("");
+
+  async function loadTrades() {
+    setLoading(true);
+    setMessage("");
+
+    try {
+      const {
+        data: { user },
+        error: userError,
+      } = await supabase.auth.getUser();
+
+      if (userError) throw userError;
+
+      if (!user) {
+        setTrades([]);
+        setMessage("Please log in to view your analytics.");
+        return;
+      }
+
+      const { data, error } = await supabase
+        .from("trades")
+        .select(
+          "id,date,time,symbol,direction,pnl,risk,session,strategy,emotion,rule_followed,created_at"
+        )
+        .eq("user_id", user.id)
+        .order("date", { ascending: true })
+        .order("time", { ascending: true });
+
+      if (error) throw error;
+
+      setTrades((data || []) as Trade[]);
+    } catch (error) {
+      console.error("Failed to load analytics:", error);
+      setMessage(
+        error instanceof Error
+          ? error.message
+          : "Failed to load analytics."
+      );
+    } finally {
+      setLoading(false);
+    }
+  }
 
   useEffect(() => {
-    try {
-      const savedTrades = localStorage.getItem("edge-x-trades");
-
-      if (savedTrades) {
-        const parsedTrades = JSON.parse(savedTrades);
-
-        if (Array.isArray(parsedTrades)) {
-          setTrades(parsedTrades);
-        }
-      }
-    } catch (error) {
-      console.error("Failed to load trades:", error);
-    }
+    loadTrades();
   }, []);
 
   const analytics = useMemo(() => {
-    const wins = trades.filter(
-      (trade) => Number(trade.pnl || 0) > 0
-    );
+    const pnlOf = (trade: Trade) => Number(trade.pnl || 0);
 
-    const losses = trades.filter(
-      (trade) => Number(trade.pnl || 0) < 0
-    );
+    const wins = trades.filter((trade) => pnlOf(trade) > 0);
+    const losses = trades.filter((trade) => pnlOf(trade) < 0);
+    const breakeven = trades.filter((trade) => pnlOf(trade) === 0);
 
-    const breakeven = trades.filter(
-      (trade) => Number(trade.pnl || 0) === 0
-    );
-
-    const totalPnL = trades.reduce(
-      (total, trade) => total + Number(trade.pnl || 0),
-      0
-    );
-
-    const grossProfit = wins.reduce(
-      (total, trade) => total + Number(trade.pnl || 0),
-      0
-    );
-
+    const totalPnL = trades.reduce((sum, trade) => sum + pnlOf(trade), 0);
+    const grossProfit = wins.reduce((sum, trade) => sum + pnlOf(trade), 0);
     const grossLoss = Math.abs(
-      losses.reduce(
-        (total, trade) => total + Number(trade.pnl || 0),
-        0
-      )
+      losses.reduce((sum, trade) => sum + pnlOf(trade), 0)
     );
 
-    const averageWin =
-      wins.length > 0
-        ? grossProfit / wins.length
-        : 0;
+    const averageWin = wins.length ? grossProfit / wins.length : 0;
+    const averageLoss = losses.length ? grossLoss / losses.length : 0;
 
-    const averageLoss =
-      losses.length > 0
-        ? grossLoss / losses.length
-        : 0;
-
-    const winRate =
-      trades.length > 0
-        ? (wins.length / trades.length) * 100
-        : 0;
-
-    const lossRate =
-      trades.length > 0
-        ? (losses.length / trades.length) * 100
-        : 0;
+    const winRate = trades.length ? (wins.length / trades.length) * 100 : 0;
+    const lossRate = trades.length
+      ? (losses.length / trades.length) * 100
+      : 0;
 
     const expectancy =
       (winRate / 100) * averageWin -
@@ -115,109 +118,82 @@ export default function AnalyticsPage() {
     let peak = 0;
     let maxDrawdown = 0;
 
-    trades
-      .slice()
-      .reverse()
-      .forEach((trade) => {
-        runningPnL += Number(trade.pnl || 0);
-
-        if (runningPnL > peak) {
-          peak = runningPnL;
-        }
-
+    const equityData = [...trades]
+      .sort((a, b) => {
+        const left = `${a.date || ""} ${a.time || ""}`;
+        const right = `${b.date || ""} ${b.time || ""}`;
+        return left.localeCompare(right);
+      })
+      .map((trade, index) => {
+        runningPnL += pnlOf(trade);
+        peak = Math.max(peak, runningPnL);
         const drawdown = peak - runningPnL;
+        maxDrawdown = Math.max(maxDrawdown, drawdown);
 
-        if (drawdown > maxDrawdown) {
-          maxDrawdown = drawdown;
-        }
+        return {
+          trade: index + 1,
+          pnl: Number(runningPnL.toFixed(2)),
+          drawdown: Number((-drawdown).toFixed(2)),
+        };
       });
 
-    const sessionMap: Record<
-      string,
-      { trades: number; pnl: number }
-    > = {};
+    const sessionMap: Record<string, { trades: number; pnl: number; wins: number }> = {};
+    const strategyMap: Record<string, { trades: number; pnl: number; wins: number }> = {};
+    const symbolMap: Record<string, { trades: number; pnl: number; wins: number }> = {};
+    const directionMap: Record<string, { trades: number; pnl: number; wins: number }> = {};
 
     trades.forEach((trade) => {
-      const session = trade.session || "Unknown";
+      const pnl = pnlOf(trade);
+      const session = trade.session?.trim() || "Unknown";
+      const strategy = trade.strategy?.trim() || "No Strategy";
+      const symbol = trade.symbol?.trim() || "Unknown";
+      const direction = trade.direction?.trim() || "Unknown";
 
-      if (!sessionMap[session]) {
-        sessionMap[session] = {
-          trades: 0,
-          pnl: 0,
-        };
-      }
+      const update = (
+        map: Record<string, { trades: number; pnl: number; wins: number }>,
+        key: string
+      ) => {
+        if (!map[key]) map[key] = { trades: 0, pnl: 0, wins: 0 };
+        map[key].trades += 1;
+        map[key].pnl += pnl;
+        if (pnl > 0) map[key].wins += 1;
+      };
 
-      sessionMap[session].trades += 1;
-      sessionMap[session].pnl += Number(trade.pnl || 0);
+      update(sessionMap, session);
+      update(strategyMap, strategy);
+      update(symbolMap, symbol);
+      update(directionMap, direction);
     });
 
-    const sessionData = Object.entries(sessionMap).map(
-      ([name, data]) => ({
-        name,
-        trades: data.trades,
-        pnl: Number(data.pnl.toFixed(2)),
-      })
-    );
-
-    const strategyMap: Record<
-      string,
-      {
-        trades: number;
-        wins: number;
-        pnl: number;
-      }
-    > = {};
-
-    trades.forEach((trade) => {
-      const strategy =
-        trade.strategy?.trim() || "No Strategy";
-
-      if (!strategyMap[strategy]) {
-        strategyMap[strategy] = {
-          trades: 0,
-          wins: 0,
-          pnl: 0,
-        };
-      }
-
-      strategyMap[strategy].trades += 1;
-
-      if (Number(trade.pnl || 0) > 0) {
-        strategyMap[strategy].wins += 1;
-      }
-
-      strategyMap[strategy].pnl += Number(trade.pnl || 0);
-    });
-
-    const strategyData = Object.entries(strategyMap)
-      .map(([name, data]) => ({
-        name,
-        trades: data.trades,
-        winRate:
-          data.trades > 0
-            ? (data.wins / data.trades) * 100
+    const makeData = (
+      map: Record<string, { trades: number; pnl: number; wins: number }>
+    ) =>
+      Object.entries(map)
+        .map(([name, value]) => ({
+          name,
+          trades: value.trades,
+          pnl: Number(value.pnl.toFixed(2)),
+          winRate: value.trades
+            ? Number(((value.wins / value.trades) * 100).toFixed(1))
             : 0,
-        pnl: data.pnl,
-      }))
-      .sort((a, b) => b.pnl - a.pnl);
+        }))
+        .sort((a, b) => b.pnl - a.pnl);
 
-    const bestTrade =
-      trades.length > 0
-        ? Math.max(
-            ...trades.map((trade) =>
-              Number(trade.pnl || 0)
-            )
-          )
-        : 0;
+    const sessionData = makeData(sessionMap);
+    const strategyData = makeData(strategyMap);
+    const symbolData = makeData(symbolMap);
+    const directionData = makeData(directionMap);
 
-    const worstTrade =
-      trades.length > 0
-        ? Math.min(
-            ...trades.map((trade) =>
-              Number(trade.pnl || 0)
-            )
-          )
-        : 0;
+    const bestTrade = trades.length
+      ? Math.max(...trades.map(pnlOf))
+      : 0;
+    const worstTrade = trades.length
+      ? Math.min(...trades.map(pnlOf))
+      : 0;
+
+    const ruleFollowed = trades.filter(
+      (trade) => trade.rule_followed?.toLowerCase() === "yes"
+    ).length;
 
     return {
       totalTrades: trades.length,
@@ -235,376 +211,274 @@ export default function AnalyticsPage() {
       maxDrawdown,
       bestTrade,
       worstTrade,
+      ruleFollowed,
       sessionData,
       strategyData,
+      symbolData,
+      directionData,
+      equityData,
     };
   }, [trades]);
 
-  const winLossData = [
-    {
-      name: "Wins",
-      value: analytics.wins,
-      fill: "#10b981",
-    },
-    {
-      name: "Losses",
-      value: analytics.losses,
-      fill: "#ef4444",
-    },
-    {
-      name: "Breakeven",
-      value: analytics.breakeven,
-      fill: "#64748b",
-    },
+  const outcomeData = [
+    { name: "Wins", value: analytics.wins, fill: "#34d399" },
+    { name: "Losses", value: analytics.losses, fill: "#f87171" },
+    { name: "Breakeven", value: analytics.breakeven, fill: "#94a3b8" },
   ];
 
+  const edgeScore =
+    analytics.totalTrades === 0
+      ? 0
+      : Math.min(
+          100,
+          Math.round(
+            analytics.winRate * 0.7 +
+              (analytics.expectancy > 0 ? 20 : 0) +
+              (analytics.ruleFollowed / analytics.totalTrades) * 10
+          )
+        );
+
   return (
-    <div className="flex min-h-screen bg-slate-950 text-white">
+    <div className="flex min-h-screen bg-[#070d1b] text-white">
       <Sidebar />
 
-      <main className="min-w-0 flex-1 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 p-8">
-        
-        <section className="mb-8 rounded-2xl border border-slate-800 bg-slate-900/70 p-8 shadow-2xl">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-            <div>
-              <h1 className="text-4xl font-extrabold">EDGE X PRO Analytics</h1>
-              <p className="mt-2 text-slate-400">
-                Measure your edge, identify weaknesses and improve consistency.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              <div className="rounded-xl bg-slate-950 p-4">
-                <div className="text-xs uppercase text-slate-500">EDGE Score</div>
-                <div className="mt-2 text-3xl font-bold text-cyan-400">
-                  {Math.min(100, Math.round(analytics.winRate + analytics.profitFactor * 10))}
-                </div>
-              </div>
-
-              <div className="rounded-xl bg-slate-950 p-4">
-                <div className="text-xs uppercase text-slate-500">Performance</div>
-                <div className="mt-2 text-3xl font-bold text-emerald-400">
-                  {analytics.winRate >= 60 ? "Excellent" : analytics.winRate >= 45 ? "Good" : "Needs Work"}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold">
-            Analytics
-          </h1>
-
-          <p className="mt-2 text-slate-400">
-            Deep analysis of your trading performance.
-          </p>
-        </div>
-
-
-        <div className="mb-8 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
-          <MetricCard title="Best Trade" value={formatMoney(analytics.bestTrade)} valueClass="text-emerald-400" />
-          <MetricCard title="Worst Trade" value={formatMoney(analytics.worstTrade)} valueClass="text-red-400" />
-          <MetricCard title="Gross Profit" value={formatMoney(analytics.grossProfit)} valueClass="text-emerald-400" />
-          <MetricCard title="Gross Loss" value={`-$${analytics.grossLoss.toFixed(2)}`} valueClass="text-red-400" />
-        </div>
-
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
-          <MetricCard
-            title="Total Trades"
-            value={String(analytics.totalTrades)}
-          />
-
-          <MetricCard
-            title="Win Rate"
-            value={`${analytics.winRate.toFixed(1)}%`}
-            valueClass="text-emerald-400"
-          />
-
-          <MetricCard
-            title="Net P&L"
-            value={formatMoney(analytics.totalPnL)}
-            valueClass={
-              analytics.totalPnL >= 0
-                ? "text-emerald-400"
-                : "text-red-400"
-            }
-          />
-
-          <MetricCard
-            title="Profit Factor"
-            value={
-              analytics.profitFactor === Infinity
-                ? "∞"
-                : analytics.profitFactor.toFixed(2)
-            }
-            valueClass="text-yellow-400"
-          />
-
-          <MetricCard
-            title="Average Win"
-            value={formatMoney(analytics.averageWin)}
-            valueClass="text-emerald-400"
-          />
-
-          <MetricCard
-            title="Average Loss"
-            value={
-              analytics.averageLoss > 0
-                ? `-$${analytics.averageLoss.toFixed(2)}`
-                : "$0.00"
-            }
-            valueClass="text-red-400"
-          />
-
-          <MetricCard
-            title="Expectancy / Trade"
-            value={formatMoney(analytics.expectancy)}
-            valueClass={
-              analytics.expectancy >= 0
-                ? "text-emerald-400"
-                : "text-red-400"
-            }
-          />
-
-          <MetricCard
-            title="Max Drawdown"
-            value={`-$${analytics.maxDrawdown.toFixed(2)}`}
-            valueClass="text-red-400"
-          />
-        </div>
-
-        <div className="mt-8 grid grid-cols-1 gap-6 xl:grid-cols-2">
-          <Panel
-            title="Win / Loss Distribution"
-            subtitle="Distribution of your trade outcomes"
-          >
-            {analytics.totalTrades === 0 ? (
-              <EmptyState />
-            ) : (
-              <div className="h-[320px]">
-                <ResponsiveContainer
-                  width="100%"
-                  height="100%"
-                >
-                  <PieChart>
-                    <Pie
-                      data={winLossData}
-                      dataKey="value"
-                      nameKey="name"
-                      cx="50%"
-                      cy="50%"
-                      innerRadius={70}
-                      outerRadius={110}
-                      paddingAngle={4}
-                    >
-                      {winLossData.map(
-                        (entry, index) => (
-                          <Cell
-                            key={index}
-                            fill={entry.fill}
-                          />
-                        )
-                      )}
-                    </Pie>
-
-                    <Tooltip
-                      contentStyle={{
-                        background: "#020617",
-                        border: "1px solid #334155",
-                        borderRadius: "10px",
-                      }}
-                    />
-                  </PieChart>
-                </ResponsiveContainer>
-              </div>
-            )}
-
-            <div className="grid grid-cols-3 gap-3">
-              <SmallStat
-                label="Wins"
-                value={analytics.wins}
-                className="text-emerald-400"
-              />
-
-              <SmallStat
-                label="Losses"
-                value={analytics.losses}
-                className="text-red-400"
-              />
-
-              <SmallStat
-                label="Breakeven"
-                value={analytics.breakeven}
-                className="text-slate-300"
-              />
-            </div>
-          </Panel>
-
-          <Panel
-            title="Session Performance"
-            subtitle="Net P&L generated by trading session"
-          >
-            {analytics.sessionData.length === 0 ? (
-              <EmptyState />
-            ) : (
-              <div className="h-[390px]">
-                <ResponsiveContainer
-                  width="100%"
-                  height="100%"
-                >
-                  <BarChart
-                    data={analytics.sessionData}
-                  >
-                    <CartesianGrid
-                      strokeDasharray="3 3"
-                      stroke="#1e293b"
-                    />
-
-                    <XAxis
-                      dataKey="name"
-                      stroke="#64748b"
-                    />
-
-                    <YAxis
-                      stroke="#64748b"
-                    />
-
-                    <Tooltip
-                      contentStyle={{
-                        background: "#020617",
-                        border: "1px solid #334155",
-                        borderRadius: "10px",
-                      }}
-                      formatter={(value) => [
-                        `$${Number(value).toFixed(2)}`,
-                        "P&L",
-                      ]}
-                    />
-
-                    <Bar
-                      dataKey="pnl"
-                      fill="#facc15"
-                      radius={[6, 6, 0, 0]}
-                    />
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
-            )}
-          </Panel>
-        </div>
-
-        <div className="mt-8 grid grid-cols-1 gap-6 xl:grid-cols-3">
-          <MetricCard
-            title="Best Trade"
-            value={formatMoney(analytics.bestTrade)}
-            valueClass="text-emerald-400"
-          />
-
-          <MetricCard
-            title="Worst Trade"
-            value={formatMoney(analytics.worstTrade)}
-            valueClass={
-              analytics.worstTrade < 0
-                ? "text-red-400"
-                : "text-slate-200"
-            }
-          />
-
-          <MetricCard
-            title="Gross Profit / Loss"
-            value={`$${analytics.grossProfit.toFixed(
-              0
-            )} / -$${analytics.grossLoss.toFixed(0)}`}
-          />
-        </div>
-
-        <section className="mt-8 rounded-2xl border border-slate-800 bg-slate-900 p-6">
-          <div className="mb-6">
-            <h2 className="text-xl font-bold">
-              Strategy Performance
-            </h2>
-
-            <p className="mt-1 text-sm text-slate-400">
-              Find which trading setups actually make money.
+      <main className="min-w-0 flex-1 p-6 lg:p-8">
+        <div className="mb-8 flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+          <div>
+            <h1 className="text-3xl font-extrabold lg:text-4xl">
+              Analytics
+            </h1>
+            <p className="mt-2 text-slate-400">
+              Analyze your trading edge using your real Supabase journal data.
             </p>
           </div>
 
-          {analytics.strategyData.length === 0 ? (
-            <EmptyState />
-          ) : (
-            <div className="overflow-x-auto">
-              <table className="w-full min-w-[700px]">
-                <thead>
-                  <tr className="border-b border-slate-800">
-                    <TableHead>Strategy</TableHead>
-                    <TableHead>Trades</TableHead>
-                    <TableHead>Win Rate</TableHead>
-                    <TableHead>Net P&L</TableHead>
-                  </tr>
-                </thead>
+          <button
+            onClick={loadTrades}
+            disabled={loading}
+            className="rounded-xl border border-yellow-400/40 bg-slate-900 px-5 py-3 font-semibold text-yellow-300 transition hover:bg-slate-800 disabled:opacity-60"
+          >
+            {loading ? "Loading..." : "↻ Refresh Analytics"}
+          </button>
+        </div>
 
-                <tbody>
-                  {analytics.strategyData.map(
-                    (strategy) => (
-                      <tr
-                        key={strategy.name}
-                        className="border-b border-slate-800 last:border-0"
-                      >
-                        <TableCell>
-                          {strategy.name}
-                        </TableCell>
+        {message && (
+          <div className="mb-6 rounded-xl border border-red-500/30 bg-red-500/10 p-4 text-red-300">
+            {message}
+          </div>
+        )}
 
-                        <TableCell>
-                          {strategy.trades}
-                        </TableCell>
-
-                        <TableCell>
-                          {strategy.winRate.toFixed(1)}%
-                        </TableCell>
-
-                        <TableCell>
-                          <span
-                            className={
-                              strategy.pnl >= 0
-                                ? "font-bold text-emerald-400"
-                                : "font-bold text-red-400"
-                            }
-                          >
-                            {formatMoney(strategy.pnl)}
-                          </span>
-                        </TableCell>
-                      </tr>
-                    )
-                  )}
-                </tbody>
-              </table>
-            </div>
-          )}
+        <section className="mb-7 rounded-2xl border border-slate-800 bg-[#111a2d] p-6">
+          <div className="grid gap-5 md:grid-cols-3">
+            <HeroStat
+              label="EDGE SCORE"
+              value={`${edgeScore}/100`}
+              color="text-yellow-400"
+            />
+            <HeroStat
+              label="WIN RATE"
+              value={`${analytics.winRate.toFixed(1)}%`}
+              color="text-emerald-400"
+            />
+            <HeroStat
+              label="NET PERFORMANCE"
+              value={formatMoney(analytics.totalPnL)}
+              color={analytics.totalPnL >= 0 ? "text-emerald-400" : "text-red-400"}
+            />
+          </div>
         </section>
-        <div className="mt-8 grid grid-cols-1 gap-6 xl:grid-cols-2">
-          <EquityCurve trades={trades} />
-          <DrawdownChart trades={trades} />
+
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <MetricCard title="Total Trades" value={String(analytics.totalTrades)} />
+          <MetricCard title="Best Trade" value={formatMoney(analytics.bestTrade)} valueClass="text-emerald-400" />
+          <MetricCard title="Worst Trade" value={formatMoney(analytics.worstTrade)} valueClass="text-red-400" />
+          <MetricCard
+            title="Profit Factor"
+            value={analytics.profitFactor === Infinity ? "∞" : analytics.profitFactor.toFixed(2)}
+            valueClass="text-yellow-400"
+          />
+          <MetricCard title="Gross Profit" value={formatMoney(analytics.grossProfit)} valueClass="text-emerald-400" />
+          <MetricCard
+            title="Gross Loss"
+            value={analytics.grossLoss > 0 ? `-$${analytics.grossLoss.toFixed(2)}` : "$0.00"}
+            valueClass="text-red-400"
+          />
+          <MetricCard title="Average Win" value={formatMoney(analytics.averageWin)} valueClass="text-emerald-400" />
+          <MetricCard
+            title="Expectancy / Trade"
+            value={formatMoney(analytics.expectancy)}
+            valueClass={analytics.expectancy >= 0 ? "text-emerald-400" : "text-red-400"}
+          />
         </div>
 
-        <div className="mt-8">
-          <MonthlyPerformance trades={trades} />
+        <div className="mt-7 grid grid-cols-1 gap-6 xl:grid-cols-2">
+          <Panel title="Win / Loss Distribution" subtitle="How your trades are ending">
+            {analytics.totalTrades === 0 ? (
+              <EmptyState />
+            ) : (
+              <>
+                <div className="h-[280px]">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <PieChart>
+                      <Pie
+                        data={outcomeData}
+                        dataKey="value"
+                        nameKey="name"
+                        cx="50%"
+                        cy="50%"
+                        innerRadius={65}
+                        outerRadius={105}
+                        paddingAngle={4}
+                      >
+                        {outcomeData.map((entry) => (
+                          <Cell key={entry.name} fill={entry.fill} />
+                        ))}
+                      </Pie>
+                      <Tooltip contentStyle={tooltipStyle} />
+                    </PieChart>
+                  </ResponsiveContainer>
+                </div>
+
+                <div className="grid grid-cols-3 gap-3">
+                  <SmallStat label="Wins" value={analytics.wins} color="text-emerald-400" />
+                  <SmallStat label="Losses" value={analytics.losses} color="text-red-400" />
+                  <SmallStat label="BE" value={analytics.breakeven} color="text-slate-300" />
+                </div>
+              </>
+            )}
+          </Panel>
+
+          <Panel title="Session Performance" subtitle="Net P&L by trading session">
+            <BarChartPanel data={analytics.sessionData} />
+          </Panel>
         </div>
-      </main>   
+
+        <div className="mt-7 grid grid-cols-1 gap-6 xl:grid-cols-2">
+          <Panel title="Strategy Performance" subtitle="Which setups are producing results">
+            <PerformanceTable data={analytics.strategyData} />
+          </Panel>
+
+          <Panel title="Symbol Performance" subtitle="Performance by trading instrument">
+            <PerformanceTable data={analytics.symbolData} />
+          </Panel>
+        </div>
+
+        <div className="mt-7 grid grid-cols-1 gap-6 xl:grid-cols-2">
+          <Panel title="Long vs Short" subtitle="Compare your directional performance">
+            <PerformanceTable data={analytics.directionData} />
+          </Panel>
+
+          <Panel title="Risk & Discipline" subtitle="Trading behavior from your journal">
+            <div className="grid grid-cols-2 gap-4">
+              <SmallStat
+                label="Rules Followed"
+                value={analytics.ruleFollowed}
+                color="text-emerald-400"
+              />
+              <SmallStat
+                label="Max Drawdown"
+                value={`-$${analytics.maxDrawdown.toFixed(2)}`}
+                color="text-red-400"
+              />
+              <SmallStat
+                label="Average Loss"
+                value={analytics.averageLoss > 0 ? `-$${analytics.averageLoss.toFixed(2)}` : "$0.00"}
+                color="text-red-400"
+              />
+              <SmallStat
+                label="Breakeven"
+                value={analytics.breakeven}
+                color="text-slate-300"
+              />
+            </div>
+          </Panel>
+        </div>
+      </main>
     </div>
   );
 }
 
-function formatMoney(value: number) {
-  if (value > 0) {
-    return `+$${value.toFixed(2)}`;
-  }
+const tooltipStyle = {
+  backgroundColor: "#020617",
+  border: "1px solid #334155",
+  borderRadius: "10px",
+};
 
-  if (value < 0) {
-    return `-$${Math.abs(value).toFixed(2)}`;
-  }
+function BarChartPanel({
+  data,
+}: {
+  data: { name: string; trades: number; pnl: number; winRate: number }[];
+}) {
+  if (!data.length) return <EmptyState />;
 
-  return "$0.00";
+  return (
+    <div className="h-[330px]">
+      <ResponsiveContainer width="100%" height="100%">
+        <BarChart data={data}>
+          <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
+          <XAxis dataKey="name" stroke="#64748b" />
+          <YAxis stroke="#64748b" />
+          <Tooltip
+            contentStyle={tooltipStyle}
+            formatter={(value) => [`$${Number(value).toFixed(2)}`, "P&L"]}
+          />
+          <Bar dataKey="pnl" fill="#facc15" radius={[6, 6, 0, 0]} />
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
+  );
+}
+
+function PerformanceTable({
+  data,
+}: {
+  data: { name: string; trades: number; pnl: number; winRate: number }[];
+}) {
+  if (!data.length) return <EmptyState />;
+
+  return (
+    <div className="overflow-x-auto">
+      <table className="w-full min-w-[520px]">
+        <thead>
+          <tr className="border-b border-slate-800 text-left text-xs uppercase text-slate-500">
+            <th className="px-3 py-3">Name</th>
+            <th className="px-3 py-3">Trades</th>
+            <th className="px-3 py-3">Win Rate</th>
+            <th className="px-3 py-3">Net P&L</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((row) => (
+            <tr key={row.name} className="border-b border-slate-800/80 last:border-0">
+              <td className="px-3 py-4 font-semibold text-white">{row.name}</td>
+              <td className="px-3 py-4 text-slate-300">{row.trades}</td>
+              <td className="px-3 py-4 text-slate-300">{row.winRate.toFixed(1)}%</td>
+              <td className={`px-3 py-4 font-bold ${row.pnl >= 0 ? "text-emerald-400" : "text-red-400"}`}>
+                {formatMoney(row.pnl)}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function HeroStat({
+  label,
+  value,
+  color,
+}: {
+  label: string;
+  value: string;
+  color: string;
+}) {
+  return (
+    <div className="rounded-xl bg-[#070d1b] p-5">
+      <p className="text-xs font-semibold tracking-wide text-slate-500">{label}</p>
+      <p className={`mt-2 text-3xl font-extrabold ${color}`}>{value}</p>
+    </div>
+  );
 }
 
 function MetricCard({
@@ -617,16 +491,9 @@ function MetricCard({
   valueClass?: string;
 }) {
   return (
-    <div className="rounded-xl border border-slate-800 bg-slate-900 p-5">
-      <p className="text-sm text-slate-400">
-        {title}
-      </p>
-
-      <p
-        className={`mt-2 text-3xl font-bold ${valueClass}`}
-      >
-        {value}
-      </p>
+    <div className="rounded-xl border border-slate-800 bg-[#111a2d] p-5">
+      <p className="text-sm text-slate-400">{title}</p>
+      <p className={`mt-2 text-3xl font-bold ${valueClass}`}>{value}</p>
     </div>
   );
 }
@@ -641,16 +508,10 @@ function Panel({
   children: React.ReactNode;
 }) {
   return (
-    <section className="rounded-2xl border border-slate-800 bg-slate-900 p-6">
-      <h2 className="text-xl font-bold">
-        {title}
-      </h2>
-
-      <p className="mt-1 text-sm text-slate-400">
-        {subtitle}
-      </p>
-
-      {children}
+    <section className="rounded-2xl border border-slate-800 bg-[#111a2d] p-6">
+      <h2 className="text-xl font-bold">{title}</h2>
+      <p className="mt-1 text-sm text-slate-400">{subtitle}</p>
+      <div className="mt-5">{children}</div>
     </section>
   );
 }
@@ -658,55 +519,30 @@ function Panel({
 function SmallStat({
   label,
   value,
-  className,
+  color,
 }: {
   label: string;
-  value: number;
-  className: string;
+  value: string | number;
+  color: string;
 }) {
   return (
-    <div className="rounded-xl bg-slate-950 p-4 text-center">
-      <p className="text-xs text-slate-500">
-        {label}
-      </p>
-
-      <p
-        className={`mt-1 text-2xl font-bold ${className}`}
-      >
-        {value}
-      </p>
+    <div className="rounded-xl bg-[#070d1b] p-4">
+      <p className="text-xs uppercase tracking-wide text-slate-500">{label}</p>
+      <p className={`mt-2 text-2xl font-bold ${color}`}>{value}</p>
     </div>
   );
 }
 
 function EmptyState() {
   return (
-    <div className="flex h-[320px] items-center justify-center text-slate-500">
-      Add more trades to see analytics.
+    <div className="flex h-[260px] items-center justify-center rounded-xl bg-[#070d1b] text-slate-500">
+      Add more trades to unlock this analysis.
     </div>
   );
 }
 
-function TableHead({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <th className="px-5 py-4 text-left text-xs font-semibold uppercase text-slate-400">
-      {children}
-    </th>
-  );
-}
-
-function TableCell({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <td className="px-5 py-4 text-sm text-slate-300">
-      {children}
-    </td>
-  );
+function formatMoney(value: number) {
+  if (value > 0) return `+$${value.toFixed(2)}`;
+  if (value < 0) return `-$${Math.abs(value).toFixed(2)}`;
+  return "$0.00";
 }

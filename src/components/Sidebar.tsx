@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { supabase } from "@/lib/supabase";
 
 import {
   LayoutDashboard,
@@ -12,6 +13,7 @@ import {
   Newspaper,
   CalendarDays,
   Settings,
+  LogOut,
 } from "lucide-react";
 
 const menuItems = [
@@ -59,9 +61,30 @@ const menuItems = [
 
 export default function Sidebar() {
   const pathname = usePathname();
+  const router = useRouter();
+
+  async function handleLogout() {
+    const confirmed = window.confirm(
+      "Are you sure you want to logout?"
+    );
+
+    if (!confirmed) return;
+
+    const { error } = await supabase.auth.signOut();
+
+    if (error) {
+      console.error("Logout error:", error);
+      alert("Failed to logout: " + error.message);
+      return;
+    }
+
+    router.push("/login");
+    router.refresh();
+  }
 
   return (
     <aside className="flex h-screen w-[232px] shrink-0 flex-col border-r border-slate-800 bg-[#111a2d]">
+      
       {/* LOGO */}
       <div className="border-b border-slate-800 px-4 py-6">
         <h1 className="text-[28px] font-black tracking-tight text-yellow-400">
@@ -102,8 +125,19 @@ export default function Sidebar() {
         })}
       </nav>
 
-      {/* BOTTOM STATUS */}
-      <div className="p-3">
+      {/* BOTTOM */}
+      <div className="border-t border-slate-800 p-3">
+        
+        {/* LOGOUT BUTTON */}
+        <button
+          onClick={handleLogout}
+          className="mb-3 flex w-full items-center gap-3 rounded-xl px-4 py-3 text-slate-300 transition hover:bg-red-500/10 hover:text-red-400"
+        >
+          <LogOut size={20} />
+          <span className="font-medium">Logout</span>
+        </button>
+
+        {/* STATUS */}
         <div className="rounded-xl bg-[#020617] p-3">
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
