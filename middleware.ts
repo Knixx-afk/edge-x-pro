@@ -6,6 +6,21 @@ export async function middleware(request: NextRequest) {
     request,
   });
 
+  const pathname = request.nextUrl.pathname;
+
+  // Public routes
+  const publicRoutes = [
+    "/login",
+    "/signup",
+    "/forgot-password",
+    "/reset-password",
+  ];
+
+  // Ignore API routes
+  if (pathname.startsWith("/api")) {
+    return response;
+  }
+
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
@@ -17,8 +32,6 @@ export async function middleware(request: NextRequest) {
 
         setAll(cookiesToSet) {
           cookiesToSet.forEach(({ name, value, options }) => {
-            request.cookies.set(name, value);
-
             response.cookies.set(name, value, options);
           });
         },
@@ -30,32 +43,20 @@ export async function middleware(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const pathname = request.nextUrl.pathname;
+  const isPublicRoute = publicRoutes.includes(pathname);
 
-  // Pages that must work without logging in
-  const publicRoutes = [
-    "/login",
-    "/signup",
-    "/forgot-password",
-    "/reset-password",
-  ];
-
-  const isPublicRoute = publicRoutes.some(
-    (route) => pathname === route || pathname.startsWith(`${route}/`)
-  );
-
-  // User is NOT logged in and tries to access protected pages
+  // Not logged in → Login
   if (!user && !isPublicRoute) {
-    return NextResponse.redirect(new URL("/login", request.url));
+    return NextResponse.redirect(
+      new URL("/login", request.url)
+    );
   }
 
-  // Logged-in users should not return to login/signup pages.
-  // IMPORTANT: forgot/reset password are allowed.
-  if (
-    user &&
-    (pathname === "/login" || pathname === "/signup")
-  ) {
-    return NextResponse.redirect(new URL("/", request.url));
+  // Logged in → prevent visiting login/signup
+  if (user && isPublicRoute) {
+    return NextResponse.redirect(
+      new URL("/", request.url)
+    );
   }
 
   return response;
@@ -63,6 +64,6 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/((?!_next/static|_next/image|favicon.ico).*)",
+    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
   ],
 };
