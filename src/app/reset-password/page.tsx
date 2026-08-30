@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, Suspense, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 
-export default function ResetPasswordPage() {
+function ResetPasswordForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -24,33 +24,34 @@ export default function ResetPasswordPage() {
         setCheckingSession(true);
         setError("");
 
-        // Check for PKCE recovery code
-        const code = searchParams.get("code");
+        // Get PKCE recovery code safely
+        const code = searchParams?.get("code");
 
+        // If Supabase sent a PKCE code, exchange it for a session
         if (code) {
-          const { error } =
+          const { error: exchangeError } =
             await supabase.auth.exchangeCodeForSession(code);
 
-          if (error) {
-            console.error("Code exchange error:", error);
-            setError(error.message);
-            setCheckingSession(false);
+          if (exchangeError) {
+            console.error("Code exchange error:", exchangeError);
+            setError(
+              "Invalid or expired password reset link. Please request a new one."
+            );
             return;
           }
         }
 
-        // Give Supabase a moment to process hash-based recovery links
+        // Small delay to allow Supabase auth state to update
         await new Promise((resolve) => setTimeout(resolve, 500));
 
         const {
           data: { session },
-          error,
+          error: sessionError,
         } = await supabase.auth.getSession();
 
-        if (error) {
-          console.error("Session error:", error);
-          setError(error.message);
-          setCheckingSession(false);
+        if (sessionError) {
+          console.error("Session error:", sessionError);
+          setError(sessionError.message);
           return;
         }
 
@@ -98,29 +99,26 @@ export default function ResetPasswordPage() {
         setError(
           "Your password reset session has expired. Please request a new reset link."
         );
-        setLoading(false);
         return;
       }
 
-      const { error: updateError } =
-        await supabase.auth.updateUser({
-          password,
-        });
+      const { error: updateError } = await supabase.auth.updateUser({
+        password,
+      });
 
       if (updateError) {
+        console.error(updateError);
         setError(updateError.message);
-        setLoading(false);
         return;
       }
 
-      setMessage(
-        "Password updated successfully! Redirecting to login..."
-      );
+      setMessage("Password updated successfully! Redirecting to login...");
 
+      // Sign out so the user can log in with the new password
       await supabase.auth.signOut();
 
       setTimeout(() => {
-        router.push("/login");
+        router.replace("/login");
       }, 2000);
     } catch (err) {
       console.error(err);
@@ -130,10 +128,11 @@ export default function ResetPasswordPage() {
     }
   }
 
+  const hasInvalidSession = !!error && checkingSession === false;
+
   return (
     <main className="flex min-h-screen items-center justify-center bg-slate-950 px-4">
       <div className="w-full max-w-md rounded-2xl border border-slate-700 bg-slate-900 p-8 shadow-2xl">
-
         <div className="mb-8 text-center">
           <h1 className="text-3xl font-bold tracking-wide text-white">
             Reset Password
@@ -149,11 +148,7 @@ export default function ResetPasswordPage() {
             Verifying password reset link...
           </div>
         ) : (
-          <form
-            onSubmit={handleReset}
-            className="space-y-5"
-          >
-
+          <form onSubmit={handleReset} className="space-y-5">
             <div>
               <label className="mb-2 block text-sm font-medium text-slate-300">
                 New Password
@@ -166,8 +161,9 @@ export default function ResetPasswordPage() {
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 minLength={6}
-                disabled={!!error && error.includes("reset link")}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
+                disabled={hasInvalidSession || loading}
+                autoComplete="new-password"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 disabled:opacity-50"
               />
             </div>
 
@@ -180,13 +176,12 @@ export default function ResetPasswordPage() {
                 type="password"
                 placeholder="Confirm new password"
                 value={confirmPassword}
-                onChange={(e) =>
-                  setConfirmPassword(e.target.value)
-                }
+                onChange={(e) => setConfirmPassword(e.target.value)}
                 required
                 minLength={6}
-                disabled={!!error && error.includes("reset link")}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
+                disabled={hasInvalidSession || loading}
+                autoComplete="new-password"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 disabled:opacity-50"
               />
             </div>
 
@@ -204,16 +199,10 @@ export default function ResetPasswordPage() {
 
             <button
               type="submit"
-              disabled={
-                loading ||
-                checkingSession ||
-                !!error
-              }
+              disabled={loading || hasInvalidSession}
               className="w-full rounded-lg bg-blue-600 px-4 py-3 font-semibold text-white transition hover:bg-blue-500 disabled:cursor-not-allowed disabled:opacity-60"
             >
-              {loading
-                ? "Updating Password..."
-                : "Update Password"}
+              {loading ? "Updating Password..." : "Update Password"}
             </button>
           </form>
         )}
@@ -226,8 +215,23 @@ export default function ResetPasswordPage() {
             Back to Login
           </Link>
         </div>
-
       </div>
     </main>
+  );
+}
+
+export default function ResetPasswordPage() {
+  return (
+    <Suspense
+      fallback={
+        <main className="flex min-h-screen items-center justify-center bg-slate-950 px-4">
+          <div className="rounded-lg border border-blue-500/30 bg-blue-500/10 px-6 py-4 text-blue-300">
+            Loading password reset...
+          </div>
+        </main>
+      }
+    >
+      <ResetPasswordForm />
+    </Suspense>
   );
 }
