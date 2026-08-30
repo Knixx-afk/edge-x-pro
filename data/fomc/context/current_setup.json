@@ -3,7 +3,7 @@
   "event_name": "FED Interest Rate Decision",
   "event_time_utc": "2026-07-25T18:00:00+00:00",
   "technical": {
-    "collected_at_utc": "2026-08-30T12:01:03.957453+00:00",
+    "collected_at_utc": "2026-08-30T14:33:09.115916+00:00",
     "symbol": "XAUUSD",
     "broker": "Winprofx Limited",
     "latest_candle_time_utc": "2026-08-28T23:59:00+00:00",
@@ -171,7 +171,7 @@
       "us10y_data": true
     },
     "macro_source_status": "LIVE_BLS",
-    "macro_updated_at_utc": "2026-08-30T12:01:02.227347+00:00",
+    "macro_updated_at_utc": "2026-08-30T14:33:06.640953+00:00",
     "gold_market_bias": {
       "bias": "NEUTRAL",
       "score": 0,
@@ -180,8 +180,8 @@
         "Treasury yield trend is mixed."
       ]
     },
-    "market_context_updated_at_utc": "2026-08-30T12:01:03.339235+00:00"
+    "market_context_updated_at_utc": "2026-08-30T14:33:07.992075+00:00"
   },
-  "fundamental_updated_at_utc": "2026-08-30T12:00:59.909386+00:00",
+  "fundamental_updated_at_utc": "2026-08-30T14:33:03.857760+00:00",
   "event_date": "2026-09-16"
 }
