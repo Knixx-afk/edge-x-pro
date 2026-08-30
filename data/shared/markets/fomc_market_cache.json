@@ -1,35 +1,35 @@
 {
   "dxy": {
-    "value": 101.47,
-    "date": "2026-07-24",
-    "direction": "RISING",
+    "value": 99.16,
+    "date": "2026-08-27",
+    "direction": "MIXED",
     "direction_1d": "FLAT",
     "direction_5d": "RISING",
-    "direction_20d": "FLAT",
-    "change_1d_percent": 0.039,
-    "change_5d_percent": 0.715,
-    "change_20d_percent": 0.039,
+    "direction_20d": "FALLING",
+    "change_1d_percent": -0.01,
+    "change_5d_percent": 0.263,
+    "change_20d_percent": -0.85,
     "source": "Yahoo Finance chart data"
   },
   "us10y": {
-    "value": 4.679,
-    "date": "2026-07-24",
-    "direction": "RISING",
-    "direction_1d": "FALLING",
-    "direction_5d": "RISING",
-    "direction_20d": "RISING",
-    "change_1d_percent": -0.51,
-    "change_5d_percent": 3.039,
-    "change_20d_percent": 6.535,
+    "value": 4.672,
+    "date": "2026-08-27",
+    "direction": "MIXED",
+    "direction_1d": "FLAT",
+    "direction_5d": "FLAT",
+    "direction_20d": "FLAT",
+    "change_1d_percent": 0.172,
+    "change_5d_percent": -0.511,
+    "change_20d_percent": 0.193,
     "source": "Yahoo Finance chart data"
   },
   "gold_market_bias": {
-    "bias": "STRONGLY_BEARISH",
-    "score": -4,
+    "bias": "NEUTRAL",
+    "score": 0,
     "reasons": [
-      "Rising US dollar pressures gold.",
-      "Rising Treasury yields pressure gold."
+      "US dollar trend is mixed.",
+      "Treasury yield trend is mixed."
     ]
   },
-  "updated_at_utc": "2026-07-26T15:58:57.270794+00:00"
+  "updated_at_utc": "2026-08-30T12:01:03.338345+00:00"
 }
